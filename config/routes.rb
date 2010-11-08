@@ -1,4 +1,6 @@
 EnterpriseSite::Application.routes.draw do
+  resources :products
+
   resources :notices
 
   root :to => "home#index"

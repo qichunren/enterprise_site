@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101108144642) do
+ActiveRecord::Schema.define(:version => 20101108145231) do
 
   create_table "notices", :force => true do |t|
     t.string   "title",                          :null => false
@@ -18,6 +18,20 @@ ActiveRecord::Schema.define(:version => 20101108144642) do
     t.integer  "click_count",  :default => 1
     t.boolean  "is_published", :default => true
     t.string   "created_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name",                                                          :null => false
+    t.integer  "category_id",                                                   :null => false
+    t.string   "product_no"
+    t.text     "description"
+    t.integer  "click_count",                                 :default => 1
+    t.decimal  "price",        :precision => 10, :scale => 0
+    t.integer  "amount"
+    t.boolean  "is_published",                                :default => true
+    t.string   "createb_by"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
