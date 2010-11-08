@@ -1,4 +1,6 @@
 EnterpriseSite::Application.routes.draw do
+  resources :site_settings
+
   devise_for :users
 
   resources :categories

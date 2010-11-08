@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @site_setting.name %>
+</p>
+
+<p>
+  <b>Setting key:</b>
+  <%= @site_setting.setting_key %>
+</p>
+
+<p>
+  <b>Setting value:</b>
+  <%= @site_setting.setting_value %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%= @site_setting.remark %>
+</p>
+
+<p>
+  <b>Value type:</b>
+  <%= @site_setting.value_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_setting_path(@site_setting) %> |
+<%= link_to 'Back', site_settings_path %>

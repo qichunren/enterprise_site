@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101108154138) do
+ActiveRecord::Schema.define(:version => 20101108155204) do
 
   create_table "categories", :force => true do |t|
     t.string   "name",       :null => false
@@ -60,6 +60,16 @@ ActiveRecord::Schema.define(:version => 20101108154138) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "site_settings", :force => true do |t|
+    t.string   "name",          :null => false
+    t.string   "setting_key",   :null => false
+    t.string   "setting_value", :null => false
+    t.string   "remark"
+    t.string   "value_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
