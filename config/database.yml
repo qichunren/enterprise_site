@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  database: enterprise_site_development
+  username: root
+  password: "123456"
+  pool: 5
+  encoding: utf8
+
+development:
+  adapter: mysql2
+  database: enterprise_site_test
+  username: root
+  password: "123456"
+  pool: 5
+  encoding: utf8
+
+development:
+  adapter: mysql2
+  database: enterprise_site_production
+  username: root
+  password: "123456"
+  pool: 5
+
