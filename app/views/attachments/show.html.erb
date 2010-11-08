@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @attachment.name %>
+</p>
+
+<p>
+  <b>Download count:</b>
+  <%= @attachment.download_count %>
+</p>
+
+<p>
+  <b>Descripton:</b>
+  <%= @attachment.descripton %>
+</p>
+
+<p>
+  <b>Attach file name:</b>
+  <%= @attachment.attach_file_name %>
+</p>
+
+<p>
+  <b>Attach content type:</b>
+  <%= @attachment.attach_content_type %>
+</p>
+
+<p>
+  <b>Attach file size:</b>
+  <%= @attachment.attach_file_size %>
+</p>
+
+<p>
+  <b>Attach updated at:</b>
+  <%= @attachment.attach_updated_at %>
+</p>
+
+Download: <%= @attachment.attach.url %>
+<%= link_to 'Edit', edit_attachment_path(@attachment) %> |
+<%= link_to 'Back', attachments_path %>

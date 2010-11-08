@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101108155204) do
+ActiveRecord::Schema.define(:version => 20101108161320) do
+
+  create_table "attachments", :force => true do |t|
+    t.string   "name",                               :null => false
+    t.integer  "download_count",      :default => 0
+    t.text     "descripton"
+    t.string   "attach_file_name"
+    t.string   "attach_content_type"
+    t.integer  "attach_file_size"
+    t.datetime "attach_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name",       :null => false
