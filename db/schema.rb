@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101108161320) do
+ActiveRecord::Schema.define(:version => 20101108162839) do
 
   create_table "attachments", :force => true do |t|
     t.string   "name",                               :null => false
@@ -30,6 +30,22 @@ ActiveRecord::Schema.define(:version => 20101108161320) do
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feedbacks", :force => true do |t|
+    t.string   "user_name",                          :null => false
+    t.string   "email",                              :null => false
+    t.string   "phone"
+    t.string   "user_ip"
+    t.string   "website"
+    t.text     "body"
+    t.boolean  "is_read",         :default => false
+    t.boolean  "is_public",       :default => false
+    t.text     "replied_content"
+    t.datetime "replied_at"
+    t.string   "replied_by"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

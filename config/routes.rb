@@ -1,4 +1,6 @@
 EnterpriseSite::Application.routes.draw do
+  resources :feedbacks
+
   resources :attachments
 
   resources :site_settings

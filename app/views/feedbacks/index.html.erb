@@ -1,0 +1,43 @@
+<h1>Listing feedbacks</h1>
+
+<table>
+  <tr>
+    <th>User name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>User ip</th>
+    <th>Website</th>
+    <th>Body</th>
+    <th>Is read</th>
+    <th>Is public</th>
+    <th>Replied content</th>
+    <th>Replied at</th>
+    <th>Replied by</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @feedbacks.each do |feedback| %>
+  <tr>
+    <td><%= feedback.user_name %></td>
+    <td><%= feedback.email %></td>
+    <td><%= feedback.phone %></td>
+    <td><%= feedback.user_ip %></td>
+    <td><%= feedback.website %></td>
+    <td><%= feedback.body %></td>
+    <td><%= feedback.is_read %></td>
+    <td><%= feedback.is_public %></td>
+    <td><%= feedback.replied_content %></td>
+    <td><%= feedback.replied_at %></td>
+    <td><%= feedback.replied_by %></td>
+    <td><%= link_to 'Show', feedback %></td>
+    <td><%= link_to 'Edit', edit_feedback_path(feedback) %></td>
+    <td><%= link_to 'Destroy', feedback, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Feedback', new_feedback_path %>
