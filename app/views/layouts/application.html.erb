@@ -7,8 +7,27 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div id="wrapper">
+    <div id="header">
+    </div>
 
-<%= yield %>
+    <div id="nav">
+      <ul>
+        <li><%= link_to "Home", root_path %></li> 
+      </ul>
+    </div>
 
+    <div id="main">
+      <div id="content">
+        <%= yield %>
+      </div>
+
+      <div id="sidebar">
+        <%= yield :sidebar %>
+      </div>
+    </div>
+
+    <div id="footer">
+    </div>
 </body>
 </html>
