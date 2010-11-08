@@ -23,6 +23,7 @@
     <td><%= product.product_no %></td>
     <td><%= product.description %></td>
     <td><%= product.click_count %></td>
+    <td><%= image_tag product.avatar.url(:thumb) %></td>
     <td><%= product.price %></td>
     <td><%= product.amount %></td>
     <td><%= product.is_published %></td>
