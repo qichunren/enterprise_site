@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br />
-    <%= f.text_field :category_id %>
+    <%= f.select :category_id, nested_set_options(Category, Category.new) {|i| "#{'---' * i.level} #{i.name}" } %>
   </div>
   <div class="field">
     <%= f.label :product_no %><br />

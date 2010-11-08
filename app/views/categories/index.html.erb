@@ -1,0 +1,30 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Parent</th>
+    <th>Lft</th>
+    <th>Rgt</th>
+    <th>Depth</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% Category.each_with_level(Category.root.descendants) do |category, level| %>
+  <tr>
+    <td><div style="margin-left:<%= 30 * level %>px;"><%= category.name %></div></td>
+    <td><%= category.parent_id %></td>
+    <td><%= category.lft %></td>
+    <td><%= category.rgt %></td>
+    <td><%= category.depth %></td>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Category', new_category_path %>

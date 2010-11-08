@@ -1,4 +1,6 @@
 EnterpriseSite::Application.routes.draw do
+  resources :categories
+
   resources :pages
 
   resources :products
