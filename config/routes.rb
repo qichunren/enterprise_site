@@ -1,4 +1,6 @@
 EnterpriseSite::Application.routes.draw do
+  resources :notices
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:
