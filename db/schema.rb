@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101108145703) do
+ActiveRecord::Schema.define(:version => 20101108150853) do
 
   create_table "notices", :force => true do |t|
     t.string   "title",                          :null => false
@@ -18,6 +18,18 @@ ActiveRecord::Schema.define(:version => 20101108145703) do
     t.integer  "click_count",  :default => 1
     t.boolean  "is_published", :default => true
     t.string   "created_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "title",                          :null => false
+    t.string   "keywords"
+    t.string   "description"
+    t.text     "body"
+    t.string   "url_slug",                       :null => false
+    t.string   "created_by"
+    t.boolean  "is_published", :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
