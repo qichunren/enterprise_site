@@ -15,16 +15,9 @@
   <%= @notice.click_count %>
 </p>
 
-<p>
-  <b>Is published:</b>
-  <%= @notice.is_published %>
-</p>
+
 
 <p>
   <b>Created by:</b>
   <%= @notice.created_by %>
 </p>
-
-
-<%= link_to 'Edit', edit_notice_path(@notice) %> |
-<%= link_to 'Back', notices_path %>

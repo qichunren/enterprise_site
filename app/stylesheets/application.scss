@@ -51,12 +51,17 @@ line-height: 24px;
 }    
 
 #content {
-  float:right;        
+       
   width: 80%;
 }
 
+html > body #content {
+  min-height:600px;
+}
+
 #sidebar {
-  width: 20%;
+  width: 20%; 
+  float: right;
 }
 
 #sidebar .wrapper {
@@ -64,13 +69,31 @@ line-height: 24px;
 }  
 
 #content .wrapper, #sidebar .wrapper {
-  margin: 10px;
+
   padding: 10px;
 }             
+#main.nosidebar #sidebar{ display: none; }
+#main.nosidebar #content{ width: auto; border-right: 0; }
+
 
 #footer {
   border-top: 2px solid #FF9900;
   margin-top: 8px;
 }                  
 
-#footer .bgl{padding: 10px;}
+#footer .bgl{padding: 10px;} 
+ 
+
+
+/***** Links *****/
+a, a:link, a:visited{ color: #2A5685; text-decoration: none; }
+a:hover, a:active{ color: #c61a1a; text-decoration: underline;}
+a img{ border: 0; }
+
+
+
+
+#login-form table {margin-top:5em; padding:1em; margin-left: auto; margin-right: auto; border: 2px solid #FDBF3B; background-color:#FFEBC1; }
+#login-form table td {padding: 6px;}
+#login-form label {font-weight: bold;}
+#login-form input#username, #login-form input#password { width: 300px; }

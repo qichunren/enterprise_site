@@ -1,42 +1,20 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>管理员登录</title>
-    <%= stylesheet_link_tag 'login', 'jquery.human-msg' %>
-    <%=  javascript_include_tag :defaults %>
-    <%=  javascript_include_tag "jquery.humanMsg" %>
-    <%= csrf_meta_tag %>
- </head>
-<body style=" background-color:#002a68;">
-   <div class="admin">
-   <ul class="logopanel">
-          <%= form_for @admin_session, :url => admin_session_path do |form| %>
-         <li>
-           <span>帐号：</span>
-           <%= form.text_field "login", :size => 30, :maxlength => 50, :class => "text" %>
-         </li>
+﻿<div id="login-form">
+    <%= form_for @admin_session, :url => admin_session_path do |form| %>
+        <table>
+            <tr> 
+              <td align='right'><label for="admin_session_login">员工帐号:</label></td>
+              <td align='left'><%= form.text_field "login", :size => 30, :maxlength => 50, :class => "text" %></td>
+            </tr>
 
-         <li>
-           <span>密码：</span>
-           <%= form.password_field :password, :value => "", :size => 30, :maxlength => 50, :class => "text" %>
-         </li>
-
-
-         <li class="mg_t2">
-            <span>验证码：</span>
-              <%= text_field_tag :code_image, "", :maxlength => 4, :id => "code_image_field", :class => "text mg_none" %>
-              <p class="imgbox"><img alt="" src="/images/aa.jpg" /></p>
-                <!--img id="image_code" height="20" width="52"   src='/admin/code_image?<%= rand %>' alt="验证码"  style="cursor:pointer"  title="看不清楚，点击换一个" /-->
-         </li>
-
-         <li style="padding-left:54px; margin-top:10px;">
-          <%= form.submit "登录", :class => "a_btn" %> 
-        </li>
-
+            <tr> 
+              <td align='right'><label for="admin_session_password">密码:</label></td>
+              <td align='left'><%= form.password_field :password, :value => "", :maxlength => 50, :class => "text" %></td>
+            </tr>
+            
+            <tr> 
+              <td align='left'><% "link_to '不记得密码了？', new_password_path " %></td>
+              <td align='right'><%= form.submit raw "登录 &#187;"  %></td>
+            </tr>
+        </table>
        <% end %>
-    </div>
-<%= show_human_flash_messages %>
-
-  </body>
-</html>
+  </div>

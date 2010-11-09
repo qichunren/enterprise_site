@@ -1,8 +1,8 @@
 # encoding: utf-8
 class AdminSessionsController < ApplicationController
 
-  skip_before_filter :require_admin, :only => [:new, :show, :create]
-  layout false
+  skip_before_filter :require_admin, :except => [:destroy]
+
   
   def new
     @admin_session = AdminSession.new

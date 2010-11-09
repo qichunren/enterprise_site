@@ -27,20 +27,23 @@
       </ul>
     </div>
 
-    <div id="main">
-      <div id="content">
-        <div class="wrapper"><%= yield %></div>
-      </div>
+    <div id="main" class="<%= has_content?(:sidebar) ? '' : 'nosidebar' %>" >
 
       <div id="sidebar">
         <div class="wrapper"><%= yield :sidebar %></div>
       </div>
+
+      <div id="content">
+        <div class="wrapper"><%= yield %></div>
+      </div>
+
+
     </div>
 
     <div id="footer">
       <div class='bgl'>
         <div class="bgr">
-          Powered by EnterpriseSiete 1.0
+          Powered by EnterpriseSiete 1.0 &copy; <%= link_to "管理", new_admin_session_path %>
           </div>
         </div>
     </div> 

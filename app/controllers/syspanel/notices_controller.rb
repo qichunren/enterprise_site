@@ -41,11 +41,12 @@ class Syspanel::NoticesController < Syspanel::BaseController
   # POST /notices
   # POST /notices.xml
   def create
-    @notice = Notice.new(params[:notice])
+    @notice = Notice.new(params[:notice]) 
+    @notice.created_by = current_admin.login
 
     respond_to do |format|
       if @notice.save
-        format.html { redirect_to(@notice, :notice => 'Notice was successfully created.') }
+        format.html { redirect_to([:syspanel, @notice], :notice => 'Notice was successfully created.') }
         format.xml  { render :xml => @notice, :status => :created, :location => @notice }
       else
         format.html { render :action => "new" }
