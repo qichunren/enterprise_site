@@ -43,7 +43,12 @@
     <div id="footer">
       <div class='bgl'>
         <div class="bgr">
-          Powered by EnterpriseSiete 1.0 &copy; <%= link_to "管理", new_admin_session_path %>
+          Powered by EnterpriseSiete 1.0 &copy;    
+          <% if current_admin %>
+          <%= link_to "进入后台", "/syspanel/home/index" %>
+          <% else %>
+          <%= link_to("管理", new_admin_session_path) %>
+          <% end %>
           </div>
         </div>
     </div> 
