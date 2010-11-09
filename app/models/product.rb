@@ -5,4 +5,7 @@ class Product < ActiveRecord::Base
   before_save do |product|
     raise "Product must belongs to a child category!" unless product.category.children.blank?
   end
+  
+  scope :published, :conditions => ["is_published=true", true], :order => "id DESC"
+  
 end
