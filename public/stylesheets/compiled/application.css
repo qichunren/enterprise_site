@@ -23,36 +23,61 @@ body {
 
 /* line 23, ../../../app/stylesheets/application.scss */
 #nav {
-  background: #FF3300;
+  margin: 8px;
+  background: #26B3CF;
   clear: both;
   height: 38px;
 }
 
-/* line 33, ../../../app/stylesheets/application.scss */
+/* line 35, ../../../app/stylesheets/application.scss */
 #nav li {
   float: left;
   list-style-type: none;
   margin: 0 2px 0 0;
   padding: 0;
   white-space: nowrap;
+  line-height: 24px;
 }
 
-/* line 41, ../../../app/stylesheets/application.scss */
+/* line 44, ../../../app/stylesheets/application.scss */
 #nav li a {
-  background-color: #EEEEEE;
+  background-color: #47838F;
+  color: #FFF;
   font-weight: bold;
   display: block;
   padding: 6px 12px;
   text-decoration: none;
 }
 
-/* line 49, ../../../app/stylesheets/application.scss */
+/* line 53, ../../../app/stylesheets/application.scss */
+#content {
+  float: right;
+  width: 80%;
+}
+
+/* line 58, ../../../app/stylesheets/application.scss */
+#sidebar {
+  width: 20%;
+}
+
+/* line 62, ../../../app/stylesheets/application.scss */
+#sidebar .wrapper {
+  background: #D1E4EF;
+}
+
+/* line 66, ../../../app/stylesheets/application.scss */
+#content .wrapper, #sidebar .wrapper {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* line 71, ../../../app/stylesheets/application.scss */
 #footer {
   border-top: 2px solid #FF9900;
   margin-top: 8px;
 }
 
-/* line 54, ../../../app/stylesheets/application.scss */
+/* line 76, ../../../app/stylesheets/application.scss */
 #footer .bgl {
   padding: 10px;
 }

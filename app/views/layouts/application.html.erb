@@ -29,11 +29,11 @@
 
     <div id="main">
       <div id="content">
-        <%= yield %>
+        <div class="wrapper"><%= yield %></div>
       </div>
 
       <div id="sidebar">
-        <%= yield :sidebar %>
+        <div class="wrapper"><%= yield :sidebar %></div>
       </div>
     </div>
 

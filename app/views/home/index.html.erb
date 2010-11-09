@@ -1,2 +1,14 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% content_for :sidebar do %>
+  <ul>   
+    <% @latest_notices.each do |notice| %>
+      <li><%= notice.title %></li>
+    <% end %>
+    </ul>
+<% end %> 
+
+<% @latest_products.each do |product| %>
+  <div class='product'>
+    <h3><%= product.name %><h3>
+      <div><%= product.price %></div> 
+  </div>
+<% end %>

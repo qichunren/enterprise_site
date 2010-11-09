@@ -33,4 +33,35 @@
   </tr>
 <% end %>
 </table>
-<%= will_paginate @products %>
+<%= will_paginate @products %> 
+
+
+<% content_for :sidebar do %>
+  <div class="box">
+    <h3>推荐产品</h3>
+    <div>  
+      <ul>  
+        <li>
+          <%= link_to "Some thing here", "" %>
+          <div><%= image_tag "rails.png" %></div>
+        </li>
+        <li>
+          <%= link_to "Some thing here", "" %>
+          <div><%= image_tag "rails.png" %></div>
+        </li>
+        <li>
+          <%= link_to "Some thing here", "" %>
+          <div><%= image_tag "rails.png" %></div>
+        </li>
+        <li>
+          <%= link_to "Some thing here", "" %>
+          <div><%= image_tag "rails.png" %></div>
+        </li>
+        <li>
+          <%= link_to "Some thing here", "" %>
+          <div><%= image_tag "rails.png" %></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<% end %>

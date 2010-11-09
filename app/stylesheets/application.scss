@@ -20,14 +20,16 @@ body {
   padding: 10px;
 }
 
-#nav {
-  background: #FF3300;
+#nav {         
+  margin: 8px;
+  background: #26B3CF;
   clear: both; 
   height: 38px;
+  
 }                    
 
 #nav ul{
-
+  
 }                 
 
 #nav li {
@@ -36,15 +38,35 @@ list-style-type:none;
 margin:0 2px 0 0;
 padding:0;
 white-space:nowrap;
+line-height: 24px;
 }                  
 
 #nav li a {
-  background-color:#EEEEEE;
+  background-color:#47838F;
+  color: #FFF;
   font-weight: bold;
   display:block;
   padding:6px 12px;
   text-decoration:none;
+}    
+
+#content {
+  float:right;        
+  width: 80%;
 }
+
+#sidebar {
+  width: 20%;
+}
+
+#sidebar .wrapper {
+  background: #D1E4EF;
+}  
+
+#content .wrapper, #sidebar .wrapper {
+  margin: 10px;
+  padding: 10px;
+}             
 
 #footer {
   border-top: 2px solid #FF9900;
