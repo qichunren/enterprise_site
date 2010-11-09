@@ -13,9 +13,10 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
-  <div id="wrapper">
-    <div id="header">
+<body >
+  <div id="container">
+    <div id="header"> 
+      <h1>企业网站</h1>
     </div>
 
     <div id="nav">
@@ -27,8 +28,6 @@
     </div>
 
     <div id="main">
-             <p class="notice"><%= notice %></p>
-             <p class="alert"><%= alert %></p>
       <div id="content">
         <%= yield %>
       </div>
@@ -39,6 +38,13 @@
     </div>
 
     <div id="footer">
-    </div>
+      <div class='bgl'>
+        <div class="bgr">
+          Powered by EnterpriseSiete 1.0
+          </div>
+        </div>
+    </div> 
+    
+    </div><!-- end:#wrapper -->
 </body>
 </html>
