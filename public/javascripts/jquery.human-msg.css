@@ -1,0 +1,20 @@
+div.humanized-message{
+	position: absolute;
+	text-align: center;
+	width: 70%;
+	min-height: 20px;
+	_height: 20px;
+	background: #000;
+	opacity: 0.8;		
+	-moz-opacity: 0.8; 
+	filter:alpha(opacity=80); 
+	color: #fff;
+	z-index: 100000;
+	padding: 20px;
+	font-size: 30px;
+	visibility: hidden;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}

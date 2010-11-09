@@ -2,7 +2,7 @@ development:
   adapter: mysql2
   database: enterprise_site_development
   username: root
-  password: ""
+  password: "123456"
   pool: 5
   encoding: utf8
 
@@ -10,7 +10,7 @@ development:
   adapter: mysql2
   database: enterprise_site_test
   username: root
-  password: ""
+  password: "123456"
   pool: 5
   encoding: utf8
 

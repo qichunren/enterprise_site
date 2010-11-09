@@ -1,0 +1,2 @@
+module Syspanel::HomeHelper
+end

@@ -10,7 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101108162839) do
+ActiveRecord::Schema.define(:version => 20101109042359) do
+
+  create_table "admins", :force => true do |t|
+    t.string   "login",               :limit => 200,                    :null => false
+    t.string   "email",               :limit => 200
+    t.string   "crypted_password",    :limit => 200,                    :null => false
+    t.string   "password_salt",       :limit => 200,                    :null => false
+    t.string   "persistence_token",   :limit => 200,                    :null => false
+    t.string   "single_access_token", :limit => 200,                    :null => false
+    t.integer  "dept",                :limit => 2,                      :null => false
+    t.boolean  "super_admin",                        :default => false
+    t.datetime "last_login_at"
+    t.string   "last_login_ip"
+    t.datetime "last_change_at"
+    t.integer  "login_count",                        :default => 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admins", ["last_login_at"], :name => "index_admins_on_last_login_at"
+  add_index "admins", ["login"], :name => "index_admins_on_login"
+  add_index "admins", ["persistence_token"], :name => "index_admins_on_persistence_token"
 
   create_table "attachments", :force => true do |t|
     t.string   "name",                               :null => false

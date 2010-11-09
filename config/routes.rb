@@ -1,11 +1,13 @@
+# coding: utf-8 
 EnterpriseSite::Application.routes.draw do
+  
+  get "syspanel/home/index" => "syspanel/home#index"
+
   resources :feedbacks
 
   resources :attachments
 
   resources :site_settings
-
-  devise_for :users
 
   resources :categories
 
@@ -14,6 +16,8 @@ EnterpriseSite::Application.routes.draw do
   resources :products
 
   resources :notices
+  
+  resource :admin_session # 系统登录
 
   root :to => "home#index"
 
