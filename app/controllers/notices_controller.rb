@@ -2,7 +2,7 @@ class NoticesController < ApplicationController
   
   # GET /notices
   def index
-    @notices = Notice.all
+    @notices = Notice.published.paginate :per_page => 20, :page => params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
