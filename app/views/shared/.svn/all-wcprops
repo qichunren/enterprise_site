@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/9jsc/!svn/ver/217/business3/business3/app/views/shared
+END
+_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/9jsc/!svn/ver/217/business3/business3/app/views/shared/_header.html.erb
+END
+_google_analytics_code.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/9jsc/!svn/ver/136/business3/business3/app/views/shared/_google_analytics_code.html.erb
+END
+_footer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/9jsc/!svn/ver/140/business3/business3/app/views/shared/_footer.html.erb
+END

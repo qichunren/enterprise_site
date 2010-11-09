@@ -1,0 +1,8 @@
+company:
+  name: "上海九骏收藏有限公司"
+  short_name: "九骏收藏"
+app:
+  name: "九骏收藏后台业务系统"
+  version: "0.0.1"
+  front_domain: "www.9jsc.com"
+

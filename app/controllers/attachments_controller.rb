@@ -1,3 +1,4 @@
+# coding: utf-8
 class AttachmentsController < ApplicationController
   # GET /attachments
   # GET /attachments.xml

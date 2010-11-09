@@ -1,1 +1,28 @@
-<%= yield %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title><%= yield(:title).blank? ? "后台管理" : yield(:title) %></title>    
+    <%= yield(:description)%><%= yield(:keywords)%> 
+    <%= stylesheet_link_tag 'syspanel', 'flick/jquery-ui-1.8.5.custom' %>
+    <%= javascript_include_tag :defaults, "jquery.ui.datepicker-zh-CN" %>
+    <%= yield :html_head %>
+    <%= csrf_meta_tag %>
+    <%# must have this tag, or it wil raise ActionController::InvalidAuthenticityToken error %>
+  </head>
+  <body>
+    <div class="wrap">
+        <%= render 'shared/header' %>
+        <div class='common'>
+          <%= yield :left_menu %>
+          <div class="content">
+            <%= show_flash_messages %>
+            <%= yield %>
+          </div>
+          <div class="cb"></div>
+        </div>
+        <%= render 'shared/footer' %>
+    </div>
+  </body>
+</html>

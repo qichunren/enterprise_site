@@ -4,20 +4,25 @@ EnterpriseSite::Application.routes.draw do
   get "syspanel/home/index" => "syspanel/home#index"
 
   resources :feedbacks
+  
+  resources :notices, :only => [:index, :show]
 
-  resources :attachments
-
-  resources :site_settings
+  resources :attachments, :only => [:index, :show]
 
   resources :categories
 
-  resources :pages
-
-  resources :products
-
-  resources :notices
+  resources :products, :only => [:index, :show]
   
-  resource :admin_session # 系统登录
+  resource :admin_session # 系统登录   
+  
+  namespace :syspanel do
+    resources :feedbacks
+    resources :attachments
+    resources :site_settings 
+    resources :pages
+    resources :notices  
+    resources :products
+  end
 
   root :to => "home#index"
 

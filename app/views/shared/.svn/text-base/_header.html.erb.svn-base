@@ -1,0 +1,32 @@
+<div class="header">
+  
+  <div class="logo"><%= image_tag "logo.gif", :title => Settings.app.name %></div>
+  
+  <ul class="site_nav">
+    <li class="message">系统消息：您有<span class="c_y pd_r_l"><%= unread_messages_count_for(current_admin) %></span>条短信息</li>
+    <li class="admin_info">
+    <span><%= show_welcome_info_at_top_right %></span><%= link_to "", admin_session_path, :method => :delete, :confirm => "你要退出当前系统？", :class => "exit" %>
+    </li>
+  </ul>
+  
+  <ul class="menubox">
+    <li class="none"><!--用来控制有宽度，请勿删除--> </li>
+    <li <%= "class='on'" if app_module == "customer" %> ><%= link_to "客户管理", customer_users_path %></li>
+    <li <%= "class='on'" if app_module == "contract" %> ><%= link_to "合同管理", contract_contracts_path %></li>
+    <li <%= "class='on'" if app_module == "auction" %> ><%= link_to "拍品管理", auction_topics_path %></li>
+
+    <li <%= "class='on'" if app_module == "order" %> ><a href="#">交易管理</a></li>
+    
+    <li <%= "class='on'" if app_module == "storage" %> ><a href="#">库存管理</a></li>
+    
+    <li <%= "class='on'" if app_module == "settlement" %> ><a href="#">结算管理</a></li>
+    <li <%= "class='on'" if app_module == "transport" %> ><a href="#">物流管理</a></li>    
+
+    <li <%= "class='on'" if app_module == "finance" %> ><a href="#">财务管理</a></li>
+    <li <%= "class='on'" if app_module == "cms" %> ><a href="#">CMS</a></li>
+    <li <%= "class='on'" if app_module == "system" %> ><%= link_to "系统管理", system_admins_path %></li>
+  </ul>
+  
+  <div class="cb"></div>
+  
+</div><!--end:div.header -->
