@@ -1,4 +1,6 @@
-class SiteSetting < ActiveRecord::Base
+class SiteSetting < ActiveRecord::Base 
+  
+  validates :setting_key, :presence => true, :uniqueness => true
 
   class_eval do
     self.all.each do |record|

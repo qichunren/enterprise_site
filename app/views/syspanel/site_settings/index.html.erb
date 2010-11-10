@@ -32,11 +32,11 @@
     <td><%= site_setting.setting_value %></td>
     <td><%= site_setting.remark %></td>
     <td><%= site_setting.value_type %></td>
-    <td align="center"><%= link_to 'Show', [:syspanel, site_setting] %> <%= link_to 'Edit', edit_syspanel_site_setting_path(site_setting) %> <%= link_to 'Destroy', syspanel_site_setting, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="center"><%= link_to 'Show', [:syspanel, site_setting] %> <%= link_to 'Edit', edit_syspanel_site_setting_path(site_setting) %> <%= link_to 'Destroy', [:syspanel, site_setting], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Site setting', new_syspanel_site_setting_path %>
+<%= link_to '参加配置参数', new_syspanel_site_setting_path %>
