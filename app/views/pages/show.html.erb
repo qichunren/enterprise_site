@@ -1,9 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @page.title %>
-</p>
+<h2><%= @page.title %></h2>
 
 <p>
   <b>Keywords:</b>
@@ -16,7 +11,6 @@
 </p>
 
 <p>
-  <b>Body:</b>
   <%= @page.body %>
 </p>
 
@@ -24,17 +18,3 @@
   <b>Url slug:</b>
   <%= @page.url_slug %>
 </p>
-
-<p>
-  <b>Created by:</b>
-  <%= @page.created_by %>
-</p>
-
-<p>
-  <b>Is published:</b>
-  <%= @page.is_published %>
-</p>
-
-
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>

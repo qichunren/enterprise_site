@@ -11,7 +11,7 @@ EnterpriseSite::Application.routes.draw do
 
   resources :attachments, :only => [:index, :show]
   
-  resources :pages, :only => [:show]
+  match 'pages/:url_slug' => 'pages#show'
 
   resources :categories
 
