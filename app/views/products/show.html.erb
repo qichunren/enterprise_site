@@ -1,12 +1,7 @@
-<p id="notice"><%= notice %></p>
+<h2><%= @product.name %></h2>
 
 <p>
-  <b>Name:</b>
-  <%= @product.name %>
-</p>
-
-<p>
-  <b>Category:</b>
+  <b>分类:</b>
   <%= @product.category.name %>
 </p>
 
@@ -21,11 +16,6 @@
 </p>
 
 <p>
-  <b>Click count:</b>
-  <%= @product.click_count %>
-</p>
-
-<p>
   <b>Price:</b>
   <%= @product.price %>
 </p>
@@ -35,16 +25,4 @@
   <%= @product.amount %>
 </p>
 
-<p>
-  <b>Is published:</b>
-  <%= @product.is_published %>
-</p>
 
-<p>
-  <b>Createb by:</b>
-  <%= @product.createb_by %>
-</p>
-
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
