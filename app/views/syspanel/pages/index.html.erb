@@ -1,6 +1,6 @@
-<h1>Listing pages</h1>
+<h2>Listing pages</h2>
 
-<table>
+<table class="list">
   <tr>
     <th>Title</th>
     <th>Keywords</th>
@@ -23,13 +23,13 @@
     <td><%= page.url_slug %></td>
     <td><%= page.created_by %></td>
     <td><%= page.is_published %></td>
-    <td><%= link_to 'Show', page %></td>
-    <td><%= link_to 'Edit', edit_page_path(page) %></td>
-    <td><%= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', [:syspanel, page] %></td>
+    <td><%= link_to 'Edit', edit_syspanel_page_path(page) %></td>
+    <td><%= link_to 'Destroy', [:syspanel, page], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Page', new_page_path %>
+<%= link_to '创建新页面', new_syspanel_page_path %>

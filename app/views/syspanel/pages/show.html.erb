@@ -1,0 +1,35 @@
+<h2>页面</h2>
+<h3><%= @page.title %></h3>
+
+<p>
+  <b>Keywords:</b>
+  <%= @page.keywords %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @page.description %>
+</p>
+
+<p style="border:1px solid #ff9900;">
+  <%= @page.body %>
+</p>
+
+<p>
+  <b>Url slug:</b>
+  <%= @page.url_slug %>
+</p>
+
+<p>
+  <b>Created by:</b>
+  <%= @page.created_by %>
+</p>
+
+<p>
+  <b>Is published:</b>
+  <%= @page.is_published %>
+</p>
+
+
+<%= link_to 'Edit', edit_syspanel_page_path(@page) %> |
+<%= link_to 'Back', syspanel_pages_path %>

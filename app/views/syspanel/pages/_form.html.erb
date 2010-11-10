@@ -1,4 +1,4 @@
-<%= form_for(@page) do |f| %>
+<%= form_for([:syspanel, @page]) do |f| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
@@ -13,33 +13,30 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :style => "width: 400px;" %>
   </div>
   <div class="field">
     <%= f.label :keywords %><br />
-    <%= f.text_field :keywords %>
+    <%= f.text_field :keywords, :style => "width: 400px;" %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_field :description, :style => "width: 400px;" %>
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :style => "width: 450px; height:200px;" %>
   </div>
   <div class="field">
     <%= f.label :url_slug %><br />
     <%= f.text_field :url_slug %>
   </div>
+
   <div class="field">
-    <%= f.label :created_by %><br />
-    <%= f.text_field :created_by %>
-  </div>
-  <div class="field">
-    <%= f.label :is_published %><br />
+    <%= f.label :is_published %>
     <%= f.check_box :is_published %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit %> or <%= link_to '返回', syspanel_pages_path %>
   </div>
 <% end %>

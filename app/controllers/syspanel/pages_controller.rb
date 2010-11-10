@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class Syspanel::PagesController < Syspanel::BaseController
   # GET /pages
   def index
     @pages = Page.all
@@ -34,10 +34,11 @@ class PagesController < ApplicationController
   # POST /pages
   def create
     @page = Page.new(params[:page])
+    @page.created_by = current_admin.login
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to(@page, :notice => 'Page was successfully created.') }
+        format.html { redirect_to([:syspanel, @page], :notice => 'Page was successfully created.') }
       else
         format.html { render :action => "new" }
       end
@@ -50,7 +51,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
-        format.html { redirect_to(@page, :notice => 'Page was successfully updated.') }
+        format.html { redirect_to([:syspanel, @page], :notice => 'Page was successfully updated.') }
       else
         format.html { render :action => "edit" }
       end
@@ -63,7 +64,7 @@ class PagesController < ApplicationController
     @page.destroy
 
     respond_to do |format|
-      format.html { redirect_to(pages_url) }
+      format.html { redirect_to(syspanel_pages_url) }
     end
   end
 end
