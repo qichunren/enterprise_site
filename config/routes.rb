@@ -3,7 +3,9 @@ EnterpriseSite::Application.routes.draw do
   
   get "syspanel/home/index" => "syspanel/home#index"
 
-  resources :feedbacks
+  resources :feedbacks, :only => [:index, :new, :create]
+  
+  get "contract-us" => "feedbacks#new"
   
   resources :notices, :only => [:index, :show]
 
