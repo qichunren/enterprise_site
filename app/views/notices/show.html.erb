@@ -1,23 +1,10 @@
-<p id="notice"><%= notice %></p>
+<h2><%= @notice.title %></h2>
 
 <p>
-  <b>Title:</b>
-  <%= @notice.title %>
-</p>
-
-<p>
-  <b>Body:</b>
   <%= @notice.body %>
 </p>
 
-<p>
-  <b>Click count:</b>
-  <%= @notice.click_count %>
-</p>
 
-
-
-<p>
-  <b>Created by:</b>
-  <%= @notice.created_by %>
-</p>
+<div>
+  <strong><%= @notice.created_by %></strong> 发布于 <%= l @notice.created_at, :format => :long %>
+</div>

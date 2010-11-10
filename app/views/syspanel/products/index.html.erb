@@ -5,32 +5,27 @@
     <th>Name</th>
     <th>Category</th>
     <th>Product no</th>
-    <th>Description</th>
     <th>Click count</th>
+    <th>Picture</th>
     <th>Price</th>
     <th>Amount</th>
     <th>Is published</th>
     <th>Createb by</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>操作</th>
   </tr>
 
 <% @products.each do |product| %>
   <tr>
     <td><%= product.name %></td>
-    <td><%= product.category_id %></td>
+    <td><%= product.category.name %></td>
     <td><%= product.product_no %></td>
-    <td><%= product.description %></td>
     <td><%= product.click_count %></td>
     <td><%= image_tag product.avatar.url(:thumb) %></td>
     <td><%= product.price %></td>
     <td><%= product.amount %></td>
     <td><%= product.is_published %></td>
     <td><%= product.createb_by %></td>
-    <td><%= link_to 'Show', [:syspanel, product] %></td>
-    <td><%= link_to 'Edit', edit_syspanel_product_path(product) %></td>
-    <td><%= link_to 'Destroy', [:syspanel, product], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="center"><%= link_to 'Show', [:syspanel, product] %> － <%= link_to 'Edit', edit_syspanel_product_path(product) %> － <%= link_to 'Destroy', [:syspanel, product], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

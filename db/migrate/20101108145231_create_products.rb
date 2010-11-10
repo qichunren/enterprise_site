@@ -9,7 +9,7 @@ class CreateProducts < ActiveRecord::Migration
       t.decimal :price
       t.integer :amount
       t.boolean :is_published, :default => true
-      t.string :createb_by
+      t.string :created_by
 
       t.timestamps
     end

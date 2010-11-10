@@ -1,27 +1,12 @@
-<h1>Listing notices</h1>
+<h2>Listing notices</h2>
+                       
+<div id="notices">
+       <ul>
+        <% @notices.each do |notice| %>
+               <li><%= link_to notice.title, notice, :title => notice.title %></li>
+        <% end %>
+       </ul>
+  
+  </div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Click count</th>
-    <th>Is published</th>
-    <th>Created by</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @notices.each do |notice| %>
-  <tr>
-    <td><%= notice.title %></td>
-    <td><%= notice.body %></td>
-    <td><%= notice.click_count %></td>
-    <td><%= notice.is_published %></td>
-    <td><%= notice.created_by %></td>
-    <td><%= link_to 'Show', notice %></td>
-   
-  </tr>
-<% end %>
-</table>
 <%= will_paginate @notices %>

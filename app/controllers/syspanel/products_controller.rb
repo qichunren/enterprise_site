@@ -34,7 +34,8 @@ class Syspanel::ProductsController < Syspanel::BaseController
 
   # POST /products
   def create
-    @product = Product.new(params[:product])
+    @product = Product.new(params[:product]) 
+    @product.created_by = current_admin.login
 
     respond_to do |format|
       if @product.save

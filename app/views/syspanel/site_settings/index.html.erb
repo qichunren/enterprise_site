@@ -1,19 +1,6 @@
 <h2>Listing site_settings</h2>  
 
-<div class="tabs" id="">
-  <ul>
-      <li><a onclick="showTab('info'); this.blur(); return false;" id="tab-info" class="selected" href="/projects/my-wiki/settings/info">网站配置</a></li>
-      <li><a onclick="showTab('modules'); this.blur(); return false;" id="tab-modules" href="/projects/my-wiki/settings/modules">产品分类</a></li>
-      <li><a onclick="showTab('members'); this.blur(); return false;" id="tab-members" href="/projects/my-wiki/settings/members">成员</a></li>
-      <li><a onclick="showTab('versions'); this.blur(); return false;" id="tab-versions" href="/projects/my-wiki/settings/versions">版本</a></li>
-      <li><a onclick="showTab('wiki'); this.blur(); return false;" id="tab-wiki" href="/projects/my-wiki/settings/wiki">Wiki</a></li>
-      <li><a onclick="showTab('boards'); this.blur(); return false;" id="tab-boards" href="/projects/my-wiki/settings/boards">讨论区</a></li>
-    </ul>
-  <div style="display: none;" class="tabs-buttons">
-  	<button onclick="moveTabLeft(this);" class="tab-left"></button>
-  	<button onclick="moveTabRight(this);" class="tab-right"></button>
-  </div>
-</div>
+<%= render :partial => "/syspanel/shared/setting_tab" %>
 
 <table class="list">
   <tr>

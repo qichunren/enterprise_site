@@ -16,7 +16,8 @@ EnterpriseSite::Application.routes.draw do
   resource :admin_session # 系统登录   
   
   namespace :syspanel do
-    resources :feedbacks
+    resources :feedbacks    
+    resources :categories
     resources :attachments
     resources :site_settings 
     resources :pages

@@ -1,7 +1,7 @@
 <% content_for :sidebar do %>
   <ul>   
     <% @latest_notices.each do |notice| %>
-      <li><%= notice.title %></li>
+      <li><%= link_to notice.title, notice, :title => notice.title %></li>
     <% end %>
     </ul>
 <% end %> 

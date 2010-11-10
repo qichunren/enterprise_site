@@ -12,6 +12,7 @@ class NoticesController < ApplicationController
   # GET /notices/1
   def show
     @notice = Notice.find(params[:id])
+    @notice.read!
 
     respond_to do |format|
       format.html # show.html.erb

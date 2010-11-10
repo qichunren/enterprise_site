@@ -14,7 +14,7 @@
   <b>Product no:</b>
   <%= @product.product_no %>
 </p>
-<%= image_tag @product.avatar.url %>
+<%= image_tag @product.avatar.url(:medium) %>
 <p>
   <b>Description:</b>
   <%= @product.description %>
@@ -46,5 +46,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Edit', edit_syspanel_product_path(@product) %> |
+<%= link_to 'Back', syspanel_products_path %>
