@@ -1,4 +1,5 @@
-class SiteSettingsController < ApplicationController
+# encoding: utf-8
+class Syspanel::SiteSettingsController < Syspanel::BaseController
   # GET /site_settings
   # GET /site_settings.xml
   def index

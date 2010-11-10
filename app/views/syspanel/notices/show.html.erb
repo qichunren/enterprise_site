@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Title:</b>
   <%= @notice.title %>
@@ -26,5 +24,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_notice_path([:syspanel, @notice]) %> |
+<%= link_to 'Edit', edit_syspanel_notice_path(@notice) %> |
 <%= link_to 'Back', syspanel_notices_path %>

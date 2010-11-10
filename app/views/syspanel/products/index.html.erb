@@ -1,6 +1,6 @@
-<h1>Listing products</h1>
+<h2>Listing products</h2>
 
-<table>
+<table class="list">
   <tr>
     <th>Name</th>
     <th>Category</th>
@@ -28,9 +28,9 @@
     <td><%= product.amount %></td>
     <td><%= product.is_published %></td>
     <td><%= product.createb_by %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', [:syspanel, product] %></td>
+    <td><%= link_to 'Edit', edit_syspanel_product_path(product) %></td>
+    <td><%= link_to 'Destroy', [:syspanel, product], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

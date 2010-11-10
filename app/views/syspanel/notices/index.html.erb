@@ -1,27 +1,25 @@
-<h1>Listing notices</h1>
+<h2>Listing notices</h2>
 
-<table>
+<table class="list">  
+  <thead>
   <tr>
     <th>Title</th>
-    <th>Body</th>
     <th>Click count</th>
     <th>Is published</th>
     <th>Created by</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <th colspan='3'></th>
+  </tr> 
+  </thead>
 
 <% @notices.each do |notice| %>
   <tr>
-    <td><%= notice.title %></td>
-    <td><%= notice.body %></td>
-    <td><%= notice.click_count %></td>
-    <td><%= notice.is_published %></td>
-    <td><%= notice.created_by %></td>
-    <td><%= link_to 'Show', notice %></td>
-    <td><%= link_to 'Edit', edit_notice_path(notice) %></td>
-    <td><%= link_to 'Destroy', notice, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td width="300"><%= notice.title %></td>
+    <td align="center"><%= notice.click_count %></td>
+    <td align="center"><%= notice.is_published %></td>
+    <td align="center"><%= notice.created_by %></td>
+    <td align="center"><%= link_to 'Show', [:syspanel, notice] %>
+    <%= link_to 'Edit', edit_syspanel_notice_path(notice) %>
+    <%= link_to 'Destroy', [:syspanel, notice], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

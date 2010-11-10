@@ -1,0 +1,37 @@
+<%= form_for([:syspanel, @site_setting]) do |f| %>
+  <% if @site_setting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@site_setting.errors.count, "error") %> prohibited this site_setting from being saved:</h2>
+
+      <ul>
+      <% @site_setting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :setting_key %><br />
+    <%= f.text_field :setting_key %>
+  </div>
+  <div class="field">
+    <%= f.label :setting_value %><br />
+    <%= f.text_field :setting_value %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br />
+    <%= f.text_field :remark %>
+  </div>
+  <div class="field">
+    <%= f.label :value_type %><br />
+    <%= f.text_field :value_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,4 @@
-<div class="header">
+<div id="header">
   
   <div class="logo"><%= image_tag "logo.gif", :title => "后台管理" %></div>
   
@@ -11,11 +11,13 @@
   
   <ul class="menubox">
     <li class="none"><!--用来控制有宽度，请勿删除--> </li>
-    <li <%= "class='on'" if app_module == "notices" %> ><%= link_to "新闻管理", syspanel_notices_path %></li>
-    <li <%= "class='on'" if app_module == "products" %> ><%= link_to "产品管理", syspanel_products_path %></li>
+    <li ><%= link_to "新闻管理", syspanel_notices_path %></li>
+    <li ><%= link_to "产品管理", syspanel_products_path %></li>  
+    <li ><%= link_to "客户留言", syspanel_feedbacks_path %></li>
+    <li ><%= link_to "网站设置", syspanel_site_settings_path %></li>
 
   </ul>
   
   <div class="cb"></div>
   
-</div><!--end:div.header -->
+</div><!--end:#header -->

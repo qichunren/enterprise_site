@@ -61,8 +61,8 @@ html > body #content {
 
 /* line 62, ../../../app/stylesheets/application.scss */
 #sidebar {
-  width: 20%;
-  float: right;
+  width: 240px;
+  float: left;
 }
 
 /* line 67, ../../../app/stylesheets/application.scss */
@@ -136,6 +136,6 @@ a img {
 }
 
 /* line 99, ../../../app/stylesheets/application.scss */
-#login-form input#username, #login-form input#password {
+#login-form input#admin_session_login, #login-form input#admin_session_password {
   width: 300px;
 }

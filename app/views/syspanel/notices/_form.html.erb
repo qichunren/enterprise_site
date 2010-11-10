@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :style => "width:400px;" %>
   </div>
   <div class="field">
     <%= f.label :body %><br />
@@ -26,6 +26,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit %> or <%= link_to 'Back', syspanel_notices_path %>
   </div>
 <% end %>

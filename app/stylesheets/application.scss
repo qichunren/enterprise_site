@@ -33,12 +33,12 @@ body {
 }                 
 
 #nav li {
-float:left;
-list-style-type:none;
-margin:0 2px 0 0;
-padding:0;
-white-space:nowrap;
-line-height: 24px;
+  float:left;
+  list-style-type:none;
+  margin:0 2px 0 0;
+  padding:0;
+  white-space:nowrap;
+  line-height: 24px; 
 }                  
 
 #nav li a {
@@ -60,8 +60,8 @@ html > body #content {
 }
 
 #sidebar {
-  width: 20%; 
-  float: right;
+  width: $container_width / 4; 
+  float: left;
 }
 
 #sidebar .wrapper {
@@ -96,4 +96,4 @@ a img{ border: 0; }
 #login-form table {margin-top:5em; padding:1em; margin-left: auto; margin-right: auto; border: 2px solid #FDBF3B; background-color:#FFEBC1; }
 #login-form table td {padding: 6px;}
 #login-form label {font-weight: bold;}
-#login-form input#username, #login-form input#password { width: 300px; }
+#login-form input#admin_session_login, #login-form input#admin_session_password { width: 300px; }
