@@ -1,38 +1,18 @@
-<h1>Listing products</h1>
+<h2>Listing products</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Category</th>
-    <th>Product no</th>
-    <th>Description</th>
-    <th>Click count</th>
-    <th>Price</th>
-    <th>Amount</th>
-    <th>Is published</th>
-    <th>Createb by</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="products">
+  <ul>
+<% @products.each do |product| %> 
+    <li>
+      <h3><%= link_to product.name, product, :title => product.name %></h3>
+      <div>
+        <%= image_tag product.avatar.url(:thumb) %>
+      </div>
+    </li>                         
+    <% end %>
+  </ul>
+</div>
 
-<% @products.each do |product| %>
-  <tr>
-    <td><%= product.name %></td>
-    <td><%= product.category_id %></td>
-    <td><%= product.product_no %></td>
-    <td><%= product.description %></td>
-    <td><%= product.click_count %></td>
-    <td><%= image_tag product.avatar.url(:thumb) %></td>
-    <td><%= product.price %></td>
-    <td><%= product.amount %></td>
-    <td><%= product.is_published %></td>
-    <td><%= product.createb_by %></td>
-    <td><%= link_to 'Show', product %></td>
-   
-  </tr>
-<% end %>
-</table>
 <%= will_paginate @products %> 
 
 

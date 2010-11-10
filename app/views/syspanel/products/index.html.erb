@@ -24,7 +24,7 @@
     <td><%= product.price %></td>
     <td><%= product.amount %></td>
     <td><%= product.is_published %></td>
-    <td><%= product.createb_by %></td>
+    <td><%= product.created_by %></td>
     <td align="center"><%= link_to 'Show', [:syspanel, product] %> － <%= link_to 'Edit', edit_syspanel_product_path(product) %> － <%= link_to 'Destroy', [:syspanel, product], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
