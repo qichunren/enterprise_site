@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h2><%= @news.title %></h2>
+
+
+<p>
+  <%= @news.body %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_syspanel_news_path(@news) %> |
+<%= link_to 'Back', syspanel_news_index_path %>

@@ -1,11 +1,7 @@
 # coding: utf-8 
 EnterpriseSite::Application.routes.draw do
   
-  resources :news
-
-  resources :navmenus
-
-  get "syspanel/home/index" => "syspanel/home#index"
+  resources :news, :only => [:index, :show]
 
   resources :feedbacks, :only => [:index, :new, :create]
   
@@ -22,6 +18,8 @@ EnterpriseSite::Application.routes.draw do
   resources :products, :only => [:index, :show]
   
   resource :admin_session # 系统登录   
+
+  get "syspanel/home/index" => "syspanel/home#index"  
   
   namespace :syspanel do
     resources :feedbacks    
@@ -29,8 +27,10 @@ EnterpriseSite::Application.routes.draw do
     resources :attachments
     resources :site_settings 
     resources :pages
+    resources :navmenus, :except => [:show]
     resources :notices  
     resources :products
+    resources :news
   end
 
   root :to => "home#index"

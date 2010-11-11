@@ -6,9 +6,7 @@
     <th>Body</th>
     <th>Click count</th>
     <th>Created by</th>
-    <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
 
 <% @news.each do |news| %>
@@ -17,13 +15,9 @@
     <td><%= news.body %></td>
     <td><%= news.click_count %></td>
     <td><%= news.created_by %></td>
-    <td><%= link_to 'Show', news %></td>
-    <td><%= link_to 'Edit', edit_news_path(news) %></td>
-    <td><%= link_to 'Destroy', news, :confirm => 'Are you sure?', :method => :delete %></td>
+
   </tr>
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New News', new_news_path %>
+<%= will_paginate @news %>

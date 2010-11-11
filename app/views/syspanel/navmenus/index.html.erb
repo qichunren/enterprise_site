@@ -1,4 +1,4 @@
-<h1>Listing navmenus</h1>
+<h2>Listing navmenus</h2>
 
 <table>
   <tr>
@@ -21,13 +21,12 @@
     <td><%= navmenu.position %></td>
     <td><%= navmenu.is_display %></td>
     <td><%= navmenu.open_in_new_window %></td>
-    <td><%= link_to 'Show', navmenu %></td>
-    <td><%= link_to 'Edit', edit_navmenu_path(navmenu) %></td>
-    <td><%= link_to 'Destroy', navmenu, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Edit', edit_syspanel_navmenu_path(navmenu) %></td>
+    <td><%= link_to 'Destroy', [:syspanel, navmenu], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Navmenu', new_navmenu_path %>
+<%= link_to 'New Navmenu', new_syspanel_navmenu_path %>

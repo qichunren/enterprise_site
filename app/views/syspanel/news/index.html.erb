@@ -1,0 +1,26 @@
+<h2>Listing news</h2>
+
+<table>
+  <tr>
+    <th>News title</th>
+    <th>Position</th>
+    <th>Is display</th>
+    <th>Open in new window</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @news.each do |news| %>
+  <tr>
+    <td><%= news.title %></td>
+    <td><%= link_to 'Show', [:syspanel, news] %></td>
+    <td><%= link_to 'Edit', edit_syspanel_news_path(news) %></td>
+    <td><%= link_to 'Destroy', [:syspanel, news], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Post a news', new_syspanel_news_path %>

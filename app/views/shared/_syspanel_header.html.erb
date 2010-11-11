@@ -1,17 +1,20 @@
 <div id="header">
   
   <div class="logo"><%= image_tag "logo.gif", :title => "后台管理" %></div>
-  
+
   <ul class="site_nav">
-    <li class="message">系统消息：您有<span class="c_y pd_r_l"><%= 1 %></span>条短信息</li>
+    <li class="message">
+      系统消息：您有<span class="c_y pd_r_l"><%= 1 %></span>条短信息</li>
     <li class="admin_info">
-    <span><%= show_welcome_info_at_top_right %></span><%= link_to "", admin_session_path, :method => :delete, :confirm => "你要退出当前系统？", :class => "exit" %>
+    <span><%= show_welcome_info_at_top_right %></span>
+    <%= link_to "", admin_session_path, :method => :delete, :confirm => "你要退出当前系统？", :class => "exit" %>
     </li>
   </ul>
   
   <ul class="menubox">
     <li class="none"><!--用来控制有宽度，请勿删除--> </li>
-    <li ><%= link_to "新闻管理", syspanel_notices_path %></li>
+    <li ><%= link_to "新闻管理", syspanel_news_index_path %></li>
+    <li ><%= link_to "公告管理", syspanel_notices_path %></li>
     <li ><%= link_to "产品管理", syspanel_products_path %></li>  
     <li ><%= link_to "客户留言", syspanel_feedbacks_path %></li>
     <li ><%= link_to "页面管理", syspanel_pages_path %></li>

@@ -1,4 +1,4 @@
-<%= form_for(@navmenu) do |f| %>
+<%= form_for([:syspanel, @navmenu]) do |f| %>
   <% if @navmenu.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@navmenu.errors.count, "error") %> prohibited this navmenu from being saved:</h2>
@@ -36,6 +36,6 @@
     <%= f.check_box :open_in_new_window %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit %> or <%= link_to 'Back', syspanel_navmenus_path %>
   </div>
 <% end %>
