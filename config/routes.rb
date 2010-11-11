@@ -9,7 +9,6 @@ EnterpriseSite::Application.routes.draw do
   
   resources :notices, :only => [:index, :show]
 
-  resources :attachments, :only => [:index, :show]
   
   match 'pages/:url_slug' => 'pages#show'
 

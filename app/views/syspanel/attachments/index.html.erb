@@ -1,4 +1,4 @@
-<h1>Listing attachments</h1>
+<h2>Listing attachments</h2>
 
 <table>
   <tr>
@@ -23,13 +23,13 @@
     <td><%= attachment.attach_content_type %></td>
     <td><%= attachment.attach_file_size %></td>
     <td><%= attachment.attach_updated_at %></td>
-    <td><%= link_to 'Show', attachment %></td>
-    <td><%= link_to 'Edit', edit_attachment_path(attachment) %></td>
-    <td><%= link_to 'Destroy', attachment, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', [:syspanel, attachment] %></td>
+    <td><%= link_to 'Edit', edit_syspanel_attachment_path(attachment) %></td>
+    <td><%= link_to 'Destroy', [:syspanel, attachment], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Attachment', new_attachment_path %>
+<%= link_to 'New Attachment', new_syspanel_attachment_path %>
