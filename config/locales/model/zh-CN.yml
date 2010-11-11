@@ -6,7 +6,8 @@
       feedback: "留言"     
       product: "产品"
       notice: "公告" 
-      news: "新闻"
+      news: "新闻" 
+      site_setting: "配置参数"
       
     attributes:
       admin:

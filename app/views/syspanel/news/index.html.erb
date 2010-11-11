@@ -1,4 +1,4 @@
-<h2>Listing news</h2>
+<h2><%= News.model_name.human %></h2>
 
 <table>
   <tr>
@@ -23,4 +23,4 @@
 
 <br />
 
-<%= link_to 'Post a news', new_syspanel_news_path %>
+<%= link_to t(:post_a_news, :default => "Post a news"), new_syspanel_news_path %>

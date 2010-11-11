@@ -1,5 +1,20 @@
-'zh-CN':
+"zh-CN":
+  new_news: "发布新闻"
+  new_attachment: "上传文件"
+  new_notice: "发布公告"
+  new_product: "发布产品"
+  new_page: "创建新页面" 
+  new_site_setting: "添加配置参数"
+  
+  
+  label_back: "返回"
+  
   helpers:
     submit:
       create: "新建 {{model}}"
-      update: "保存 {{model}}"
+      update: "保存 {{model}}"     
+      
+      
+      
+      
+  
