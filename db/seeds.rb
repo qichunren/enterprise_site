@@ -7,9 +7,41 @@ super_admin = Admin.create(
                              :password => "admin888",
                              :password_confirmation => "admin888",
                              :dept => 0,
-                             :super_admin => true ) 
+                             :super_admin => true )
+
+super_admin = Admin.create(
+                            :login => "davidcao",
+                            :email => "whyruby@gmail.com",
+                            :password => "davidcao888",
+                            :password_confirmation => "davidcao888",
+                            :dept => 1,
+                            :super_admin => false ) 
+                            
 notice_1 = Notice.create(:title => "公司网站正式开通了", :body => "公司网站正式开通了, 欢迎访问, 并留下你的宝贵意见.", :created_by => super_admin.login)
 notice_2 = Notice.create(:title => "好消息，公司新产品上市了", :body => "公司新产品上市了, 欢迎选购.", :created_by => super_admin.login)         
+
+Navmenu.create!([
+  {
+    :label => "首页",
+    :url   => "/",
+    :link_title => "首页" }, 
+  
+  { :label => "新闻中心",
+    :url => "/news",
+    :link_title => "新闻中心",
+    :position => 1 },
+     
+  { :label => "产品中心",
+    :url => "/products",
+    :link_title => "联系我们",
+    :position => 2 },
+    
+  { :label => "联系我们",
+    :url => "/contract-us",
+    :link_title => "联系我们",
+    :position => 3 }    
+    ])
+
 # All categories  start
 
 root_category = Category.create(:name => "全站分类")

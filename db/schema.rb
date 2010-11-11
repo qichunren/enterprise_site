@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101109042359) do
+ActiveRecord::Schema.define(:version => 20101111112445) do
 
   create_table "admins", :force => true do |t|
     t.string   "login",               :limit => 200,                    :null => false
@@ -67,6 +67,26 @@ ActiveRecord::Schema.define(:version => 20101109042359) do
     t.text     "replied_content"
     t.datetime "replied_at"
     t.string   "replied_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "navmenus", :force => true do |t|
+    t.string   "label",                                 :null => false
+    t.string   "url",                                   :null => false
+    t.string   "link_title",                            :null => false
+    t.integer  "position",           :default => 0,     :null => false
+    t.boolean  "is_display",         :default => true,  :null => false
+    t.boolean  "open_in_new_window", :default => false, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "news", :force => true do |t|
+    t.string   "title",                      :null => false
+    t.text     "body",                       :null => false
+    t.integer  "click_count", :default => 0, :null => false
+    t.string   "created_by",                 :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

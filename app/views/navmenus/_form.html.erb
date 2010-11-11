@@ -1,0 +1,41 @@
+<%= form_for(@navmenu) do |f| %>
+  <% if @navmenu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@navmenu.errors.count, "error") %> prohibited this navmenu from being saved:</h2>
+
+      <ul>
+      <% @navmenu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :label %><br />
+    <%= f.text_field :label %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :link_title %><br />
+    <%= f.text_field :link_title %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :is_display %><br />
+    <%= f.check_box :is_display %>
+  </div>
+  <div class="field">
+    <%= f.label :open_in_new_window %><br />
+    <%= f.check_box :open_in_new_window %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -21,10 +21,9 @@
 
     <div id="nav">
       <ul>
-        <li><%= link_to "首页", root_path %></li> 
-        <li><%= link_to "新闻中心", notices_path %></li> 
-        <li><%= link_to "产品中心", products_path %></li>
-        <li><%= link_to "联系我们", "/contract-us" %></li> 
+        <% Navmenu.availble.all.each do |nav_menu| %>
+        <li><%= link_to nav_menu.label, nav_menu.url, :target => ("_blank" if nav_menu.open_in_new_window?), :title => nav_menu.link_title %></li> 
+        <% end %> 
       </ul>
     </div>
 

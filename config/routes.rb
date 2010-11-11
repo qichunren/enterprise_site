@@ -1,6 +1,10 @@
 # coding: utf-8 
 EnterpriseSite::Application.routes.draw do
   
+  resources :news
+
+  resources :navmenus
+
   get "syspanel/home/index" => "syspanel/home#index"
 
   resources :feedbacks, :only => [:index, :new, :create]
