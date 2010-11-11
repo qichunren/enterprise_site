@@ -3,7 +3,7 @@ class Syspanel::FeedbacksController < Syspanel::BaseController
   # GET /feedbacks
   # GET /feedbacks.xml
   def index
-    @feedbacks = Feedback.all
+    @feedbacks = Feedback.paginate :page => params[:page], :per_page => 20
 
     respond_to do |format|
       format.html # index.html.erb
