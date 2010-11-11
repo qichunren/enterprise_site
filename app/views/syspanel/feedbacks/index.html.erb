@@ -32,12 +32,9 @@
     <td><%= feedback.replied_at %></td>
     <td><%= feedback.replied_by %></td>
     <td><%= link_to 'Show', [:syspanel, feedback] %></td>
-    <td><%= link_to 'Edit', edit_syspanel_feedback_path(feedback) %></td>
+    <td><%= link_to 'Reply', edit_syspanel_feedback_path(feedback) %></td>
     <td><%= link_to 'Destroy', [:syspanel, feedback], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Feedback', new_syspanel_feedback_path %>
+<%= will_paginate @feedbacks %>
