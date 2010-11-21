@@ -1,35 +1,29 @@
-<h2>Listing attachments</h2>
+<h2><%= Attachment.model_name.human %>列表</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Download count</th>
-    <th>Descripton</th>
-    <th>Attach file name</th>
-    <th>Attach content type</th>
-    <th>Attach file size</th>
-    <th>Attach updated at</th>
-    <th></th>
-    <th></th>
-    <th></th>
+<table class="list">
+  <tr>           
+    <th><%= Attachment.model_name.human %>ID</th>
+    <th><%= Attachment.model_name.human %>名称</th>
+    <th>下载次数</th>
+    <th>添加时间</th>
+    <th>文件类型</th>
+    <th>文件大小</th>
+    <th>操作</th>
   </tr>
 
 <% @attachments.each do |attachment| %>
   <tr>
-    <td><%= attachment.name %></td>
-    <td><%= attachment.download_count %></td>
-    <td><%= attachment.descripton %></td>
-    <td><%= attachment.attach_file_name %></td>
+    <td align="center"><%= attachment.id %></td> 
+    <td><%= attachment.name %></td> 
+    <td align="center"><%= attachment.download_count %></td> 
+    <td align="center"><%= attachment.created_at.to_s(:db) %></td> 
     <td><%= attachment.attach_content_type %></td>
     <td><%= attachment.attach_file_size %></td>
-    <td><%= attachment.attach_updated_at %></td>
-    <td><%= link_to 'Show', [:syspanel, attachment] %></td>
-    <td><%= link_to 'Edit', edit_syspanel_attachment_path(attachment) %></td>
-    <td><%= link_to 'Destroy', [:syspanel, attachment], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to '查看', [:syspanel, attachment] %> － <%= link_to '修改', edit_syspanel_attachment_path(attachment) %> － <%= link_to '删除', [:syspanel, attachment], :confirm => '你要删除这个附件?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Attachment', new_syspanel_attachment_path %>
+<%= link_to '添加附件', new_syspanel_attachment_path %>

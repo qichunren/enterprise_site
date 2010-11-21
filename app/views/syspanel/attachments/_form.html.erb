@@ -1,7 +1,7 @@
 <%= form_for([:syspanel, @attachment], :html => { :multipart => true } ) do |f| %>
   <% if @attachment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@attachment.errors.count, "error") %> prohibited this attachment from being saved:</h2>
+      <h2>发生以下错误：</h2>
 
       <ul>
       <% @attachment.errors.full_messages.each do |msg| %>
@@ -24,6 +24,6 @@
     <%= f.file_field :attach %>
   </div>
   <div class="actions">
-    <%= f.submit %> or <%= link_to t(:label_back), syspanel_attachments_path %>
+    <%= f.submit %> - <%= link_to t(:label_back), syspanel_attachments_path %>
   </div>
 <% end %>

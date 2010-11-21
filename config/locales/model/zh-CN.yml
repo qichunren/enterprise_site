@@ -2,7 +2,7 @@
   activerecord:
     models:
       admin: "员工"
-      attachment: "文件"
+      attachment: "附件"
       feedback: "留言"     
       product: "产品"
       notice: "公告" 
@@ -16,7 +16,10 @@
         password_confirmation: "确认密码"
         email: "Email"
         login_count: "登录次数"
-      attachment:
+      attachment:   
+        name: "附件名称"
+        description: "附件说明"
+        attach: "上传"
       notice:
         title: "标题"
         body: "正文"       
