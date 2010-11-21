@@ -49,4 +49,10 @@
         description: "页面描述"  
         body: "内容"
         url_slug: "URL"
-        is_published: "是否发布"
+        is_published: "是否发布" 
+      site_setting:
+        name: "名称"
+        setting_key: "参数key" 
+        setting_value: "参数值"
+        remark: "备注"
+        value_type: "参数类型"

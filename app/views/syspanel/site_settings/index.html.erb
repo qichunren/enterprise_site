@@ -1,15 +1,15 @@
-<h2>Listing site_settings</h2>  
+<h2>网站配置</h2> 
 
 <%= render :partial => "/syspanel/shared/setting_tab" %>
 
 <table class="list">
   <tr>
-    <th>Name</th>
-    <th>Setting key</th>
-    <th>Setting value</th>
-    <th>Remark</th>
-    <th>Value type</th>
-    <th colspan="3"></th>
+    <th>配置名称</th>
+    <th>参数KEY</th>
+    <th>参数值</th>
+    <th>备注</th>
+    <th>值类型</th>
+    <th></th>
   </tr>
 
 <% @site_settings.each do |site_setting| %>
@@ -19,7 +19,7 @@
     <td><%= site_setting.setting_value %></td>
     <td><%= site_setting.remark %></td>
     <td><%= site_setting.value_type %></td>
-    <td align="center"><%= link_to 'Show', [:syspanel, site_setting] %> <%= link_to 'Edit', edit_syspanel_site_setting_path(site_setting) %> <%= link_to 'Destroy', [:syspanel, site_setting], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="center"><%= link_to '修改', edit_syspanel_site_setting_path(site_setting) %> <%= link_to '删除', [:syspanel, site_setting], :confirm => '你要删除?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

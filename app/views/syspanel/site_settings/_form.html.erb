@@ -1,7 +1,7 @@
 <%= form_for([:syspanel, @site_setting], :html => { :class => "tabular"}) do |f| %>
   <% if @site_setting.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@site_setting.errors.count, "error") %> prohibited this site_setting from being saved:</h2>
+      <h2>发生如下错误:</h2>
 
       <ul>
       <% @site_setting.errors.full_messages.each do |msg| %>
@@ -34,6 +34,6 @@
     </p>
   </div>
 
-    <%= f.submit %> or <%= link_to t(:label_back), syspanel_site_settings_path %>
+    <%= f.submit %> - <%= link_to t(:label_back), syspanel_site_settings_path %>
 
 <% end %>
