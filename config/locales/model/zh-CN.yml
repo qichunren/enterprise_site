@@ -40,4 +40,5 @@
         user_name: "称呼"
         phone: "联系电话"
         website: "你的网站/博客"
-        body: "留言内容"      
+        body: "留言内容"    
+        replied_content: "回复"  

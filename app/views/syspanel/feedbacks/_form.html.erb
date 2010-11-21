@@ -1,7 +1,7 @@
 <%= form_for([:syspanel, @feedback]) do |f| %>
   <% if @feedback.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+      <h2>发生以下错误:</h2>
 
       <ul>
       <% @feedback.errors.full_messages.each do |msg| %>
@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_name %><br />
-    <%= f.text_field :user_name %>
+    客户姓名：<strong><%= @feedback.user_name %></strong>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label :email %>: <%= @feedback.email %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
+    <%= f.label :phone %>: <%= @feedback.phone %>
   </div>
   <div class="field">
-    <%= f.label :website %><br />
-    <%= f.text_field :website %>
+    客户网站: <%= @feedback.website %>
   </div>
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    留言内容: <%= @feedback.body %>
+  </div>  
+  
+  <div class="field">
+    <%= f.label :replied_content %>      
+    <%= f.text_area :replied_content %>
   </div>
   <div class="actions">
-    <%= f.submit %> or <%= link_to t(:label_back), feedbacks_path %>
+    <%= f.submit "提交" %> － <%= link_to t(:label_back), syspanel_feedbacks_path %>
   </div>
 <% end %>

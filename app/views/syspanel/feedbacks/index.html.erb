@@ -1,21 +1,13 @@
-<h2>Listing feedbacks</h2>
+<h2><%= Feedback.model_name.human %>列表</h2> 
 
 <table class="list">
   <tr>
-    <th>User name</th>
+    <th>客户名称</th>
     <th>Email</th>
-    <th>Phone</th>
-    <th>User ip</th>
-    <th>Website</th>
-    <th>Body</th>
-    <th>Is read</th>
-    <th>Is public</th>
-    <th>Replied content</th>
-    <th>Replied at</th>
-    <th>Replied by</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>电话</th>
+    <th>客户IP</th>
+    <th>客户网站</th>
+    <th>操作</th>
   </tr>
 
 <% @feedbacks.each do |feedback| %>
@@ -25,15 +17,8 @@
     <td><%= feedback.phone %></td>
     <td><%= feedback.user_ip %></td>
     <td><%= feedback.website %></td>
-    <td><%= feedback.body %></td>
-    <td><%= feedback.is_read %></td>
-    <td><%= feedback.is_public %></td>
-    <td><%= feedback.replied_content %></td>
-    <td><%= feedback.replied_at %></td>
-    <td><%= feedback.replied_by %></td>
-    <td><%= link_to 'Show', [:syspanel, feedback] %></td>
-    <td><%= link_to 'Reply', edit_syspanel_feedback_path(feedback) %></td>
-    <td><%= link_to 'Destroy', [:syspanel, feedback], :confirm => 'Are you sure?', :method => :delete %></td>
+  
+    <td align="center"><%= link_to '详情', [:syspanel, feedback] %> － <%= link_to '回复', edit_syspanel_feedback_path(feedback) %> － <%= link_to '删除', [:syspanel, feedback], :confirm => '你要删除?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

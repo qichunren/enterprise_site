@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>User name:</b>
+  <b>客户姓名:</b>
   <%= @feedback.user_name %>
 </p>
 
@@ -11,50 +11,46 @@
 </p>
 
 <p>
-  <b>Phone:</b>
+  <b>客户电话:</b>
   <%= @feedback.phone %>
 </p>
 
 <p>
-  <b>User ip:</b>
+  <b>客户IP:</b>
   <%= @feedback.user_ip %>
 </p>
 
 <p>
-  <b>Website:</b>
+  <b>客户网站:</b>
   <%= @feedback.website %>
 </p>
 
 <p>
-  <b>Body:</b>
+  <b>留言:</b>
   <%= @feedback.body %>
 </p>
 
-<p>
-  <b>Is read:</b>
-  <%= @feedback.is_read %>
-</p>
 
 <p>
-  <b>Is public:</b>
+  <b>是否显示在前台:</b>
   <%= @feedback.is_public %>
 </p>
 
 <p>
-  <b>Replied content:</b>
+  <b>回复内容:</b>
   <%= @feedback.replied_content %>
 </p>
 
 <p>
-  <b>Replied at:</b>
+  <b>回复时间:</b>
   <%= @feedback.replied_at %>
 </p>
 
 <p>
-  <b>Replied by:</b>
+  <b>回复人:</b>
   <%= @feedback.replied_by %>
 </p>
 
 
-<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
-<%= link_to t(:back), feedbacks_path %>
+<%= link_to '回复', edit_syspanel_feedback_path(@feedback) %> |
+<%= link_to t(:label_back), syspanel_feedbacks_path %>
