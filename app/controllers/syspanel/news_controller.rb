@@ -39,7 +39,7 @@ class Syspanel::NewsController < Syspanel::BaseController
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to([:syspanel, @news], :notice => 'News was successfully created.') }
+        format.html { redirect_to([:syspanel, @news], :notice => '新闻发布成功.') }
       else
         format.html { render :action => "new" }
       end
@@ -52,7 +52,7 @@ class Syspanel::NewsController < Syspanel::BaseController
 
     respond_to do |format|
       if @news.update_attributes(params[:news])
-        format.html { redirect_to([:syspanel, @news], :notice => 'News was successfully updated.') }
+        format.html { redirect_to([:syspanel, @news], :notice => '新闻修改成功.') }
       else
         format.html { render :action => "edit" }
       end

@@ -1,10 +1,10 @@
 <%= form_for([:syspanel, @news]) do |f| %>
   <% if @news.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@navmenu.errors.count, "error") %> prohibited this navmenu from being saved:</h2>
+      <h2>有以下错误：</h2>
 
       <ul>
-      <% @navmenu.errors.full_messages.each do |msg| %>
+      <% @news.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -13,14 +13,14 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :style => "width:450px;" %>
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :style => "width:450px;height:180px;" %>
   </div>
   
   <div class="actions">
-    <%= f.submit %> or <%= link_to t(:label_back), syspanel_news_index_path %>
+    <%= f.submit %> - <%= link_to t(:label_back), syspanel_news_index_path %>
   </div>
 <% end %>

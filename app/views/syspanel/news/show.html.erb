@@ -2,7 +2,6 @@
 
 <h2><%= @news.title %></h2>
 
-
 <p>
   <%= @news.body %>
 </p>
@@ -10,5 +9,5 @@
 
 
 
-<%= link_to 'Edit', edit_syspanel_news_path(@news) %> |
-<%= link_to 'Back', syspanel_news_index_path %>
+<%= link_to '修改', edit_syspanel_news_path(@news) %> |
+<%= link_to '返回', syspanel_news_index_path %>
