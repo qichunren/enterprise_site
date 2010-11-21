@@ -1,25 +1,27 @@
-<h2>Listing notices</h2>
+<h2><%= Notice.model_name.human %>列表</h2> 
 
 <table class="list">  
   <thead>
   <tr>
-    <th>Title</th>
-    <th>Click count</th>
-    <th>Is published</th>
-    <th>Created by</th>
-    <th colspan='3'></th>
+    <th width="90"><%= Notice.model_name.human %>ID</th>
+    <th><%= Notice.model_name.human %>标题</th>
+    <th width="90">浏览次数</th>
+    <th width="90">是否显示</th>
+    <th width="90">发布人</th>
+    <th width="90">操作</th>
   </tr> 
   </thead>
 
 <% @notices.each do |notice| %>
-  <tr>
+  <tr>                                      
+    <td align="center"><%= notice.id %></td>
     <td width="300"><%= notice.title %></td>
     <td align="center"><%= notice.click_count %></td>
-    <td align="center"><%= notice.is_published %></td>
+    <td align="center"><%= notice.is_published? ? "是" : "否" %></td>
     <td align="center"><%= notice.created_by %></td>
-    <td align="center"><%= link_to 'Show', [:syspanel, notice] %>
-    <%= link_to 'Edit', edit_syspanel_notice_path(notice) %>
-    <%= link_to 'Destroy', [:syspanel, notice], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="center"><%= link_to '查看', [:syspanel, notice] %>
+    <%= link_to '修改', edit_syspanel_notice_path(notice) %>
+    <%= link_to '删除', [:syspanel, notice], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

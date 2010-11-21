@@ -19,7 +19,8 @@
       attachment:
       notice:
         title: "标题"
-        body: "正文"   
+        body: "正文"       
+        is_published: "是否显示"
       news:
         title: "标题"
         body: "正文"

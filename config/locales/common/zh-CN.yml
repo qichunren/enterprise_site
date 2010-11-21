@@ -11,8 +11,8 @@
   
   helpers:
     submit:
-      create: "新建 {{model}}"
-      update: "保存 {{model}}"     
+      create: "提交"
+      update: "保存"     
       
       
       

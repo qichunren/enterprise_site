@@ -13,19 +13,18 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title, :style => "width:400px;" %>
+    <%= f.text_field :title, :style => "width:450px;" %>
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :style => "width:450px;height:250px;" %>
   </div>
 
   <div class="field">
-    <%= f.label :is_published %><br />
-    <%= f.check_box :is_published %>
+    <%= f.label :is_published %> <%= f.check_box :is_published %>
   </div>
 
   <div class="actions">
-    <%= f.submit %> or <%= link_to t(:label_back), syspanel_notices_path %>
+    <%= f.submit %> － <%= link_to t(:label_back), syspanel_notices_path %>
   </div>
 <% end %>
