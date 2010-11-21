@@ -26,6 +26,13 @@
         body: "正文"
       product:
         name: "产品名"
+        avatar: "产品图片"
+        category_id: "产品分类"
+        product_no: "产品编号" 
+        description: "产品描述"
+        price: "销售价格"
+        amount: "可售数量"
+        is_published: "是否显示"
       feedback:    
         user_name: "称呼"
         phone: "联系电话"

@@ -1,29 +1,25 @@
-<h2>Listing products</h2>
+<h2><%= Product.model_name.human %>列表</h2>
 
 <table class="list">
   <tr>
-    <th>Name</th>
-    <th>Category</th>
-    <th>Product no</th>
-    <th>Click count</th>
-    <th>Picture</th>
-    <th>Price</th>
-    <th>Amount</th>
-    <th>Is published</th>
-    <th>Createb by</th>
+    <th><%= Product.model_name.human %>ID</th>
+    <th><%= Product.model_name.human %>名称</th>
+    <th><%= Product.model_name.human %>编号</th>
+    <th>浏览次数</th>
+    <th>图片</th>
+    <th>价格</th>
+    <th>发布人</th>
     <th>操作</th>
   </tr>
 
 <% @products.each do |product| %>
   <tr>
+    <td align="center"><%= product.id %></td>
     <td><%= product.name %></td>
-    <td><%= product.category.name %></td>
     <td><%= product.product_no %></td>
     <td><%= product.click_count %></td>
     <td><%= image_tag product.avatar.url(:thumb) %></td>
     <td><%= product.price %></td>
-    <td><%= product.amount %></td>
-    <td><%= product.is_published %></td>
     <td><%= product.created_by %></td>
     <td align="center"><%= link_to 'Show', [:syspanel, product] %> － <%= link_to 'Edit', edit_syspanel_product_path(product) %> － <%= link_to 'Destroy', [:syspanel, product], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -32,4 +28,4 @@
 
 <br />
 
-<%= link_to 'New Product', new_syspanel_product_path %>
+<%= link_to '发布产品', new_syspanel_product_path %>
