@@ -7,7 +7,8 @@
       product: "产品"
       notice: "公告" 
       news: "新闻" 
-      site_setting: "配置参数"
+      site_setting: "配置参数"    
+      page: "页面"
       
     attributes:
       admin:
@@ -41,4 +42,11 @@
         phone: "联系电话"
         website: "你的网站/博客"
         body: "留言内容"    
-        replied_content: "回复"  
+        replied_content: "回复"
+      page:
+        title: "页面标题"  
+        keywords: "页面关键字"
+        description: "页面描述"  
+        body: "内容"
+        url_slug: "URL"
+        is_published: "是否发布"

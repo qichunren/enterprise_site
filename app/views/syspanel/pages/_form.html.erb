@@ -1,8 +1,7 @@
 <%= form_for([:syspanel, @page]) do |f| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
-
+      <h2>发生如下错误:</h2>
       <ul>
       <% @page.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -37,6 +36,6 @@
     <%= f.check_box :is_published %>
   </div>
   <div class="actions">
-    <%= f.submit %> or <%= link_to t(:label_back), syspanel_pages_path %>
+    <%= f.submit %> － <%= link_to t(:label_back), syspanel_pages_path %>
   </div>
 <% end %>

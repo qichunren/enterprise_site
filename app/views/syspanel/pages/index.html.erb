@@ -1,31 +1,23 @@
-<h2>Listing pages</h2>
+<h2><%= Page.model_name.human %></h2>
 
 <table class="list">
-  <tr>
-    <th>Title</th>
-    <th>Keywords</th>
-    <th>Description</th>
-    <th>Body</th>
-    <th>Url slug</th>
-    <th>Created by</th>
-    <th>Is published</th>
-    <th></th>
-    <th></th>
-    <th></th>
+  <tr>             
+    <th>页页ID</th>  
+    <th>页页标题</th>
+    <th>URL</th>
+    <th>添加人</th>
+    <th>是否发布</th>
+    <th>操作</th>
   </tr>
 
 <% @pages.each do |page| %>
   <tr>
+    <td align="center"><%= page.id %></td> 
     <td><%= page.title %></td>
-    <td><%= page.keywords %></td>
-    <td><%= page.description %></td>
-    <td><%= page.body %></td>
     <td><%= page.url_slug %></td>
-    <td><%= page.created_by %></td>
-    <td><%= page.is_published %></td>
-    <td><%= link_to 'Show', [:syspanel, page] %></td>
-    <td><%= link_to 'Edit', edit_syspanel_page_path(page) %></td>
-    <td><%= link_to 'Destroy', [:syspanel, page], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="right"><%= page.created_by %></td>
+    <td><%= page.is_published? ? "是" : "否" %></td>
+    <td align="center"><%= link_to 'Show', [:syspanel, page] %> － <%= link_to 'Edit', edit_syspanel_page_path(page) %> － <%= link_to 'Destroy', [:syspanel, page], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
