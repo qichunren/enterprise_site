@@ -1,7 +1,7 @@
 <%= form_for([:syspanel, @category]) do |f| %>
   <% if @category.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+      <h3>由于以下错误没有保存成功:</h3>
 
       <ul>
       <% @category.errors.full_messages.each do |msg| %>
@@ -20,6 +20,6 @@
     <%= f.select :parent_id, nested_set_options(Category, @category) {|i| "#{'---' * i.level} #{i.name}" } %>
   </div>
   <div class="actions">
-    <%= f.submit %> or <%= link_to t(:label_back), syspanel_categories_path %>
+    <%= f.submit %> － <%= link_to t(:label_back), syspanel_categories_path %>
   </div>
 <% end %>
