@@ -1,21 +1,13 @@
-<h2><%= News.model_name.human %></h2>
+<% title "新闻中心" %>
+
+<h2>新闻中心</h2>
 
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Click count</th>
-    <th>Created by</th>
-
-  </tr>
 
 <% @news.each do |news| %>
   <tr>
-    <td><%= news.title %></td>
-    <td><%= news.body %></td>
-    <td><%= news.click_count %></td>
-    <td><%= news.created_by %></td>
-
+    <td><%= link_to news.title, news, :title => news.title %></td>
+    <td><%= l(news.created_at, :format => :short) %></td>
   </tr>
 <% end %>
 </table>

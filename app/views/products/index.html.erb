@@ -1,8 +1,8 @@
-<h2>Listing products</h2>
+<% title "产品中心" %> 
 
 <div id="products">
   <ul>
-<% @products.each do |product| %> 
+    <% @products.each do |product| %> 
     <li>
       <h3><%= link_to product.name, product, :title => product.name %></h3>
       <div>
@@ -11,7 +11,7 @@
     </li>                         
     <% end %>
   </ul>
-</div>
+</div><!-- end:#products -->
 
 <%= will_paginate @products %> 
 

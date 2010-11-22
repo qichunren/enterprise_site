@@ -5,11 +5,11 @@ class SiteSetting < ActiveRecord::Base
   validates :setting_key, :presence => true, :uniqueness => true
   validates :setting_value, :presence => true
 
-  class_eval do
-    self.all.each do |record|
-      define_method("self." + record.setting_key) do
-        record.setting_value
-      end
-    end
+      
+  class << self
+    def got key
+      find_by_setting_key(key.to_s.to_sym).setting_value rescue ""
+    end          
   end
+  
 end

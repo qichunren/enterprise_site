@@ -1,25 +1,12 @@
-<p id="notice"><%= notice %></p>
+<% title @news.title %>
+<h2><%= @news.title %></h2>
 
 <p>
-  <b>Title:</b>
-  <%= @news.title %>
-</p>
-
-<p>
-  <b>Body:</b>
   <%= @news.body %>
 </p>
 
-<p>
-  <b>Click count:</b>
-  <%= @news.click_count %>
-</p>
 
 <p>
-  <b>Created by:</b>
-  <%= @news.created_by %>
+  <b>浏览次数:</b>
+  <%= @news.click_count %>  <%= @news.created_by %> <%= l(@news.created_at, :format => :long) %>发布
 </p>
-
-
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>

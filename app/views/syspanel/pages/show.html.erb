@@ -2,13 +2,13 @@
 <h3><%= @page.title %></h3>
 
 <p>
-  <b>Keywords:</b>
-  <%= @page.keywords %>
+  页面关键字(head -> meta:keywords):
+  <strong><%= @page.keywords %></strong>
 </p>
 
 <p>
-  <b>Description:</b>
-  <%= @page.description %>
+  页面描述(head -> meta:description):
+  <strong><%= @page.description %></strong>
 </p>
 
 <p style="border:1px solid #ff9900;">
@@ -16,21 +16,21 @@
 </p>
 
 <p>
-  <b>Url slug:</b>
+  <b>页面URL:</b>
   <%= @page.url_slug %>
 </p>
 
 <p>
-  <b>Created by:</b>
+  <b>创建人:</b>
   <%= @page.created_by %>
 </p>
 
 <p>
-  <b>Is published:</b>
-  <%= @page.is_published %>
+  <b>是否显示在前台:</b>
+  <%= @page.is_published? ? "显示" : "不显示" %>
 </p>
 
 
-<%= link_to 'Edit', edit_syspanel_page_path(@page) %> |         
-<%= link_to 'Preview', "/pages/#{@page.url_slug}" %> | 
-<%= link_to 'Back', syspanel_pages_path %>
+<%= link_to '编辑', edit_syspanel_page_path(@page) %> |         
+<%= link_to '预览', "/pages/#{@page.url_slug}" %> | 
+<%= link_to '返回', syspanel_pages_path %>

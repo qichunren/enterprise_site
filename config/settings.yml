@@ -6,3 +6,7 @@ app:
   version: "0.0.1"
   front_domain: "www.9jsc.com"
 
+#TODO dump from table site_setting  
+confog:
+  
+

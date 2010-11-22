@@ -1,8 +1,9 @@
 module ApplicationHelper
-  # set the title for the page
+  # set the title for the page 
+  # TODO in application.html.erb <%= yield(:title) %> How to show default title when there is not title method
   def title(page_title)
     content_for(:title) do
-      "#{page_title} - #{Settings.app.name}"
+      "#{page_title} - #{SiteSetting.got(:company_full_name)}"
     end
   end
   
