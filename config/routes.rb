@@ -12,9 +12,11 @@ EnterpriseSite::Application.routes.draw do
   
   match '/pages/:url_slug' => 'pages#show'
 
-  resources :categories
-
-  resources :products, :only => [:index, :show]
+  resources :products, :only => [:index, :show] do
+    member do 
+      get "category"
+    end
+  end
   
   resource :admin_session # 系统登录   
 

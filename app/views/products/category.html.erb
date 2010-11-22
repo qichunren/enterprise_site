@@ -30,7 +30,7 @@
             <%= link_to category.name, category_product_path(category) %>
             <div>
             <% category.children.each do |category1| %>
-              <em><%= category1.name %></em>
+              <em><%= link_to category1.name, category_product_path(category1) %></em>
             <% end %>
             </div>
           </li>  

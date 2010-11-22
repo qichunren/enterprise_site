@@ -3,4 +3,9 @@ class Category < ActiveRecord::Base
   has_many :products 
   
   validates :name, :presence => true
+         
+  # 取产品分类级别
+  def self.category_level
+    find(:first, :order => "depth DESC", :select => "depth").depth
+  end
 end
