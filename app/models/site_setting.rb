@@ -1,5 +1,7 @@
 class SiteSetting < ActiveRecord::Base
   
+  VALUE_TYPES = ["string", "integer", "float", "text"]
+  
    
   validates :name, :presence => true
   validates :setting_key, :presence => true, :uniqueness => true

@@ -16,24 +16,42 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
     </p>
-      <p>
-    <%= f.label :setting_key %>
-    <%= f.text_field :setting_key %>
-    </p>
-      <p>
-    <%= f.label :setting_value %>
-    <%= f.text_field :setting_value %>
-    </p>
-      <p>
-    <%= f.label :remark %>
-    <%= f.text_field :remark %>
-  </p>
     <p>
-    <%= f.label :value_type %>
-    <%= f.text_field :value_type %>  
+      <%= f.label :setting_key %>
+      <%= f.text_field :setting_key %>
     </p>
+    <p>
+      <%= f.label :value_type %>
+      <% if @site_setting.new_record? %>
+      <%= f.select :value_type, SiteSetting::VALUE_TYPES, {}, :onchange => "change_setting_value_element(this.value);" %>
+      <% else %>
+        <%= f.select :value_type, SiteSetting::VALUE_TYPES, {} %>
+      <% end %>
+    </p>
+
+    <p>
+      <%= f.label :setting_value %> 
+      <% if !@site_setting.new_record? && @site_setting.value_type == "text" %>
+        <%= f.text_area :setting_value %>
+      <% else %>
+        <%= f.text_field :setting_value %>
+      <% end %>
+    </p>
+    <p>
+      <%= f.label :remark %>
+      <%= f.text_field :remark %>
+    </p>
+
   </div>
 
     <%= f.submit %> - <%= link_to t(:label_back), syspanel_site_settings_path %>
 
+<% end %>   
+
+<% if @site_setting.new_record? %>
+<script type="text/javascript">
+  function change_setting_value_element(value_type){
+    // # TODO: when select 'text', I should replace input element with textarea element.
+  }
+</script>
 <% end %>
