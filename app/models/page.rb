@@ -7,4 +7,9 @@ class Page < ActiveRecord::Base
   validates_format_of :url_slug, :with => /^\w+$/
   
   scope :published, :conditions => ["is_published=?", true], :order => "url_slug"
+         
+  # 访问路径
+  def visit_path
+    "/pages/#{self.url_slug}"
+  end
 end

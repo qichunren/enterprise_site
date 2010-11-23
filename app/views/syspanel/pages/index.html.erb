@@ -3,9 +3,9 @@
 
 <table class="list">
   <tr>             
-    <th>页页ID</th>  
+    <th width="90">页页ID</th>  
     <th>页页标题</th>
-    <th>URL</th>
+    <th>访问路径</th>
     <th>添加人</th>
     <th>是否发布</th>
     <th>操作</th>
@@ -15,10 +15,10 @@
   <tr>
     <td align="center"><%= page.id %></td> 
     <td><%= page.title %></td>
-    <td><%= page.url_slug %></td>
+    <td><%= page.visit_path %></td>
     <td align="right"><%= page.created_by %></td>
-    <td><%= page.is_published? ? "是" : "否" %></td>
-    <td align="center"><%= link_to 'Show', [:syspanel, page] %> － <%= link_to 'Edit', edit_syspanel_page_path(page) %> － <%= link_to 'Destroy', [:syspanel, page], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="center"><%= page.is_published? ? "是" : "否" %></td>
+    <td align="center"><%= link_to '详情', [:syspanel, page] %> － <%= link_to '编辑', edit_syspanel_page_path(page) %> － <%= link_to '删除', [:syspanel, page], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

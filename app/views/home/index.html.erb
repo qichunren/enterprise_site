@@ -1,15 +1,35 @@
-<% title "首页" %>
-<% content_for :sidebar do %>
-  <ul>   
-    <% @latest_notices.each do |notice| %>
-      <li><%= link_to notice.title, notice, :title => notice.title %></li>
-    <% end %>
-    </ul>
-<% end %> 
+<% title "首页" %> 
 
-<% @latest_products.each do |product| %>
-  <div class='product'>
-    <h3><%= product.name %><h3>
-      <div><%= product.price %></div> 
+<div id="company_introduce">
+   <div class="wrapper">
+    <h3>公司简介</h3>
+    <%= SiteSetting.got(:company_introduce) %>
+    </div>
+</div>
+          
+<div id="latest_products">
+  <div class="wrapper">
+    <h3>最新产品</h3>
+    <% @latest_products.each do |product| %>
+      <div class='product'>
+        <%= link_to(image_tag(product.avatar.url(:thumb)), product) %>
+        <h4><%= link_to product.name, product %><h4>
+      </div> 
+    <% end %>
   </div>
+</div>
+
+<div id="latest_notices">
+  <div class="wrapper">
+    <h3>公司新闻</h3>
+    <ul>   
+      <% @latest_notices.each do |notice| %>
+        <li><%= link_to notice.title, notice, :title => notice.title %></li>
+      <% end %>
+    </ul>   
+  </div>               
+</div>
+
+<% content_for :sidebar do %>
+
 <% end %>

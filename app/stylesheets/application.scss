@@ -1,5 +1,6 @@
 $background_color: #FFFFFF;
 $container_width: 950px;
+$main_width: 710px;
 $sidebar_width: 230px;
 $header_height: 76px;
 
@@ -36,34 +37,34 @@ white-space:nowrap;
   
 }
 #nav .wrapper{
-
-height:33px;
-line-height:33px;
-margin:0;
-overflow:hidden;
-padding-left:24px;
+  height:33px;
+  line-height:33px;
+  margin:0;
+  overflow:hidden;
+  padding-left:24px;
 }                    
 
 #nav a{
-color:#474747;
-display:block;
-float:left;
-font:bold 14px/33px 'SimSun',Arial,Sans-Serif;
-height:33px;
-margin:0;
-text-align:center;
-text-decoration:none;
-width:110px;  
+  color:#474747;
+  display:block;
+  float:left;
+  font:bold 14px/33px 'SimSun',Arial,Sans-Serif;
+  height:33px;
+  margin:0;
+  text-align:center;
+  text-decoration:none;
+  width:110px;  
 }
 
 #nav a:hover{
-color:#FF6600;
+  color:#FF6600;
 }                 
   
 
 #content {
-       
-  width: 80%;
+   width: $main_width;
+   border-width: 0px;
+   float:right;
 }
 
 html > body #content {
@@ -83,11 +84,12 @@ html > body #content {
 
 }             
 #main.nosidebar #sidebar{ display: none; }
-#main.nosidebar #content{ width: auto; border-right: 0; }
+#main.nosidebar #content{ float:left; width: $container_width; }
 
 
-#footer {
-  border-top: 2px solid #FF9900;
+#footer { 
+  clear:both;
+  border-top: 2px solid #BDBDBD;
   margin-top: 8px;
 }                  
 

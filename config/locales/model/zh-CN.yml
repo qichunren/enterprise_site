@@ -10,6 +10,7 @@
       news: "新闻" 
       site_setting: "配置参数"    
       page: "页面"
+      navmenu: "导航菜单"
       
     attributes:
       admin:
@@ -25,6 +26,13 @@
       category:
         name: "分类名称"
         parent_id: "上级分类"
+      navmenu:
+        label: "名称"
+        url: "菜单链接"
+        link_title: "链接提示"
+        position: "链接排序"
+        is_display: "是否显示"
+        open_in_new_window: "在新窗口中打开"
       notice:
         title: "标题"
         body: "正文"       

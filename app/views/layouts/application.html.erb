@@ -28,15 +28,15 @@
     </div>
 
     <div id="index-banner">
-      <%= image_tag "front/index-banner.jpg", :width => "100%", :border => 0 %>
+      <%= image_tag "front/index-banner.jpg", :width => "950px", :height => "170px", :border => 0 %>
     </div>
 
     <div id="main" class="<%= has_content?(:sidebar) ? '' : 'nosidebar' %>" >
 
       <div id="sidebar">
         <div class="wrapper">
-          <%= yield :sidebar %>
           <%= image_tag "front/side1.jpg" %>
+          <%= yield :sidebar %>
         </div>
       </div>
 
@@ -50,11 +50,15 @@
     <div id="footer">
       <div class='bgl'>
         <div class="bgr">
-          Powered by EnterpriseSiete 1.0 &copy;    
+          Powered by EnterpriseSiete 1.0 &copy; <%= SiteSetting.got(:company_short_name) %> 版权所有   
+          <% if true %>
+          <div style="float:right;">
           <% if current_admin %>
-          <%= link_to "进入后台", "/syspanel/home/index" %>
+            <%= link_to "进入后台", "/syspanel/home/index" %>
           <% else %>
-          <%= link_to("管理", new_admin_session_path) %>
+            <%= link_to("管理", new_admin_session_path) %>
+          <% end %>
+          </div>
           <% end %>
           </div>
         </div>

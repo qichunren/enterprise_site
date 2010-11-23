@@ -64,7 +64,7 @@ class Syspanel::SiteSettingsController < Syspanel::BaseController
     @site_setting.destroy
 
     respond_to do |format|
-      format.html { redirect_to(site_settings_url) }
+      format.html { redirect_to(syspanel_site_settings_path) }
     end
   end
 end

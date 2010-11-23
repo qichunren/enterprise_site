@@ -3,24 +3,24 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* @import "compass/reset"; */
-/* line 6, ../../../app/stylesheets/application.scss */
+/* line 7, ../../../app/stylesheets/application.scss */
 body {
   background-color: white;
 }
 
-/* line 10, ../../../app/stylesheets/application.scss */
+/* line 11, ../../../app/stylesheets/application.scss */
 #container {
   width: 950px;
   margin: 0 auto;
   background: #FFF;
 }
 
-/* line 16, ../../../app/stylesheets/application.scss */
+/* line 17, ../../../app/stylesheets/application.scss */
 #header {
   height: 76px;
 }
 
-/* line 20, ../../../app/stylesheets/application.scss */
+/* line 21, ../../../app/stylesheets/application.scss */
 #header h1 {
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@ body {
   background: url(/images/front/logo.jpg) no-repeat;
 }
 
-/* line 27, ../../../app/stylesheets/application.scss */
+/* line 28, ../../../app/stylesheets/application.scss */
 #nav {
   background: url("/images/front/top.png") no-repeat scroll 0 0 transparent;
   height: 33px;
@@ -38,7 +38,7 @@ body {
   white-space: nowrap;
 }
 
-/* line 38, ../../../app/stylesheets/application.scss */
+/* line 39, ../../../app/stylesheets/application.scss */
 #nav .wrapper {
   height: 33px;
   line-height: 33px;
@@ -67,61 +67,64 @@ body {
 
 /* line 64, ../../../app/stylesheets/application.scss */
 #content {
-  width: 80%;
+  width: 710px;
+  border-width: 0px;
+  float: right;
 }
 
-/* line 69, ../../../app/stylesheets/application.scss */
+/* line 70, ../../../app/stylesheets/application.scss */
 html > body #content {
   min-height: 600px;
 }
 
-/* line 73, ../../../app/stylesheets/application.scss */
+/* line 74, ../../../app/stylesheets/application.scss */
 #sidebar {
   width: 230px;
   float: left;
 }
 
-/* line 85, ../../../app/stylesheets/application.scss */
+/* line 86, ../../../app/stylesheets/application.scss */
 #main.nosidebar #sidebar {
   display: none;
 }
 
-/* line 86, ../../../app/stylesheets/application.scss */
+/* line 87, ../../../app/stylesheets/application.scss */
 #main.nosidebar #content {
-  width: auto;
-  border-right: 0;
+  float: left;
+  width: 950px;
 }
 
-/* line 89, ../../../app/stylesheets/application.scss */
+/* line 90, ../../../app/stylesheets/application.scss */
 #footer {
-  border-top: 2px solid #FF9900;
+  clear: both;
+  border-top: 2px solid #BDBDBD;
   margin-top: 8px;
 }
 
-/* line 94, ../../../app/stylesheets/application.scss */
+/* line 96, ../../../app/stylesheets/application.scss */
 #footer .bgl {
   padding: 10px;
 }
 
 /***** Links *****/
-/* line 99, ../../../app/stylesheets/application.scss */
+/* line 101, ../../../app/stylesheets/application.scss */
 a, a:link, a:visited {
   color: #2A5685;
   text-decoration: none;
 }
 
-/* line 100, ../../../app/stylesheets/application.scss */
+/* line 102, ../../../app/stylesheets/application.scss */
 a:hover, a:active {
   color: #c61a1a;
   text-decoration: underline;
 }
 
-/* line 101, ../../../app/stylesheets/application.scss */
+/* line 103, ../../../app/stylesheets/application.scss */
 a img {
   border: 0;
 }
 
-/* line 106, ../../../app/stylesheets/application.scss */
+/* line 108, ../../../app/stylesheets/application.scss */
 #login-form table {
   margin-top: 5em;
   padding: 1em;
@@ -131,17 +134,17 @@ a img {
   background-color: #FFEBC1;
 }
 
-/* line 107, ../../../app/stylesheets/application.scss */
+/* line 109, ../../../app/stylesheets/application.scss */
 #login-form table td {
   padding: 6px;
 }
 
-/* line 108, ../../../app/stylesheets/application.scss */
+/* line 110, ../../../app/stylesheets/application.scss */
 #login-form label {
   font-weight: bold;
 }
 
-/* line 109, ../../../app/stylesheets/application.scss */
+/* line 111, ../../../app/stylesheets/application.scss */
 #login-form input#admin_session_login, #login-form input#admin_session_password {
   width: 300px;
 }
