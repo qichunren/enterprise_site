@@ -16,21 +16,28 @@
 <body >
   <div id="container">
     <div id="header"> 
-      <h1>企业网站</h1>
+      <h1 id="logo"><%= link_to SiteSetting.got(:company_full_name), root_path, :title => SiteSetting.got(:company_full_name) %></h1>
     </div>
 
     <div id="nav">
-      <ul>
+      <div class="wrapper">
         <% Navmenu.availble.all.each do |nav_menu| %>
-        <li><%= link_to nav_menu.label, nav_menu.url, :target => ("_blank" if nav_menu.open_in_new_window?), :title => nav_menu.link_title %></li> 
-        <% end %> 
-      </ul>
+        <%= link_to nav_menu.label, nav_menu.url, :target => ("_blank" if nav_menu.open_in_new_window?), :title => nav_menu.link_title %>
+        <% end %>  
+        </div>
+    </div>
+
+    <div id="index-banner">
+      <%= image_tag "front/index-banner.jpg", :width => "100%", :border => 0 %>
     </div>
 
     <div id="main" class="<%= has_content?(:sidebar) ? '' : 'nosidebar' %>" >
 
       <div id="sidebar">
-        <div class="wrapper"><%= yield :sidebar %></div>
+        <div class="wrapper">
+          <%= yield :sidebar %>
+          <%= image_tag "front/side1.jpg" %>
+        </div>
       </div>
 
       <div id="content">

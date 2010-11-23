@@ -1,5 +1,7 @@
-$background_color: #BDBDBD;
-$container_width: 960px;
+$background_color: #FFFFFF;
+$container_width: 950px;
+$sidebar_width: 230px;
+$header_height: 76px;
 
 body {
   background-color: $background_color;  
@@ -12,43 +14,52 @@ body {
 }
 
 #header {
-  height: 100px;
-  border-bottom: 2px solid #FF9900;
+  height: $header_height;
 } 
 
 #header h1{ 
-  padding: 10px;
+  margin:0;padding:0;
+  height:76px;
+  text-indent:-999px;
+  background:url(/images/front/logo.jpg) no-repeat;
 }
 
-#nav {         
-  margin: 8px;
-  background: #26B3CF;
-  clear: both; 
-  height: 38px;
+#nav {    
+
+background:url("/images/front/top.png") no-repeat scroll 0 0 transparent;
+height:33px;
+margin:0;
+overflow:hidden;
+white-space:nowrap;
+     
+
   
+}
+#nav .wrapper{
+
+height:33px;
+line-height:33px;
+margin:0;
+overflow:hidden;
+padding-left:24px;
 }                    
 
-#nav ul{
-  
+#nav a{
+color:#474747;
+display:block;
+float:left;
+font:bold 14px/33px 'SimSun',Arial,Sans-Serif;
+height:33px;
+margin:0;
+text-align:center;
+text-decoration:none;
+width:110px;  
+}
+
+#nav a:hover{
+color:#FF6600;
 }                 
-
-#nav li {
-  float:left;
-  list-style-type:none;
-  margin:0 2px 0 0;
-  padding:0;
-  white-space:nowrap;
-  line-height: 24px; 
-}                  
-
-#nav li a {
-  background-color:#47838F;
-  color: #FFF;
-  font-weight: bold;
-  display:block;
-  padding:6px 12px;
-  text-decoration:none;
-}    
+  
 
 #content {
        
@@ -60,17 +71,16 @@ html > body #content {
 }
 
 #sidebar {
-  width: $container_width / 4; 
+  width: $sidebar_width; 
   float: left;
 }
 
 #sidebar .wrapper {
-  background: #D1E4EF;
+
 }  
 
 #content .wrapper, #sidebar .wrapper {
 
-  padding: 10px;
 }             
 #main.nosidebar #sidebar{ display: none; }
 #main.nosidebar #content{ width: auto; border-right: 0; }

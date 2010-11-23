@@ -1,121 +1,122 @@
-/* line 4, ../../../app/stylesheets/application.scss */
+/* line 6, ../../../app/stylesheets/application.scss */
 body {
-  background-color: #bdbdbd;
+  background-color: white;
 }
 
-/* line 8, ../../../app/stylesheets/application.scss */
+/* line 10, ../../../app/stylesheets/application.scss */
 #container {
-  width: 960px;
+  width: 950px;
   margin: 0 auto;
   background: #FFF;
 }
 
-/* line 14, ../../../app/stylesheets/application.scss */
+/* line 16, ../../../app/stylesheets/application.scss */
 #header {
-  height: 100px;
-  border-bottom: 2px solid #FF9900;
+  height: 76px;
 }
 
-/* line 19, ../../../app/stylesheets/application.scss */
+/* line 20, ../../../app/stylesheets/application.scss */
 #header h1 {
-  padding: 10px;
-}
-
-/* line 23, ../../../app/stylesheets/application.scss */
-#nav {
-  margin: 8px;
-  background: #26B3CF;
-  clear: both;
-  height: 38px;
-}
-
-/* line 35, ../../../app/stylesheets/application.scss */
-#nav li {
-  float: left;
-  list-style-type: none;
-  margin: 0 2px 0 0;
+  margin: 0;
   padding: 0;
+  height: 76px;
+  text-indent: -999px;
+  background: url(/images/front/logo.jpg) no-repeat;
+}
+
+/* line 27, ../../../app/stylesheets/application.scss */
+#nav {
+  background: url("/images/front/top.png") no-repeat scroll 0 0 transparent;
+  height: 33px;
+  margin: 0;
+  overflow: hidden;
   white-space: nowrap;
-  line-height: 24px;
 }
 
-/* line 44, ../../../app/stylesheets/application.scss */
-#nav li a {
-  background-color: #47838F;
-  color: #FFF;
-  font-weight: bold;
+/* line 38, ../../../app/stylesheets/application.scss */
+#nav .wrapper {
+  height: 33px;
+  line-height: 33px;
+  margin: 0;
+  overflow: hidden;
+  padding-left: 24px;
+}
+
+/* line 47, ../../../app/stylesheets/application.scss */
+#nav a {
+  color: #474747;
   display: block;
-  padding: 6px 12px;
+  float: left;
+  font: bold 14px/33px "SimSun", Arial, Sans-Serif;
+  height: 33px;
+  margin: 0;
+  text-align: center;
   text-decoration: none;
+  width: 110px;
 }
 
-/* line 53, ../../../app/stylesheets/application.scss */
+/* line 59, ../../../app/stylesheets/application.scss */
+#nav a:hover {
+  color: #FF6600;
+}
+
+/* line 64, ../../../app/stylesheets/application.scss */
 #content {
   width: 80%;
 }
 
-/* line 58, ../../../app/stylesheets/application.scss */
+/* line 69, ../../../app/stylesheets/application.scss */
 html > body #content {
   min-height: 600px;
 }
 
-/* line 62, ../../../app/stylesheets/application.scss */
+/* line 73, ../../../app/stylesheets/application.scss */
 #sidebar {
-  width: 240px;
+  width: 230px;
   float: left;
 }
 
-/* line 67, ../../../app/stylesheets/application.scss */
-#sidebar .wrapper {
-  background: #D1E4EF;
-}
-
-/* line 71, ../../../app/stylesheets/application.scss */
-#content .wrapper, #sidebar .wrapper {
-  padding: 10px;
-}
-
-/* line 75, ../../../app/stylesheets/application.scss */
+/* line 85, ../../../app/stylesheets/application.scss */
 #main.nosidebar #sidebar {
   display: none;
 }
 
-/* line 76, ../../../app/stylesheets/application.scss */
+/* line 86, ../../../app/stylesheets/application.scss */
 #main.nosidebar #content {
   width: auto;
   border-right: 0;
 }
 
-/* line 79, ../../../app/stylesheets/application.scss */
+/* line 89, ../../../app/stylesheets/application.scss */
 #footer {
   border-top: 2px solid #FF9900;
   margin-top: 8px;
 }
 
-/* line 84, ../../../app/stylesheets/application.scss */
+/* line 94, ../../../app/stylesheets/application.scss */
 #footer .bgl {
   padding: 10px;
 }
 
 /***** Links *****/
-/* line 89, ../../../app/stylesheets/application.scss */
+/* line 99, ../../../app/stylesheets/application.scss */
 a, a:link, a:visited {
   color: #2A5685;
   text-decoration: none;
 }
 
-/* line 90, ../../../app/stylesheets/application.scss */
+/* line 100, ../../../app/stylesheets/application.scss */
 a:hover, a:active {
   color: #c61a1a;
   text-decoration: underline;
 }
 
-/* line 91, ../../../app/stylesheets/application.scss */
+/* line 101, ../../../app/stylesheets/application.scss */
 a img {
   border: 0;
 }
 
-/* line 96, ../../../app/stylesheets/application.scss */
+/* line 106, ../../../app/stylesheets/application.scss */
 #login-form table {
   margin-top: 5em;
   padding: 1em;
@@ -125,17 +126,17 @@ a img {
   background-color: #FFEBC1;
 }
 
-/* line 97, ../../../app/stylesheets/application.scss */
+/* line 107, ../../../app/stylesheets/application.scss */
 #login-form table td {
   padding: 6px;
 }
 
-/* line 98, ../../../app/stylesheets/application.scss */
+/* line 108, ../../../app/stylesheets/application.scss */
 #login-form label {
   font-weight: bold;
 }
 
-/* line 99, ../../../app/stylesheets/application.scss */
+/* line 109, ../../../app/stylesheets/application.scss */
 #login-form input#admin_session_login, #login-form input#admin_session_password {
   width: 300px;
 }
