@@ -51,7 +51,7 @@ class Syspanel::SiteSettingsController < Syspanel::BaseController
 
     respond_to do |format|
       if @site_setting.update_attributes(params[:site_setting])
-        format.html { redirect_to(@site_setting, :notice => 'Site setting was successfully updated.') }
+        format.html { redirect_to(syspanel_site_settings_path, :notice => 'Site setting was successfully updated.') }
       else
         format.html { render :action => "edit" }
       end
