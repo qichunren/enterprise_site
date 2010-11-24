@@ -1,174 +1,209 @@
 /* pages layout */
-/* line 10, ../../../app/stylesheets/application.scss */
+/* line 12, ../../../app/stylesheets/application.scss */
 #container {
   width: 950px;
   margin: 0 auto;
 }
 
-/* line 15, ../../../app/stylesheets/application.scss */
+/* line 17, ../../../app/stylesheets/application.scss */
 #content {
   width: 710px;
   border-width: 0px;
   float: right;
 }
 
-/* line 21, ../../../app/stylesheets/application.scss */
+/* line 23, ../../../app/stylesheets/application.scss */
 html > body #content {
   min-height: 600px;
 }
 
-/* line 25, ../../../app/stylesheets/application.scss */
+/* line 27, ../../../app/stylesheets/application.scss */
 #sidebar {
   width: 230px;
   float: left;
 }
 
-/* line 30, ../../../app/stylesheets/application.scss */
+/* line 32, ../../../app/stylesheets/application.scss */
 #sidebar {
   width: 230px;
   float: left;
 }
 
-/* line 43, ../../../app/stylesheets/application.scss */
+/* line 45, ../../../app/stylesheets/application.scss */
 #main.nosidebar #sidebar {
   display: none;
 }
 
-/* line 44, ../../../app/stylesheets/application.scss */
+/* line 46, ../../../app/stylesheets/application.scss */
 #main.nosidebar #content {
   float: left;
   width: 950px;
 }
 
-/* line 46, ../../../app/stylesheets/application.scss */
+/* line 48, ../../../app/stylesheets/application.scss */
 #footer {
   clear: both;
   border-top: 2px solid #BDBDBD;
   margin-top: 8px;
 }
 
-/* line 52, ../../../app/stylesheets/application.scss */
+/* line 54, ../../../app/stylesheets/application.scss */
 #footer .bgl {
   padding: 10px;
 }
 
-/* line 53, ../../../app/stylesheets/application.scss */
+/* line 55, ../../../app/stylesheets/application.scss */
 #header {
   height: 76px;
 }
 
-/* line 57, ../../../app/stylesheets/application.scss */
+/* line 59, ../../../app/stylesheets/application.scss */
 #header h1 {
   margin: 0;
   padding: 0;
   height: 76px;
 }
 
-/* line 62, ../../../app/stylesheets/application.scss */
+/* line 65, ../../../app/stylesheets/application.scss */
 #nav {
   height: 33px;
   margin: 0;
   overflow: hidden;
 }
 
-/* line 68, ../../../app/stylesheets/application.scss */
+/* line 71, ../../../app/stylesheets/application.scss */
 #nav .wrapper {
   height: 33px;
   line-height: 33px;
   margin: 0;
   overflow: hidden;
-  padding-left: 24px;
+  padding-left: 25px;
 }
 
-/* line 76, ../../../app/stylesheets/application.scss */
+/* line 79, ../../../app/stylesheets/application.scss */
 #nav a {
   display: block;
   float: left;
   height: 33px;
   margin: 0;
   text-align: center;
-  width: 110px;
+  width: 100px;
 }
 
 /* pages theme */
-/* line 87, ../../../app/stylesheets/application.scss */
+/* line 90, ../../../app/stylesheets/application.scss */
 body {
   background-color: white;
 }
 
-/* line 91, ../../../app/stylesheets/application.scss */
+/* line 94, ../../../app/stylesheets/application.scss */
 #container {
   background: #FFF;
 }
 
-/* line 95, ../../../app/stylesheets/application.scss */
+/* line 98, ../../../app/stylesheets/application.scss */
 #header h1 {
   text-indent: -999px;
   background: url(/images/front/logo.jpg) no-repeat;
 }
 
-/* line 100, ../../../app/stylesheets/application.scss */
+/* line 103, ../../../app/stylesheets/application.scss */
 #nav {
   background: url("/images/front/top.png") no-repeat scroll 0 0 transparent;
   white-space: nowrap;
 }
 
-/* line 110, ../../../app/stylesheets/application.scss */
+/* line 113, ../../../app/stylesheets/application.scss */
 #nav a {
   color: #474747;
   font: bold 14px/33px "SimSun", Arial, Sans-Serif;
   text-decoration: none;
 }
 
-/* line 116, ../../../app/stylesheets/application.scss */
+/* line 119, ../../../app/stylesheets/application.scss */
 #nav a:hover {
   color: #FF6600;
 }
 
-/* line 140, ../../../app/stylesheets/application.scss */
+/* line 143, ../../../app/stylesheets/application.scss */
 #footer {
   border-top: 2px solid #BDBDBD;
 }
 
 /***** Links *****/
-/* line 146, ../../../app/stylesheets/application.scss */
+/* line 149, ../../../app/stylesheets/application.scss */
 a, a:link, a:visited {
-  color: #2A5685;
+  color: #6F7C7F;
   text-decoration: none;
 }
 
-/* line 147, ../../../app/stylesheets/application.scss */
+/* line 150, ../../../app/stylesheets/application.scss */
 a:hover, a:active {
-  color: #c61a1a;
+  color: #FF9900;
   text-decoration: underline;
 }
 
-/* line 148, ../../../app/stylesheets/application.scss */
+/* line 151, ../../../app/stylesheets/application.scss */
 a img {
   border: 0;
 }
 
-/* line 153, ../../../app/stylesheets/application.scss */
-#login-form table {
-  margin-top: 5em;
-  padding: 1em;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid #FDBF3B;
-  background-color: #FFEBC1;
+/* login page style */
+/* line 156, ../../../app/stylesheets/application.scss */
+#login-form {
+  font-size: 2em;
+  margin: 20px;
+  background-color: #5F5F5F;
+  text-align: center;
 }
 
-/* line 154, ../../../app/stylesheets/application.scss */
-#login-form table td {
+/* line 157, ../../../app/stylesheets/application.scss */
+#login-form #back_link {
+  font-size: 12px;
+  position: absolute;
+  z-index: 10;
+  right: 22px;
+  top: 4px;
+}
+
+/* line 158, ../../../app/stylesheets/application.scss */
+#login-form #copyright {
+  font-size: 14px;
+  padding: 8px;
+}
+
+/* line 160, ../../../app/stylesheets/application.scss */
+#login-form h1 {
+  margin: 4px;
+  padding: 4px;
+}
+
+/* line 161, ../../../app/stylesheets/application.scss */
+#login-form .wrapper {
+  padding: 20px;
+  border: 2px solid #4F4F4F;
+  background: #BDBDBD;
+}
+
+/* line 163, ../../../app/stylesheets/application.scss */
+#login-form p {
   padding: 6px;
 }
 
-/* line 155, ../../../app/stylesheets/application.scss */
+/* line 164, ../../../app/stylesheets/application.scss */
 #login-form label {
   font-weight: bold;
 }
 
-/* line 156, ../../../app/stylesheets/application.scss */
+/* line 165, ../../../app/stylesheets/application.scss */
 #login-form input#admin_session_login, #login-form input#admin_session_password {
   width: 300px;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #7F7F7F;
+}
+
+/* line 166, ../../../app/stylesheets/application.scss */
+#admin_session_submit {
+  font-size: 20px;
 }

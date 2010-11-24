@@ -2,6 +2,8 @@
 class AdminSessionsController < ApplicationController
 
   skip_before_filter :require_admin, :except => [:destroy]
+  
+  layout false
 
   
   def new
