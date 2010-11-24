@@ -32,7 +32,7 @@
     <p>
       <%= f.label :setting_value %> 
       <% if !@site_setting.new_record? && @site_setting.value_type == "text" %>
-        <%= f.text_area :setting_value %>
+        <%= f.text_area :setting_value, :style => "width:450px;height:300px;" %>
       <% else %>
         <%= f.text_field :setting_value %>
       <% end %>
