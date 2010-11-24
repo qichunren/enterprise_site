@@ -150,6 +150,16 @@ a, a:link, a:visited{ color: #6F7C7F; text-decoration: none; }
 a:hover, a:active{ color: #FF9900; text-decoration: underline;}
 a img{ border: 0; }
 
+/* news */ 
+#latest_notices{clear:both;}
+/* products */
+#latest_products{clear:both;}
+.product { float:left; margin:0 10px 10px 0;}
+.product .product_inner{width:120px;height:95px;}
+.product h4{margin:0;padding:0;overflow:hidden;width:120px;height:35px;line-height:18px;}
+
+#product .product_image{float:left; margin: 0 10px 10px 0;}   
+#product .product_desc { border-top:2px solid #BDBDBD;clear:both; padding: 10px;}
 
 
 /* login page style */

@@ -5,8 +5,10 @@
     <h3>最新产品</h3>
     <% @products.each do |product| %>
       <div class='product'>
-        <%= link_to(image_tag(product.avatar.url(:thumb)), product) %>
-        <h4><%= link_to product.name, product %><h4>
+        <div class="product_inner">
+          <%= link_to(image_tag(product.avatar.url(:thumb)), product) %>
+        </div>
+        <h4><%= link_to product.name, product %></h4>
       </div> 
     <% end %>
   </div>

@@ -22,7 +22,7 @@
     <td><%= image_tag product.avatar.url(:thumb) %></td>
     <td><%= product.price %></td>
     <td><%= product.created_by %></td>
-    <td align="center"><%= link_to 'Show', [:syspanel, product] %> － <%= link_to 'Edit', edit_syspanel_product_path(product) %> － <%= link_to 'Destroy', [:syspanel, product], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="center"><%= link_to '详情', [:syspanel, product] %> － <%= link_to '修改', edit_syspanel_product_path(product) %> － <%= link_to '删除', [:syspanel, product], :confirm => '你确定要删除此商品?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

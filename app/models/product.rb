@@ -2,7 +2,7 @@ class Product < ActiveRecord::Base
   
   
   belongs_to :category
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "120x90" }
   
   validates :name, :presence => true
   

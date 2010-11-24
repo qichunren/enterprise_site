@@ -1,28 +1,33 @@
-<h2><%= @product.name %></h2>
+<div id="product">
+  <div class="product_inner">
+    <%= image_tag @product.avatar.url(:medium), :class => "product_image" %>
+  </div>
+  <div class="product_meta">
+    <h2><%= @product.name %></h2>
+    <p>
+      <b>产品编号:</b>
+      <%= @product.product_no %>
+    </p>
+    <p>
+      <b>分类:</b>
+      <%= @product.category.name %>
+    </p>
 
-<p>
-  <b>分类:</b>
-  <%= @product.category.name %>
-</p>
+    <p>
+      <b>价格:</b>
+      <%= @product.price %>元
+    </p>
+    <p>
+      <b>现售数量:</b>
+      <%= @product.amount %>
+    </p>    
+  </div>
+  <div class="product_desc"><%= @product.description %></div>
+  
+</div>
 
-<p>
-  <b>Product no:</b>
-  <%= @product.product_no %>
-</p>
-<%= image_tag @product.avatar.url %>
-<p>
-  <b>Description:</b>
-  <%= @product.description %>
-</p>
 
-<p>
-  <b>Price:</b>
-  <%= @product.price %>
-</p>
 
-<p>
-  <b>Amount:</b>
-  <%= @product.amount %>
-</p>
+
 
 
