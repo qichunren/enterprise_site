@@ -3,63 +3,14 @@ $container_width: 950px;
 $main_width: 710px;
 $sidebar_width: 230px;
 $header_height: 76px;
+$nav_height: 33px; 
 
-body {
-  background-color: $background_color;  
-}                                     
+/* pages layout */
 
 #container {
   width: $container_width;
   margin: 0 auto;
-  background:#FFF;
-}
-
-#header {
-  height: $header_height;
-} 
-
-#header h1{ 
-  margin:0;padding:0;
-  height:76px;
-  text-indent:-999px;
-  background:url(/images/front/logo.jpg) no-repeat;
-}
-
-#nav {    
-
-background:url("/images/front/top.png") no-repeat scroll 0 0 transparent;
-height:33px;
-margin:0;
-overflow:hidden;
-white-space:nowrap;
-     
-
-  
-}
-#nav .wrapper{
-  height:33px;
-  line-height:33px;
-  margin:0;
-  overflow:hidden;
-  padding-left:24px;
-}                    
-
-#nav a{
-  color:#474747;
-  display:block;
-  float:left;
-  font:bold 14px/33px 'SimSun',Arial,Sans-Serif;
-  height:33px;
-  margin:0;
-  text-align:center;
-  text-decoration:none;
-  width:110px;  
-}
-
-#nav a:hover{
-  color:#FF6600;
-}                 
-  
+}  
 
 #content {
    width: $main_width;
@@ -74,6 +25,108 @@ html > body #content {
 #sidebar {
   width: $sidebar_width; 
   float: left;
+} 
+
+#sidebar {
+  width: $sidebar_width; 
+  float: left;
+}
+
+#sidebar .wrapper {
+
+}  
+
+#content .wrapper, #sidebar .wrapper {
+
+}      
+       
+#main.nosidebar #sidebar{ display: none; }
+#main.nosidebar #content{ float:left; width: $container_width; } 
+
+#footer { 
+  clear:both;
+  border-top: 2px solid #BDBDBD;
+  margin-top: 8px;
+}                  
+
+#footer .bgl{padding: 10px;}
+#header {
+  height: $header_height;
+} 
+
+#header h1{ 
+  margin:0;padding:0;
+  height: $header_height;
+} 
+
+#nav {
+  height: $nav_height;
+  margin:0;
+  overflow:hidden;
+}
+
+#nav .wrapper{
+  height: $nav_height;
+  line-height: $nav_height;
+  margin:0;
+  overflow:hidden;
+  padding-left:24px;
+}
+
+#nav a{
+  display:block;
+  float:left;
+  height: $nav_height;
+  margin:0;
+  text-align:center;
+  width: 110px;  
+}
+ 
+
+/* pages theme */
+body {
+  background-color: $background_color;  
+}                                     
+
+#container {
+  background:#FFF;
+}
+
+#header h1{ 
+  text-indent:-999px;
+  background:url(/images/front/logo.jpg) no-repeat;
+}
+
+#nav {    
+  background:url("/images/front/top.png") no-repeat scroll 0 0 transparent;
+  white-space:nowrap; 
+}
+
+#nav .wrapper{
+} 
+
+                   
+
+#nav a{
+  color:#474747;
+  font:bold 14px/33px 'SimSun',Arial,Sans-Serif;
+  text-decoration:none;
+}
+
+#nav a:hover{
+  color:#FF6600;
+}                 
+  
+
+#content {
+
+}
+
+html > body #content {
+
+}
+
+#sidebar {
 }
 
 #sidebar .wrapper {
@@ -83,18 +136,10 @@ html > body #content {
 #content .wrapper, #sidebar .wrapper {
 
 }             
-#main.nosidebar #sidebar{ display: none; }
-#main.nosidebar #content{ float:left; width: $container_width; }
-
 
 #footer { 
-  clear:both;
   border-top: 2px solid #BDBDBD;
-  margin-top: 8px;
-}                  
-
-#footer .bgl{padding: 10px;} 
- 
+} 
 
 
 /***** Links *****/
