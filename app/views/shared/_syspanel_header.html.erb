@@ -6,7 +6,8 @@
     <li class="message">
       系统消息：您有<span class="c_y pd_r_l"><%= 1 %></span>条短信息</li>
     <li class="admin_info">
-    <span><%= show_welcome_info_at_top_right %></span>
+    <span><%= show_welcome_info_at_top_right %></span> 
+    <span><%= link_to "查看网站", root_url %></span>
     <%= link_to "", admin_session_path, :method => :delete, :confirm => "你要退出当前系统？", :class => "exit" %>
     </li>
   </ul>

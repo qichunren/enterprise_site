@@ -1,10 +1,10 @@
 ﻿body{padding:0; margin:0; font-family:verdana,tahoma,arial,宋体;
 }
 div,ul,li,h3,p,h2,ol,form,dl,dt,dd{padding:0; margin:0; list-style:none; font-size:12px;}
-*{color:#775f58;}
-a{text-decoration:none;}
+
+a{color: #a61d24;text-decoration:none;}
 a img{ border:none;}
-a:hover{color:#a61d24;}
+a:hover{color:#FF9900;}
 .cb{display:block; clear:both;}
 .c_y{ color:#f7d66d;}
 
