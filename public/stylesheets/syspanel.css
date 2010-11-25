@@ -106,6 +106,8 @@ input.text{background-color:transparent;  border:none; width:150px; margin-left:
 .search p{ float:left;margin-right:20px;}
 .search span{ color:#283b5c;padding-right:5px;}
 .content .list{} 
+
+/* list table style */
 .list table.tab{ border:1px #d9e2eb solid;padding:1px;}
 .list table.tab th{ background:transparent url('../images/bg_th.gif') repeat-x 0 0; height:21px; border-left:1px #d2dae5 solid;border-right:1px #f1f2f7 solid; color:#2f3430;}
 .list table.tab td{height:24px; text-align:center; color:#4d6ba9;}
@@ -114,7 +116,7 @@ input.text{background-color:transparent;  border:none; width:150px; margin-left:
 .bg_blue{ background-color:#eef2fd;}
 
 
-
+/* pagination */
 div.pagination{padding: 3px;margin: 3px;text-align:right;}
 div.pagination a{color: #003399;padding: 2px 5px 2px 5px;margin: 2px;border: 1px solid #006ACD;text-decoration: none;}
 div.pagination a:hover, div.pagination a:active{border:1px solid #A00E15;
@@ -126,12 +128,14 @@ color:#A00E15;
 font-weight:bold;}
 div.pagination span.disabled{padding: 2px 5px 2px 5px;margin: 2px;border: 1px solid #006ACD;color: #678ACF;}
 
+/* error_explanation */
 #error_explanation{margin-bottom:10px;padding:8px;border:1px solid red;}
 #error_explanation ul{margin-top: 8px;}
 #error_explanation li{list-style-position:inside;
 list-style-type:decimal;color:red;}
 .field_with_errors input{border:1px solid red;}
-
+ 
+/* tabular form style */
 html > body .tabular p {
 overflow:hidden;
 } 

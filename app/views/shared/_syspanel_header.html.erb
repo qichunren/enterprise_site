@@ -14,15 +14,15 @@
   
   <ul class="menubox">
     <li class="none"><!--用来控制有宽度，请勿删除--> </li>
-    <li ><%= link_to "新闻管理", syspanel_news_index_path %></li>
-    <li ><%= link_to "公告管理", syspanel_notices_path %></li> 
+    <li <% if ["syspanel/news"].include? params[:controller] %>class="on"<% end %> ><%= link_to "新闻管理", syspanel_news_index_path %></li>
+    <li <% if ["syspanel/notices"].include? params[:controller] %>class="on"<% end %> ><%= link_to "公告管理", syspanel_notices_path %></li> 
     <% if SiteSetting.got(:enable_product_module) == "true" %>
-      <li><%= link_to "产品模块", syspanel_products_path %></li>
+      <li <% if ["syspanel/products"].include? params[:controller] %>class="on"<% end %>  ><%= link_to "产品模块", syspanel_products_path %></li>
     <% end %>
-    <li ><%= link_to "附件管理", syspanel_attachments_path %></li>  
-    <li ><%= link_to "客户留言", syspanel_feedbacks_path %></li>
-    <li ><%= link_to "页面管理", syspanel_pages_path %></li>
-    <li ><%= link_to "网站设置", syspanel_site_settings_path %></li>
+    <li <% if ["syspanel/attachments"].include? params[:controller] %>class="on"<% end %> ><%= link_to "附件管理", syspanel_attachments_path %></li>  
+    <li <% if ["syspanel/feedbacks"].include? params[:controller] %>class="on"<% end %> ><%= link_to "客户留言", syspanel_feedbacks_path %></li>
+    <li <% if ["syspanel/pages"].include? params[:controller] %>class="on"<% end %> ><%= link_to "页面管理", syspanel_pages_path %></li>
+    <li <% if ["syspanel/site_settings"].include? params[:controller] %>class="on"<% end %> ><%= link_to "网站设置", syspanel_site_settings_path %></li>
 
   </ul>
   

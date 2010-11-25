@@ -10,7 +10,7 @@ class SiteSetting < ActiveRecord::Base
       
   class << self
     def got key
-      @@value ||= find_by_setting_key(key.to_s.to_sym).setting_value rescue ""
+      find_by_setting_key(key.to_s.to_sym).setting_value rescue ""
     end          
   end
   
