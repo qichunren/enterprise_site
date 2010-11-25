@@ -3,23 +3,17 @@
 <%= render :partial => "/syspanel/shared/setting_tab" %>
 <table class="list">
   <tr>
-    <th>Name</th>
-    <th>Parent</th>
-    <th>Lft</th>
-    <th>Rgt</th>
-    <th>Depth</th>
+    <th>分类名称</th>
+    <th width="70">层次</th>
 
-    <th>操作</th>
+    <th width="80">操作</th>
   </tr>
 <% Category.each_with_level(Category.root.descendants) do |category, level| %>
   <tr>
     <td><div style="margin-left:<%= 30 * level %>px;"><%= category.name %></div></td>
-    <td align="center"><%= category.parent_id %></td>
-    <td align="center"><%= category.lft %></td>
-    <td align="center"><%= category.rgt %></td>
     <td align="center"><%= category.depth %></td>
 
-    <td align="center"><%= link_to 'Edit', edit_syspanel_category_path(category) %> <%= link_to 'Destroy', [:syspanel, category], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="center"><%= link_to '编辑', edit_syspanel_category_path(category) %> <%= link_to '删除', [:syspanel, category], :confirm => '你确定吗?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
