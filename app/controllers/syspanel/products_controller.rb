@@ -1,5 +1,6 @@
 # coding: utf-8
-class Syspanel::ProductsController < Syspanel::BaseController
+class Syspanel::ProductsController < Syspanel::BaseController 
+  
   # GET /products
   def index
     @products = Product.all

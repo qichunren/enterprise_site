@@ -1,0 +1,35 @@
+<% title "修改产品模块配置" %>
+<h2>修改产品模块配置</h2> 
+
+<%= form_for([:syspanel, :site_config, @product_configration], :url => syspanel_product_configration_path(@product_configration), :html => { :class => "tabular", :method => :put }) do |f| %>
+<div class="box">
+   <p>
+     <strong>
+    <%= @product_configration.name %> <%= "?" if @product_configration.value_type == "boolean" %>
+    </strong>
+  </p>
+  <p>
+    <%= @product_configration.setting_key %> (<%= @product_configration.value_type%>类型)
+  </p>
+
+
+  <p>
+    <%= f.label :setting_value %> 
+    <% if !@product_configration.new_record? && @product_configration.value_type == "text" %>
+      <%= f.text_area :setting_value, :style => "width:450px;height:300px;" %>
+    <% else %>
+      <%= f.text_field :setting_value %>
+    <% end %>
+  </p>
+  <p>
+    <%= f.label :remark %>
+    <%= f.text_field :remark %>
+  </p>
+
+</div>
+<%= f.submit "保存" %> - <%= link_to "返回", :back %>
+<% end %>
+
+<%= content_for :sidebar do %>
+  <%= render :partial => "/syspanel/products/sidebar" %>
+<% end %>

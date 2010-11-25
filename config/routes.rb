@@ -31,6 +31,7 @@ EnterpriseSite::Application.routes.draw do
     resources :navmenus, :except => [:show]
     resources :notices  
     resources :products
+    resources :product_configrations
     resources :news
   end
 

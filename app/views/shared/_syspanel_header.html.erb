@@ -17,7 +17,7 @@
     <li <% if ["syspanel/news"].include? params[:controller] %>class="on"<% end %> ><%= link_to "新闻管理", syspanel_news_index_path %></li>
     <li <% if ["syspanel/notices"].include? params[:controller] %>class="on"<% end %> ><%= link_to "公告管理", syspanel_notices_path %></li> 
     <% if SiteSetting.got(:enable_product_module) == "true" %>
-      <li <% if ["syspanel/products"].include? params[:controller] %>class="on"<% end %>  ><%= link_to "产品模块", syspanel_products_path %></li>
+      <li <% if ["syspanel/products", "syspanel/product_configrations", "syspanel/categories"].include? params[:controller] %>class="on"<% end %>  ><%= link_to "产品模块", syspanel_products_path %></li>
     <% end %>
     <li <% if ["syspanel/attachments"].include? params[:controller] %>class="on"<% end %> ><%= link_to "附件管理", syspanel_attachments_path %></li>  
     <li <% if ["syspanel/feedbacks"].include? params[:controller] %>class="on"<% end %> ><%= link_to "客户留言", syspanel_feedbacks_path %></li>

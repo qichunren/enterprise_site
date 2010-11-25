@@ -1,0 +1,28 @@
+<% title "产品模块配置" %>
+<h2>产品模块配置</h2>
+
+<table class="list">
+  <tr>
+    <th>配置名称</th>
+    <th width="70">参数KEY</th>
+   <th width="70">参数值</th>
+   <th width="70">值类型</th>
+    <th >备注</th>
+    <th width="80">修改</th>
+  </tr>
+  <% @product_configrations.each do |site_config| %>
+   <tr>
+     <td><%= site_config.name %></td>
+       <td><%= site_config.setting_key %></td>
+       <td><%= site_config.setting_value %></td> 
+       <td><%= site_config.value_type %></td> 
+       <td><%= site_config.remark %></td>
+       <td><%= link_to "修改", edit_syspanel_product_configration_path(site_config) %></td>
+    </tr>
+  <% end %>
+</table>  
+  
+  
+  <%= content_for :sidebar do %>
+    <%= render :partial => "/syspanel/products/sidebar" %>
+  <% end %>

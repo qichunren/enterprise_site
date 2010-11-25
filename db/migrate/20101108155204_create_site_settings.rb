@@ -9,11 +9,14 @@ class CreateSiteSettings < ActiveRecord::Migration
       t.string :value_type, :null => false
       
       t.boolean :build_in, :null => false
+      
+      t.string :module, :null => false, :default => ""
 
       t.timestamps
     end
     
     add_index :site_settings, :setting_key
+    add_index :site_settings, :module
   end
 
   def self.down

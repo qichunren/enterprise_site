@@ -13,7 +13,11 @@
     <td><div style="margin-left:<%= 30 * level %>px;"><%= category.name %></div></td>
     <td align="center"><%= category.depth %></td>
 
-    <td align="center"><%= link_to '编辑', edit_syspanel_category_path(category) %> <%= link_to '删除', [:syspanel, category], :confirm => '你确定吗?', :method => :delete %></td>
+    <td align="left"><%= link_to '编辑', edit_syspanel_category_path(category) %> 
+    <% if category.children.blank? %>
+      <%= link_to '删除', [:syspanel, category], :confirm => '你确定吗?', :method => :delete %>
+    <% end %>
+    </td>
   </tr>
 <% end %>
 </table>

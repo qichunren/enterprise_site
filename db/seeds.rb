@@ -103,5 +103,13 @@ SiteSetting.create(
                      :setting_key => "enable_product_module",
                      :setting_value => "true",
                      :remark => "", :build_in => true,
-                     :value_type => "boolean" )                  
+                     :value_type => "boolean" )
+                     
+SiteSetting.create(
+                    :name => "最新商品显示条目",
+                    :setting_key => "latest_product_size",
+                    :setting_value => "8",
+                    :remark => "", :build_in => true,
+                    :module => "product",
+                    :value_type => "integer" )                  
 # all site setting end

@@ -1,4 +1,4 @@
-<%= form_for([:syspanel, @category]) do |f| %>
+<%= form_for([:syspanel, @category], :html => { :class => "tabular"}) do |f| %>
   <% if @category.errors.any? %>
     <div id="error_explanation">
       <h3>由于以下错误没有保存成功:</h3>
@@ -12,11 +12,13 @@
   
   <div class="box"> 
     <p>
-      <%= f.label :name %><br />
+
+      <label for="category_name">分类名称 <span class="required">*</span></label>
       <%= f.text_field :name %>
     </p>
+    <% unless @category.new_record? %><p><%= @category.name %> 层级为 <strong><%= @category.depth%></strong></p><% end %>
     <p>
-      <%= f.label :parent_id %><br />
+      <%= f.label :parent_id %>
       <%= f.select :parent_id, nested_set_options(Category, @category) {|i| "#{'---' * i.level} #{i.name}" } %>
     </p>
   </div>

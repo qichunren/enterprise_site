@@ -138,10 +138,12 @@ ActiveRecord::Schema.define(:version => 20101111112445) do
     t.string   "remark"
     t.string   "value_type",    :null => false
     t.boolean  "build_in",      :null => false
+    t.string   "module"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "site_settings", ["module"], :name => "index_site_settings_on_module"
   add_index "site_settings", ["setting_key"], :name => "index_site_settings_on_setting_key"
 
 end

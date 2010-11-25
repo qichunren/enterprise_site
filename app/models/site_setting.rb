@@ -6,6 +6,9 @@ class SiteSetting < ActiveRecord::Base
   validates :name, :presence => true
   validates :setting_key, :presence => true, :uniqueness => true
   validates :setting_value, :presence => true
+  
+  
+  scope :product_module, where(:module => "product")
 
       
   class << self
