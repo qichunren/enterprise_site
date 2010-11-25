@@ -35,10 +35,11 @@ class Syspanel::SiteSettingsController < Syspanel::BaseController
   # POST /site_settings
   def create
     @site_setting = SiteSetting.new(params[:site_setting])
+    @site_setting.build_in = false # ervery new created config item is not build_in
 
     respond_to do |format|
       if @site_setting.save
-        format.html { redirect_to(@site_setting, :notice => 'Site setting was successfully created.') }
+        format.html { redirect_to(syspanel_site_settings_path, :notice => '新配置项添加成功.') }
       else
         format.html { render :action => "new" }
       end

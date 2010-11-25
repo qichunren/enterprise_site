@@ -20,7 +20,7 @@
     <td><%= truncate(site_setting.setting_value, :length => 100, :omission => "...") %></td>
     <td><%= site_setting.remark %></td>
     <td align="center"><%= site_setting.value_type %></td>
-    <td align="center"><%= link_to '修改', edit_syspanel_site_setting_path(site_setting) %> <%= link_to '删除', [:syspanel, site_setting], :confirm => '你要删除?', :method => :delete %></td>
+    <td align="center"><%= link_to '修改', edit_syspanel_site_setting_path(site_setting) %> <%= link_to('删除', [:syspanel, site_setting], :confirm => '你要删除?', :method => :delete) unless site_setting.build_in? %></td>
   </tr>
 <% end %>
 </table>

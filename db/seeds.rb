@@ -103,5 +103,5 @@ SiteSetting.create(
                      :setting_key => "enable_product_module",
                      :setting_value => "true",
                      :remark => "", :build_in => true,
-                     :value_type => "boolean" )                   
+                     :value_type => "boolean" )                  
 # all site setting end
