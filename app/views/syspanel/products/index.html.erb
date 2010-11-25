@@ -29,4 +29,14 @@
 
 <br />
 
-<%= link_to '发布产品', new_syspanel_product_path %>
+
+<%= content_for :sidebar do %>
+    <div class="content_box">
+      <div class="inner_box_header">
+        <h3>产品模块</h3>
+      </div>
+      <div class="inner_box_body">
+      <%= link_to '发布产品', new_syspanel_product_path %>
+      </div>
+    </div>
+<% end %>
