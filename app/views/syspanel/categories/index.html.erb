@@ -1,6 +1,6 @@
 <% title "产品分类管理" %>
 <h2>产品分类</h2>
-<%= render :partial => "/syspanel/shared/setting_tab" %>
+
 <table class="list">
   <tr>
     <th>分类名称</th>
@@ -20,4 +20,6 @@
 
 <br />
 
-<%= link_to '添加分类', new_syspanel_category_path %>
+<%= content_for :sidebar do %>
+  <%= render :partial => "/syspanel/products/sidebar" %>
+<% end %>

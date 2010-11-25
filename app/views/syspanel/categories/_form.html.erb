@@ -2,7 +2,6 @@
   <% if @category.errors.any? %>
     <div id="error_explanation">
       <h3>由于以下错误没有保存成功:</h3>
-
       <ul>
       <% @category.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -10,16 +9,17 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  
+  <div class="box"> 
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :parent_id %><br />
+      <%= f.select :parent_id, nested_set_options(Category, @category) {|i| "#{'---' * i.level} #{i.name}" } %>
+    </p>
   </div>
-  <div class="field">
-    <%= f.label :parent_id %><br />
-    <%= f.select :parent_id, nested_set_options(Category, @category) {|i| "#{'---' * i.level} #{i.name}" } %>
-  </div>
-  <div class="actions">
     <%= f.submit %> － <%= link_to t(:label_back), syspanel_categories_path %>
   </div>
 <% end %>

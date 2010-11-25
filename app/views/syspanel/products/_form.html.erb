@@ -1,48 +1,49 @@
 <%= form_for([:syspanel, @product], :html => { :multipart => true, :class => "tabular" } ) do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2>有如下错误：</h2>
-
-      <ul>
-      <% @product.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="box">
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
-  </p>
-  <p>
-    <%= f.label :category_id %>
-    <%= f.select :category_id, nested_set_options(Category, Category.new) {|i| "#{'---' * i.level} #{i.name}" } %>
-  </p>
-  <p>
-    <%= f.label :product_no %>
-    <%= f.text_field :product_no %>
-  </p>
-  <p>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :price %>
-    <%= f.text_field :price %>
-  </p>
-  <p>
-    <%= f.label :amount %>
-    <%= f.text_field :amount %>
-  </p>
-  <p>
-    <%= f.label :is_published %>
-    <%= f.check_box :is_published %>
-  </p>
+  
+<% if @product.errors.any? %>
+  <div id="error_explanation">
+    <h3>由于以下错误没有保存成功:</h3>
+    <ul>
+    <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
   </div>
-     <%= f.submit %> - <%= link_to t(:label_back), syspanel_products_path %>    
+<% end %>
+  
+  <div class="box">
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p> 
+    <p>
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar %>
+    </p> 
+    <p>
+      <%= f.label :category_id %>
+      <%= f.select :category_id, nested_set_options(Category, Category.new) {|i| "#{'---' * i.level} #{i.name}" } %>
+    </p> 
+    <p>
+      <%= f.label :product_no %>
+      <%= f.text_field :product_no %>
+    </p> 
+    <p>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </p>  
+    <p>
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+    </p> 
+    <p>
+      <%= f.label :amount %>
+      <%= f.text_field :amount %>
+    </p>  
+    <p>
+      <%= f.label :is_published %>
+      <%= f.check_box :is_published %>
+    </p> 
+  </div>
+ <%= f.submit %> - <%= link_to t(:label_back), syspanel_products_path %>    
 <% end %>

@@ -13,18 +13,13 @@
   <body>
     <div id="wrapper">
         <%= render 'shared/syspanel_header' %>
+        
         <div id="main" class="<%= has_content?(:sidebar) ? '' : 'nosidebar' %>" >
-
-          <div id="sidebar">
-            <%= yield :sidebar %>
-          </div>
-
-          <div id="content">
-            <%= yield %>
-          </div>
-
-
-        </div>
+          <div id="sidebar"><%= yield :sidebar %></div><!-- end:#sidebar -->
+          <div id="content"><%= yield %></div><!-- end:#content -->
+        </div><!-- end:#main --> 
+        
+ 
         <%= render 'shared/syspanel_footer' %>
     </div><!-- end:#wrapper -->
   </body>

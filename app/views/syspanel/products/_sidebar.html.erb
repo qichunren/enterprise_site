@@ -1,0 +1,22 @@
+<div class="content_box">
+  <div class="inner_box_header">
+    <h3>产品模块</h3>
+  </div>
+  <div class="inner_box_body">                      
+    <ul>
+      <li><%= link_to '产品列表', syspanel_products_path %>
+        <span><%= link_to '发布产品', new_syspanel_product_path %></span>
+      </li>
+  </div>
+</div>  
+
+<div class="content_box">
+    <div class="inner_box_header">
+      <h3>产品模块配置</h3>
+    </div>
+    <div class="inner_box_body">
+      <ul>
+        <li><%= link_to "产品分类", syspanel_categories_path %>
+        <span><%= link_to "添加产品分类", new_syspanel_category_path %></span></li>
+    </div>
+  </div>
