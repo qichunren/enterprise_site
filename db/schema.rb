@@ -134,11 +134,14 @@ ActiveRecord::Schema.define(:version => 20101111112445) do
   create_table "site_settings", :force => true do |t|
     t.string   "name",          :null => false
     t.string   "setting_key",   :null => false
-    t.string   "setting_value", :null => false
+    t.text     "setting_value", :null => false
     t.string   "remark"
-    t.string   "value_type"
+    t.string   "value_type",    :null => false
+    t.boolean  "build_in",      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "site_settings", ["setting_key"], :name => "index_site_settings_on_setting_key"
 
 end

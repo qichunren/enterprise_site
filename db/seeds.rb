@@ -75,27 +75,33 @@ SiteSetting.create(
                      :name => "公司全名",
                      :setting_key => "company_full_name",
                      :setting_value => "上海某某科技有限公司",
-                     :remark => "",
+                     :remark => "", :build_in => true,
                      :value_type => "string" ) 
 
 SiteSetting.create(
                      :name => "公司简称",
                      :setting_key => "company_short_name",
                      :setting_value => "上海某某",
-                     :remark => "",
+                     :remark => "", :build_in => true,
                      :value_type => "string" )  
                      
 SiteSetting.create(
                     :name => "公司地址",
                     :setting_key => "company_address",
                     :setting_value => "上海市徐汇区漕溪北路18号（上实大厦）37楼",
-                    :remark => "",
+                    :remark => "", :build_in => true,
                     :value_type => "string" )
 
 SiteSetting.create(
                     :name => "公司联系电话",
                     :setting_key => "company_telphone",
                     :setting_value => "021-885566",
-                    :remark => "",
-                    :value_type => "string" )                   
+                    :remark => "", :build_in => true,
+                    :value_type => "string" )
+SiteSetting.create(
+                     :name => "是否启用产品模块",
+                     :setting_key => "enable_product_module",
+                     :setting_value => "true",
+                     :remark => "", :build_in => true,
+                     :value_type => "boolean" )                   
 # all site setting end

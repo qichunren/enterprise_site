@@ -1,6 +1,6 @@
 class SiteSetting < ActiveRecord::Base
   
-  VALUE_TYPES = ["string", "integer", "float", "text"]
+  VALUE_TYPES = ["string", "integer", "float", "text", "boolean"]
   
    
   validates :name, :presence => true
