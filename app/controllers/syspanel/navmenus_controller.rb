@@ -8,6 +8,16 @@ class Syspanel::NavmenusController < Syspanel::BaseController
       format.html # index.html.erb
     end
   end
+     
+  # PUT save sorted nav menus
+  def sort
+    menus = params[:navmenus]
+    puts "#{menus.inspect}"
+    menus.each_with_index do |menu, i|
+      Navmenu.find(menu).update_attribute("position", i)
+    end
+    render :text => ""
+  end
 
   # GET /navmenus/new
   def new

@@ -28,7 +28,11 @@ EnterpriseSite::Application.routes.draw do
     resources :attachments
     resources :site_settings 
     resources :pages
-    resources :navmenus, :except => [:show]
+    resources :navmenus, :except => [:show] do
+      collection do
+        post "sort"
+      end
+    end
     resources :notices  
     resources :products
     resources :product_configrations

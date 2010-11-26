@@ -1,4 +1,6 @@
-class Navmenu < ActiveRecord::Base 
+class Navmenu < ActiveRecord::Base
+  
+  default_scope :order => "position" 
   
   validates :label, :presence => true
   validates :url,   :presence => true

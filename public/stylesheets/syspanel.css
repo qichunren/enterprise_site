@@ -219,6 +219,23 @@ table.list tbody td, table.list tbody tr:hover td {
 
 #content .tabs ul li a.selected:hover {
   background-color: #fff;
+} 
+
+
+#navmenu_list_sortable {
+  height:40px;
+  margin-bottom: 10px;
+}
+
+#navmenu_list_sortable li {
+  float: left;
+  border: 1px solid #BDBDBD;
+  margin-right:8px;
+  width: 70px;
+  padding:8px; 
+  font-weight: bold;
+  cursor:move;
+  background: #EFFFFA;
 }
 
 
