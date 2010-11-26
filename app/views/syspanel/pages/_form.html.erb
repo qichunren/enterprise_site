@@ -24,7 +24,7 @@
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body, :style => "width: 450px; height:200px;" %>
+    <%= f.text_area :body, :class => "wymeditor" %>
   </div>
   <div class="field">
     <%= f.label :url_slug %><br />
@@ -36,6 +36,11 @@
     <%= f.check_box :is_published %>
   </div>
   <div class="actions">
-    <%= f.submit %> － <%= link_to t(:label_back), syspanel_pages_path %>
+    <%= f.submit "提交", :class => "wymupdate" %> － <%= link_to t(:label_back), syspanel_pages_path %>
   </div>
+<% end %>
+
+<%= content_for :html_head do %>
+  <%= javascript_include_tag "wymeditor/jquery.wymeditor.min.js" %>
+
 <% end %>

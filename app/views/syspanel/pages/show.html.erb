@@ -12,13 +12,13 @@
   <strong><%= @page.description %></strong>
 </p>
 
-<p style="border:1px solid #ff9900;">
-  <%= @page.body %>
+<p style="">
+  <%= raw @page.body %>
 </p>
 
 <p>
   <b>访问路径:</b>
-  <%= @page.visit_path %>
+  <%= link_to '预览', "/pages/#{@page.url_slug}" %>
 </p>
 
 <p>
@@ -32,6 +32,5 @@
 </p>
 
 
-<%= link_to '编辑', edit_syspanel_page_path(@page) %> |         
-<%= link_to '预览', "/pages/#{@page.url_slug}" %> | 
+<%= link_to '编辑', edit_syspanel_page_path(@page) %> 
 <%= link_to '返回', syspanel_pages_path %>

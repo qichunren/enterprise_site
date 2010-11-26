@@ -38,16 +38,25 @@ jQuery.fn.serializeList = function (attribute, levelString) {
 
 
 jQuery(document).ready(function(){ 
-  $("#enable_navmenu_list_sortable").click(function(){
-    $(this).hide();
-    $("#done_navmenu_list_sortable").show();
-    $("#navmenu_list_sortable").css({ border: "1px solid #BDBDBD", padding: "2px"}).sortable({ axis: 'x' })
+  
+  // for nav menu sort 
+  jQuery("#enable_navmenu_list_sortable").click(function(){
+    jQuery(this).hide();
+    jQuery("#done_navmenu_list_sortable").show();
+    jQuery("#navmenu_list_sortable").css({ border: "1px solid #BDBDBD", padding: "2px"}).sortable({ axis: 'x' })
+  });
+                       
+  // save nav menu sort at server side
+  jQuery("#done_navmenu_list_sortable").click(function(){
+    jQuery.post("/syspanel/navmenus/sort?" + $("#navmenu_list_sortable").serializeList("data-id","navmenus"));
+    jQuery(this).hide();
+    jQuery("#enable_navmenu_list_sortable").show();
+    jQuery("#navmenu_list_sortable").css({ border: "0px solid #BDBDBD", padding: "0px"}).sortable("disable");
+  });   
+  
+  jQuery('.wymeditor').wymeditor({ 
+    updateSelector: "input[type='submit']"
   });
   
-  $("#done_navmenu_list_sortable").click(function(){
-    $.post("/syspanel/navmenus/sort?" + $("#navmenu_list_sortable").serializeList("data-id","navmenus"));
-    $(this).hide();
-    $("#enable_navmenu_list_sortable").show();
-    $("#navmenu_list_sortable").css({ border: "0px solid #BDBDBD", padding: "0px"}).sortable("disable");
-  });
+
 });
