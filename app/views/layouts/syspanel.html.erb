@@ -6,7 +6,13 @@
     <title><%= yield(:title).blank? ? "后台管理" : yield(:title) %> － <%= Settings.system.name %></title>    
     <%= yield(:description)%><%= yield(:keywords)%> 
     <%= stylesheet_link_tag 'syspanel', 'flick/jquery-ui-1.8.5.custom' %>
-    <%= javascript_include_tag :defaults %>
+    
+    <% if Rails.env.production? %>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+      <% else %>
+      <%= javascript_include_tag "jquery.js", "rails.js", "application.js" %>
+      <% end %>
+    
     <%= javascript_include_tag "jquery-ui-1.8.6.custom.min.js" %>
     <%= yield :html_head %>
     <%= csrf_meta_tag %>
