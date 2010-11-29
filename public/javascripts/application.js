@@ -54,9 +54,6 @@ jQuery(document).ready(function(){
     jQuery("#navmenu_list_sortable").css({ border: "0px solid #BDBDBD", padding: "0px"}).sortable("disable");
   });   
   
-  jQuery('.wymeditor').wymeditor({ 
-    updateSelector: "input[type='submit']"
-  });
   
 
 });

@@ -97,7 +97,7 @@ input.text{background-color:transparent;  border:none; width:150px; margin-left:
 .logopanel li.mg_t2{margin-top:2px;}
 
 #content { background: #FFF;padding:5px 5px; border:1px solid #BDBDBD;}
-#content h2{ padding: 10px; margin-bottom:8px; border-bottom:2px solid #BDBDBD;}
+#content h2.h2{ padding: 10px; margin-bottom:8px; border-bottom:2px solid #BDBDBD;}
 #content .h3_tab{margin-bottom:-0px; height:27px;}
 #content .h3_tab a{display:block;background: transparent url('../images/bg_content_h3.gif') repeat-x 0 0;border:2px #d1dae3 solid;border-bottom:none; height:22px;padding:5px 20px 0; float:left;}
 #content .detailbox{ background-color:#f8f8f8; border:2px #dae1eb solid;padding:10px;}

@@ -1,4 +1,23 @@
 <% title "创建新页面" %>
-<h2>创建新页面</h2>
+<h2 class="h2">创建新页面</h2>  
+
+<%= link_to "上传图片", new_syspanel_attachment_path(:layout => "false"), :id => "upload_image_link", :title => "上传图片" %>
 
 <%= render 'form' %>
+
+<div id="upload_image_div" style="display: none;">
+  <%= form_for([:syspanel, Attachment.new], :html => { :multipart => true }) do |f| %>
+  <%= f.submit "上传" %>
+  
+  <% end %>
+</div>
+
+<%= content_for :html_head do %>
+  <script type="text/javascript" src="/javascripts/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <link rel="stylesheet" href="/javascripts/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#upload_image_link").fancybox();
+    });
+  </script>
+<% end %>

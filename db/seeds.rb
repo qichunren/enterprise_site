@@ -74,14 +74,14 @@ category_52 = Category.create(:name => "休闲食品", :parent_id => category_5.
 SiteSetting.create(
                      :name => "公司全名",
                      :setting_key => "company_full_name",
-                     :setting_value => "上海某某科技有限公司",
+                     :setting_value => "上海ABC有限公司",
                      :remark => "", :build_in => true,
                      :value_type => "string" ) 
 
 SiteSetting.create(
                      :name => "公司简称",
                      :setting_key => "company_short_name",
-                     :setting_value => "上海某某",
+                     :setting_value => "上海ABC",
                      :remark => "", :build_in => true,
                      :value_type => "string" )  
                      

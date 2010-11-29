@@ -23,7 +23,11 @@ class Syspanel::AttachmentsController <  Syspanel::BaseController
     @attachment = Attachment.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html {
+        if params[:layout] == "false"
+          render :layout => false
+        end
+      }
     end
   end
 
@@ -38,7 +42,7 @@ class Syspanel::AttachmentsController <  Syspanel::BaseController
 
     respond_to do |format|
       if @attachment.save
-        format.html { redirect_to([:syspanel, @attachment], :notice => 'Attachment was successfully created.') }
+        format.html { render :text => "ddd" }
       else
         format.html { render :action => "new" }
       end

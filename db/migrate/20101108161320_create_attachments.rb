@@ -3,7 +3,7 @@ class CreateAttachments < ActiveRecord::Migration
     create_table :attachments do |t|
       t.string :name, :null => false
       t.integer :download_count, :default => 0
-      t.text :descripton
+      t.text :description
       
       # for paperclip gem: has_attached_file :attach
       t.string    :attach_file_name

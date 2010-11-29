@@ -22,6 +22,7 @@
       attachment:   
         name: "附件名称"
         description: "附件说明"
+        attach_file_name: "文件"
         attach: "上传"
       category:
         name: "分类名称"

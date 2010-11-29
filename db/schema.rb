@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20101111112445) do
   create_table "attachments", :force => true do |t|
     t.string   "name",                               :null => false
     t.integer  "download_count",      :default => 0
-    t.text     "descripton"
+    t.text     "description"
     t.string   "attach_file_name"
     t.string   "attach_content_type"
     t.integer  "attach_file_size"
@@ -132,13 +132,13 @@ ActiveRecord::Schema.define(:version => 20101111112445) do
   end
 
   create_table "site_settings", :force => true do |t|
-    t.string   "name",          :null => false
-    t.string   "setting_key",   :null => false
-    t.text     "setting_value", :null => false
+    t.string   "name",                          :null => false
+    t.string   "setting_key",                   :null => false
+    t.text     "setting_value",                 :null => false
     t.string   "remark"
-    t.string   "value_type",    :null => false
-    t.boolean  "build_in",      :null => false
-    t.string   "module"
+    t.string   "value_type",                    :null => false
+    t.boolean  "build_in",                      :null => false
+    t.string   "module",        :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

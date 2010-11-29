@@ -15,7 +15,11 @@ class AdminSessionsController < ApplicationController
   end
 
   def create
-    @admin_session = AdminSession.new(params[:admin_session])
+    # params[:admin_session][:login]
+    login_hash = {}
+    login_hash[:login] = params[:admin_session][:login].strip if params[:admin_session]
+    login_hash[:password] = params[:admin_session][:password] if params[:admin_session]
+    @admin_session = AdminSession.new(login_hash)
     if @admin_session.save
       flash[:notice] = "登录成功!"
       redirect_to "/syspanel/home/index"

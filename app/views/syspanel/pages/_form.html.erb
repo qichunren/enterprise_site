@@ -1,4 +1,4 @@
-<%= form_for([:syspanel, @page]) do |f| %>
+<%= form_for([:syspanel, @page], :html => { :class => "tabular"}) do |f| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
       <h2>发生如下错误:</h2>
@@ -8,39 +8,47 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
+  <% end %>                                                   
+  
+  <div class="box">
+  <p>
+    <%= f.label :title %>
     <%= f.text_field :title, :style => "width: 400px;" %>
-  </div>
-  <div class="field">
-    <%= f.label :keywords %><br />
+  </p> 
+  <p>
+    <%= f.label :url_slug %>
+    /pages/<%= f.text_field :url_slug %>
+  </p>
+  <p>
+    <%= f.label :keywords %>
     <%= f.text_field :keywords, :style => "width: 400px;" %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
+  </p>
+  <p>
+    <%= f.label :description %>
     <%= f.text_field :description, :style => "width: 400px;" %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
+  </p>
+  <p>
+    <%= f.label :body %>
     <%= f.text_area :body, :class => "wymeditor" %>
-  </div>
-  <div class="field">
-    <%= f.label :url_slug %><br />
-    <%= f.text_field :url_slug %>(eg: /pages/our-servers)
-  </div>
+  </p>
 
-  <div class="field">
-    <%= f.label :is_published %>
-    <%= f.check_box :is_published %>
   </div>
-  <div class="actions">
-    <%= f.submit "提交", :class => "wymupdate" %> － <%= link_to t(:label_back), syspanel_pages_path %>
-  </div>
+    <%= f.submit "发布页面", :class => "wymupdate" %> - <%= f.submit "保存草稿" %> － <%= link_to t(:label_back), syspanel_pages_path %>
 <% end %>
 
 <%= content_for :html_head do %>
   <%= javascript_include_tag "wymeditor/jquery.wymeditor.min.js" %>
-
+  <%= javascript_include_tag "wymeditor/plugins/resizable/jquery.wymeditor.resizable.js" %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      jQuery('.wymeditor').wymeditor({ 
+        updateSelector: "input[type='submit']",
+        
+        postInit: function(wym) {
+         wym.resizable();
+        }
+        
+      });
+    });
+  </script>
 <% end %>
