@@ -83,7 +83,14 @@ SiteSetting.create(
                      :setting_key => "company_short_name",
                      :setting_value => "上海ABC",
                      :remark => "", :build_in => true,
-                     :value_type => "string" )  
+                     :value_type => "string" )
+
+SiteSetting.create(
+                    :name => "公司简介",
+                    :setting_key => "company_introduce",
+                    :setting_value => "火星市某某家居有限公司，占地面积450余亩，年产陶瓷洁具320多万件，浴缸、淋浴房、龙头、浴室柜等卫浴设施300多万套。公司现有员工4800 多人，公司传承开拓创新精神，专注于制造高品质的陶瓷洁具及配套产品，为广大用户提供自由、奔放、舒适、健康的产品。公司拥有300多名资深设计师组成的设计团队，在产品设计上充分以人文化、科技智能化的设计理念，全力彰显人性需求，同时结合人体工程学、流体力学、结构力学的最新研究成果，开发研制出 2200多种款式新颖、时尚大方的产品。",
+                    :remark => "", :build_in => true,
+                    :value_type => "text" )  
                      
 SiteSetting.create(
                     :name => "公司地址",
