@@ -148,8 +148,22 @@ html > body #content {
 /***** Links *****/
 a, a:link, a:visited{ color: #6F7C7F; text-decoration: none; }
 a:hover, a:active{ color: #FF9900; text-decoration: underline;}
-a img{ border: 0; }
+a img{ border: 0; } 
 
+/* home page style */
+#company_introduce {
+  line-height: 24px;
+}
+#company_introduce h3.title {
+  margin: 0px;                      
+  padding-bottom:5px;
+  border-bottom: 1px dashed #EEEEEE; 
+}
+#company_introduce .wrapper {
+  padding: 3px;
+  text-indent: 33px;
+}
+                    
 /* news */ 
 #latest_notices{clear:both;}
 /* products */

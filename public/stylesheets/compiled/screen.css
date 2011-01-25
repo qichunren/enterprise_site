@@ -153,31 +153,50 @@ a img {
   border: 0;
 }
 
-/* news */
+/* home page style */
 /* line 154, ../../../app/stylesheets/application.scss */
+#company_introduce {
+  line-height: 24px;
+}
+
+/* line 157, ../../../app/stylesheets/application.scss */
+#company_introduce h3.title {
+  margin: 0px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #EEEEEE;
+}
+
+/* line 162, ../../../app/stylesheets/application.scss */
+#company_introduce .wrapper {
+  padding: 3px;
+  text-indent: 33px;
+}
+
+/* news */
+/* line 168, ../../../app/stylesheets/application.scss */
 #latest_notices {
   clear: both;
 }
 
 /* products */
-/* line 156, ../../../app/stylesheets/application.scss */
+/* line 170, ../../../app/stylesheets/application.scss */
 #latest_products {
   clear: both;
 }
 
-/* line 157, ../../../app/stylesheets/application.scss */
+/* line 171, ../../../app/stylesheets/application.scss */
 .product {
   float: left;
   margin: 0 10px 10px 0;
 }
 
-/* line 158, ../../../app/stylesheets/application.scss */
+/* line 172, ../../../app/stylesheets/application.scss */
 .product .product_inner {
   width: 120px;
   height: 95px;
 }
 
-/* line 159, ../../../app/stylesheets/application.scss */
+/* line 173, ../../../app/stylesheets/application.scss */
 .product h4 {
   margin: 0;
   padding: 0;
@@ -187,13 +206,13 @@ a img {
   line-height: 18px;
 }
 
-/* line 161, ../../../app/stylesheets/application.scss */
+/* line 175, ../../../app/stylesheets/application.scss */
 #product .product_image {
   float: left;
   margin: 0 10px 10px 0;
 }
 
-/* line 162, ../../../app/stylesheets/application.scss */
+/* line 176, ../../../app/stylesheets/application.scss */
 #product .product_desc {
   border-top: 2px solid #BDBDBD;
   clear: both;
@@ -201,7 +220,7 @@ a img {
 }
 
 /* login page style */
-/* line 166, ../../../app/stylesheets/application.scss */
+/* line 180, ../../../app/stylesheets/application.scss */
 #login-form {
   font-size: 2em;
   margin: 20px;
@@ -209,7 +228,7 @@ a img {
   text-align: center;
 }
 
-/* line 167, ../../../app/stylesheets/application.scss */
+/* line 181, ../../../app/stylesheets/application.scss */
 #login-form #back_link {
   font-size: 12px;
   position: absolute;
@@ -218,36 +237,36 @@ a img {
   top: 4px;
 }
 
-/* line 168, ../../../app/stylesheets/application.scss */
+/* line 182, ../../../app/stylesheets/application.scss */
 #login-form #copyright {
   font-size: 14px;
   padding: 8px;
 }
 
-/* line 170, ../../../app/stylesheets/application.scss */
+/* line 184, ../../../app/stylesheets/application.scss */
 #login-form h1 {
   margin: 4px;
   padding: 4px;
 }
 
-/* line 171, ../../../app/stylesheets/application.scss */
+/* line 185, ../../../app/stylesheets/application.scss */
 #login-form .wrapper {
   padding: 20px;
   border: 2px solid #4F4F4F;
   background: #BDBDBD;
 }
 
-/* line 173, ../../../app/stylesheets/application.scss */
+/* line 187, ../../../app/stylesheets/application.scss */
 #login-form p {
   padding: 6px;
 }
 
-/* line 174, ../../../app/stylesheets/application.scss */
+/* line 188, ../../../app/stylesheets/application.scss */
 #login-form label {
   font-weight: bold;
 }
 
-/* line 175, ../../../app/stylesheets/application.scss */
+/* line 189, ../../../app/stylesheets/application.scss */
 #login-form input#admin_session_login, #login-form input#admin_session_password {
   width: 300px;
   padding: 10px;
@@ -255,7 +274,7 @@ a img {
   border: 2px solid #7F7F7F;
 }
 
-/* line 176, ../../../app/stylesheets/application.scss */
+/* line 190, ../../../app/stylesheets/application.scss */
 #admin_session_submit {
   font-size: 20px;
 }
