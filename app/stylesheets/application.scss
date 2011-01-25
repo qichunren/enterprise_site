@@ -134,7 +134,17 @@ html > body #content {
 
 #sidebar .wrapper {
 
-}  
+} 
+
+#sidebar .box {
+  border: 1px solid #BDBDBD;
+  margin-bottom: 10px;
+}
+#sidebar .box h3.title {
+  margin: 0px;
+  padding: 10px;
+  background: #EEEEEE;
+} 
 
 #content .wrapper, #sidebar .wrapper {
 
@@ -155,8 +165,8 @@ a img{ border: 0; }
   line-height: 24px;
 }
 #company_introduce h3.title {
-  margin: 0px;                      
-  padding-bottom:5px;
+  margin-bottom: 8px;                      
+  padding-bottom: 5px;  
   border-bottom: 1px dashed #EEEEEE; 
 }
 #company_introduce .wrapper {
@@ -167,13 +177,25 @@ a img{ border: 0; }
 /* news */ 
 #latest_notices{clear:both;}
 /* products */
-#latest_products{clear:both;}
+#latest_products{clear:both;} 
+
+#latest_products h3.title {
+  margin-bottom: 8px;                      
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #EEEEEE; 
+}
 .product { float:left; margin:0 10px 10px 0;}
-.product .product_inner{width:120px;height:95px;}
+.product .product_inner{width:120px;height:95px; border: 1px solid #EEEEEE; padding: 5px;margin-bottom:5px;}
 .product h4{margin:0;padding:0;overflow:hidden;width:120px;height:35px;line-height:18px;}
 
 #product .product_image{float:left; margin: 0 10px 10px 0;}   
-#product .product_desc { border-top:2px solid #BDBDBD;clear:both; padding: 10px;}
+#product .product_desc { border-top:2px solid #BDBDBD;clear:both; padding: 10px;} 
+
+#categories ul { list-style-type: none; list-style-position:inside; margin: 0px; padding: 0px;}
+#categories li { padding: 8px;}
+#categories .category_1 { margin-bottom:5px; padding: 3px; border-bottom: 1px solid #BDBDBD; } 
+#categories .category_2 {margin-left: 10px;}    
+.box .product{ float: none; margin:10px;}
 
 
 /* login page style */

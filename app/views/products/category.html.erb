@@ -17,44 +17,8 @@
 
 
 <% content_for :sidebar do %>
-  <div class="box">
-    <h3>产品分类</h3>
-    <div>
-      <ul>
-        <% category_level = Category.category_level %>
-        <% Category.root.children.each do |category| %>
-        <% if category_level == 1 %>
-          <li><%= link_to category.name, category_product_path(category) %></li>                   
-        <% elsif category_level == 2 %>
-          <li>
-            <%= link_to category.name, category_product_path(category) %>
-            <div>
-            <% category.children.each do |category1| %>
-              <em><%= link_to category1.name, category_product_path(category1) %></em>
-            <% end %>
-            </div>
-          </li>  
-          <% end %>
-        <% end %>
-      </ul>
-    </div>
-    <h3>推荐产品</h3>
-    <div>  
-      <ul>  
-        <li>
-          <%= link_to "Some thing here", "" %>
-          <div><%= image_tag "rails.png" %></div>
-        </li>
-        <li>
-          <%= link_to "Some thing here", "" %>
-          <div><%= image_tag "rails.png" %></div>
-        </li>
-        <li>
-          <%= link_to "Some thing here", "" %>
-          <div><%= image_tag "rails.png" %></div>
-        </li>
+<%= render :partial => "/products/categories_bar" %>      
+<%= render :partial => "/products/recommend_products" %>
 
-      </ul>
-    </div>
-  </div>
+
 <% end %>

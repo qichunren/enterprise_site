@@ -8,8 +8,8 @@
 </div>
           
 <div id="latest_products">
+  <h3 class="title">最新产品</h3>
   <div class="wrapper">
-    <h3>最新产品</h3>
     <% @latest_products.each do |product| %>
       <div class='product'>
         <div class="product_inner"><%= link_to(image_tag(product.avatar.url(:thumb)), product) %></div>
@@ -29,7 +29,3 @@
     </ul>   
   </div>               
 </div>
-
-<% content_for :sidebar do %>
-
-<% end %>

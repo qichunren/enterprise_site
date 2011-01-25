@@ -10,6 +10,10 @@ class Product < ActiveRecord::Base
     raise "Product must belongs to a child category!" unless product.category.children.blank?
   end
   
-  scope :published, :conditions => ["is_published=true", true], :order => "id DESC"
+  scope :published, :conditions => ["is_published=true", true], :order => "id DESC"  
+  
+  def self.recommend_products(limit)
+    self.published.find(:all, :limit => limit)
+  end
   
 end

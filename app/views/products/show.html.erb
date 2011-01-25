@@ -24,7 +24,12 @@
   </div>
   <div class="product_desc"><%= @product.description %></div>
   
-</div>
+</div><!-- End:#product -->
+
+<% content_for :sidebar do %>
+  <%= render :partial => "/products/categories_bar" %>
+  <%= render :partial => "/products/recommend_products" %>
+<% end %>
 
 
 
