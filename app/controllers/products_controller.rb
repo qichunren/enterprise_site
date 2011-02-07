@@ -17,6 +17,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   def show
     @product = Product.published.find(params[:id])
+    @product.click_count += 1
+    @product.save 
 
     respond_to do |format|
       format.html # show.html.erb

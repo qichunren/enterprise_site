@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :category_id, :null => false
       t.string :product_no
       t.text :description
-      t.integer :click_count, :default => 1
+      t.integer :click_count, :default => 0
       t.decimal :price
       t.integer :amount
       t.boolean :is_published, :default => true
