@@ -1,16 +1,17 @@
-<% title "产品中心" %> 
+<% title "#{@category.name}" %> 
 
 <div id="products">
-  <ul>
-    <% @products.each do |product| %> 
-    <li>
-      <h3><%= link_to product.name, product, :title => product.name %></h3>
-      <div>
-        <%= image_tag product.avatar.url(:thumb) %>
-      </div>
-    </li>                         
+  <div class="wrapper">
+    <h3><%= @category.name %></h3>
+    <% @products.each do |product| %>
+      <div class='product'>
+        <div class="product_inner">
+          <%= link_to(image_tag(product.avatar.url(:thumb)), product) %>
+        </div>
+        <h4><%= link_to product.name, product %></h4>
+      </div> 
     <% end %>
-  </ul>
+  </div>
 </div><!-- end:#products -->
 
 <%= will_paginate @products %> 
