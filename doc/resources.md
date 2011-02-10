@@ -1,4 +1,4 @@
-# Resources
+# Resources list
 
 ### Theme Resources
 
