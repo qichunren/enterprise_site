@@ -1,0 +1,329 @@
+/* pages layout */
+/* line 12, ../../../../app/stylesheets/theme1/application.scss */
+#container {
+  width: 950px;
+  margin: 0 auto;
+}
+
+/* line 17, ../../../../app/stylesheets/theme1/application.scss */
+#content {
+  width: 710px;
+  border-width: 0px;
+  float: right;
+}
+
+/* line 23, ../../../../app/stylesheets/theme1/application.scss */
+html > body #content {
+  min-height: 600px;
+}
+
+/* line 27, ../../../../app/stylesheets/theme1/application.scss */
+#sidebar {
+  width: 230px;
+  float: left;
+}
+
+/* line 32, ../../../../app/stylesheets/theme1/application.scss */
+#sidebar {
+  width: 230px;
+  float: left;
+}
+
+/* line 45, ../../../../app/stylesheets/theme1/application.scss */
+#main.nosidebar #sidebar {
+  display: none;
+}
+
+/* line 46, ../../../../app/stylesheets/theme1/application.scss */
+#main.nosidebar #content {
+  float: left;
+  width: 950px;
+}
+
+/* line 48, ../../../../app/stylesheets/theme1/application.scss */
+#footer {
+  clear: both;
+  border-top: 2px solid #BDBDBD;
+  margin-top: 8px;
+}
+
+/* line 54, ../../../../app/stylesheets/theme1/application.scss */
+#footer .bgl {
+  padding: 10px;
+}
+
+/* line 55, ../../../../app/stylesheets/theme1/application.scss */
+#header {
+  height: 76px;
+}
+
+/* line 59, ../../../../app/stylesheets/theme1/application.scss */
+#header h1 {
+  margin: 0;
+  padding: 0;
+  height: 76px;
+}
+
+/* line 65, ../../../../app/stylesheets/theme1/application.scss */
+#nav {
+  height: 33px;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* line 71, ../../../../app/stylesheets/theme1/application.scss */
+#nav .wrapper {
+  height: 33px;
+  line-height: 33px;
+  margin: 0;
+  overflow: hidden;
+  padding-left: 25px;
+}
+
+/* line 79, ../../../../app/stylesheets/theme1/application.scss */
+#nav a {
+  display: block;
+  float: left;
+  height: 33px;
+  margin: 0;
+  text-align: center;
+  width: 100px;
+}
+
+/* pages theme */
+/* line 90, ../../../../app/stylesheets/theme1/application.scss */
+body {
+  background-color: white;
+}
+
+/* line 94, ../../../../app/stylesheets/theme1/application.scss */
+#container {
+  background: #FFF;
+}
+
+/* line 98, ../../../../app/stylesheets/theme1/application.scss */
+#header h1 {
+  text-indent: -999px;
+  background: url(/images/front/logo.jpg) no-repeat;
+}
+
+/* line 103, ../../../../app/stylesheets/theme1/application.scss */
+#nav {
+  background: url("/images/front/top.png") no-repeat scroll 0 0 transparent;
+  white-space: nowrap;
+}
+
+/* line 113, ../../../../app/stylesheets/theme1/application.scss */
+#nav a {
+  color: #474747;
+  font: bold 14px/33px "SimSun", Arial, Sans-Serif;
+  text-decoration: none;
+}
+
+/* line 119, ../../../../app/stylesheets/theme1/application.scss */
+#nav a:hover {
+  color: #FF6600;
+}
+
+/* line 139, ../../../../app/stylesheets/theme1/application.scss */
+#sidebar .box {
+  border: 1px solid #BDBDBD;
+  margin-bottom: 10px;
+}
+
+/* line 143, ../../../../app/stylesheets/theme1/application.scss */
+#sidebar .box h3.title {
+  margin: 0px;
+  padding: 10px;
+  background: #EEEEEE;
+}
+
+/* line 153, ../../../../app/stylesheets/theme1/application.scss */
+#footer {
+  border-top: 2px solid #BDBDBD;
+}
+
+/***** Links *****/
+/* line 159, ../../../../app/stylesheets/theme1/application.scss */
+a, a:link, a:visited {
+  color: #6F7C7F;
+  text-decoration: none;
+}
+
+/* line 160, ../../../../app/stylesheets/theme1/application.scss */
+a:hover, a:active {
+  color: #FF9900;
+  text-decoration: underline;
+}
+
+/* line 161, ../../../../app/stylesheets/theme1/application.scss */
+a img {
+  border: 0;
+}
+
+/* home page style */
+/* line 164, ../../../../app/stylesheets/theme1/application.scss */
+#company_introduce {
+  line-height: 24px;
+}
+
+/* line 167, ../../../../app/stylesheets/theme1/application.scss */
+#company_introduce h3.title {
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #EEEEEE;
+}
+
+/* line 172, ../../../../app/stylesheets/theme1/application.scss */
+#company_introduce .wrapper {
+  padding: 3px;
+  text-indent: 33px;
+}
+
+/* news */
+/* line 178, ../../../../app/stylesheets/theme1/application.scss */
+#latest_notices {
+  clear: both;
+}
+
+/* products */
+/* line 180, ../../../../app/stylesheets/theme1/application.scss */
+#latest_products {
+  clear: both;
+}
+
+/* line 182, ../../../../app/stylesheets/theme1/application.scss */
+#latest_products h3.title {
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #EEEEEE;
+}
+
+/* line 187, ../../../../app/stylesheets/theme1/application.scss */
+.product {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+/* line 188, ../../../../app/stylesheets/theme1/application.scss */
+.product .product_inner {
+  width: 120px;
+  height: 95px;
+  border: 1px solid #EEEEEE;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 189, ../../../../app/stylesheets/theme1/application.scss */
+.product h4 {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 120px;
+  height: 35px;
+  line-height: 18px;
+}
+
+/* line 191, ../../../../app/stylesheets/theme1/application.scss */
+#product .product_image {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+/* line 192, ../../../../app/stylesheets/theme1/application.scss */
+#product .product_desc {
+  border-top: 2px solid #BDBDBD;
+  clear: both;
+  padding: 10px;
+}
+
+/* line 194, ../../../../app/stylesheets/theme1/application.scss */
+#categories ul {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 195, ../../../../app/stylesheets/theme1/application.scss */
+#categories li {
+  padding: 8px;
+}
+
+/* line 196, ../../../../app/stylesheets/theme1/application.scss */
+#categories .category_1 {
+  margin-bottom: 5px;
+  padding: 3px;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+/* line 197, ../../../../app/stylesheets/theme1/application.scss */
+#categories .category_2 {
+  margin-left: 10px;
+}
+
+/* line 198, ../../../../app/stylesheets/theme1/application.scss */
+.box .product {
+  float: none;
+  margin: 10px;
+}
+
+/* login page style */
+/* line 202, ../../../../app/stylesheets/theme1/application.scss */
+#login-form {
+  font-size: 2em;
+  margin: 20px;
+  background-color: #5F5F5F;
+  text-align: center;
+}
+
+/* line 203, ../../../../app/stylesheets/theme1/application.scss */
+#login-form #back_link {
+  font-size: 12px;
+  position: absolute;
+  z-index: 10;
+  right: 22px;
+  top: 4px;
+}
+
+/* line 204, ../../../../app/stylesheets/theme1/application.scss */
+#login-form #copyright {
+  font-size: 14px;
+  padding: 8px;
+}
+
+/* line 206, ../../../../app/stylesheets/theme1/application.scss */
+#login-form h1 {
+  margin: 4px;
+  padding: 4px;
+}
+
+/* line 207, ../../../../app/stylesheets/theme1/application.scss */
+#login-form .wrapper {
+  padding: 20px;
+  border: 2px solid #4F4F4F;
+  background: #BDBDBD;
+}
+
+/* line 209, ../../../../app/stylesheets/theme1/application.scss */
+#login-form p {
+  padding: 6px;
+}
+
+/* line 210, ../../../../app/stylesheets/theme1/application.scss */
+#login-form label {
+  font-weight: bold;
+}
+
+/* line 211, ../../../../app/stylesheets/theme1/application.scss */
+#login-form input#admin_session_login, #login-form input#admin_session_password {
+  width: 300px;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #7F7F7F;
+}
+
+/* line 212, ../../../../app/stylesheets/theme1/application.scss */
+#admin_session_submit {
+  font-size: 20px;
+}
