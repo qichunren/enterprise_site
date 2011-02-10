@@ -1,3 +1,4 @@
+# encoding: utf-8 
 class NoticesController < ApplicationController  
   
   # GET /notices

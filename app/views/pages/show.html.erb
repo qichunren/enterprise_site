@@ -1,4 +1,4 @@
 <% title "#{@page.title}" %>
 
 <h2><%= @page.title %></h2>
-<%= raw @page.body %>
+<%= @page.body.html_safe %>

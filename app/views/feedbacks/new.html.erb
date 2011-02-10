@@ -1,6 +1,11 @@
 <% title "联系我们" %>
 
-<h2>联系我们</h2>
+<h2>在线留言</h2>
          
 <p><%= notice %></p>
 <%= render 'form' %>
+
+<% content_for :sidebar do %>
+
+<%= render :partial => "/pages/contract_us" %>
+<% end %>
