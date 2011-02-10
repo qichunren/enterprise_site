@@ -1,5 +1,9 @@
 <% title "新闻中心" %>
 
+<%= content_for :html_head do %>
+  <%= auto_discovery_link_tag(:rss, news_index_path(:format => :rss), :title => "订阅语录排行榜") %>
+<% end %>
+
 <h2>新闻中心</h2>
 
 <table>

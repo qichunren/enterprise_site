@@ -7,6 +7,7 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.rss { render :layout => false }
     end
   end
 
