@@ -10,7 +10,7 @@ body{padding:0; margin:0;}
 .footer{
   position:absolute;
   bottom:0;left:0;
-  background:transparent url('../images/bg_footer.gif') repeat-x 0 0; 
+  background:transparent url('../images/syspanel/bg_footer.gif') repeat-x 0 0; 
   height:29px;
   width:100%;
   color:#fff;
@@ -64,29 +64,36 @@ textarea{height:80px;}
 
 
 .logo{ position:absolute; top:0;left:0;width:280px; height:72px;}
-.site_nav{background:transparent url('../images/bg_site_nav.gif') repeat-x 0 0;height:35px; width:100%;}
+.site_nav{background:transparent url('../images/syspanel/bg_site_nav.gif') repeat-x 0 0;height:35px; width:100%;}
 .site_nav .message{ float:left;margin-left:350px;padding-top:10px;color:#fff;}
 .site_nav .admin_info{ float:right;margin-right:50px;padding-top:5px;}
 .site_nav .admin_info span{color:#fff; float:left;margin-right:15px; line-height:21px;}
-a.exit{ background:transparent url('../images/btn_exit.gif') no-repeat 0 0; display:block; width:73px; height:21px; float:left;}
+a.exit{ background:transparent url('../images/syspanel/btn_exit.gif') no-repeat 0 0; display:block; width:73px; height:21px; float:left;}
                                                                                        
 
 
-.menubox{background:transparent url('../images/bg_menubox.gif') repeat-x 0 0; height:34px; width:100%;padding:3px 0 0 0;}
-.menubox li{float:left;padding:8px 18px 0; height:26px;color:#2a3a5e; background:transparent url('../images/bg_line.gif') no-repeat right 0; text-align:center;}
-.menubox li a{color:#1a3b81;}
+.menubox{background:transparent url('../images/syspanel/bg_menubox.gif') repeat-x 0 0; height:34px; width:100%;padding:3px 0 0 0;}
+.menubox li{ float:left;padding:8px 18px 0; height:26px;color:#2a3a5e; 
+  background:transparent url('../images/syspanel/bg_line.gif') no-repeat right 0; text-align:center;}
+.menubox li a{ color:#1a3b81; }
 .menubox li a:hover{ color:#b9391c;}
-.menubox li.on{ background:transparent url('../images/bg_nav_on.gif') no-repeat 0 0; color:#fff; font-weight:bold;padding:8px 0 0; width:89px;}
-.menubox li.on a{color:#fff; font-size:12px;}
+.menubox li.on{ background:transparent url('../images/syspanel/bg_nav_on.gif') no-repeat 0 0; 
+  color:#fff; font-weight:bold; padding:8px 0 0; width:89px; }
+.menubox li.on a{ color:#fff; font-size:12px; }
 .menubox li.none{ background:none;width:282px; padding:0;}
 
 #main{ background-color: #eef2fd; padding:2px 4px; min-height:480px; }
 
-.edit{ display:block; float:left;margin-right:10px;background:transparent url('images/btn_bg_a.gif') no-repeat 0 0;font-size:12px;color:#364e66; width:38px;line-height:18px;left:18px; text-align:center;vertical-align:middle;}
+.edit{ display:block; float:left;margin-right:10px; 
+  background:transparent url('images/syspanel/btn_bg_a.gif') no-repeat 0 0;
+  font-size:12px;color:#364e66; width:38px;line-height:18px;
+  left:18px; text-align:center;vertical-align:middle;}
 
 
-.admin{ background:transparent url('../images/bg_admin.png') no-repeat 0 0; width:1006px; margin:0 auto; height:600px; position:relative;}
-.logopanel{width:460px; height:255px; position:absolute;top:220px; left:265px;padding-left:175px;padding-top:100px; background:transparent url('../images/bg_logopanel.png') no-repeat 0 0;}
+.admin{ background:transparent url('../images/syspanel/bg_admin.png') no-repeat 0 0; width:1006px; margin:0 auto; 
+  height:600px; position:relative;}
+.logopanel{width:460px; height:255px; position:absolute;top:220px; left:265px;padding-left:175px;padding-top:100px; 
+  background:transparent url('../images/bg_logopanel.png') no-repeat 0 0;}
 .logopanel li{padding:0 0 10px 0; height:20px; line-height:20px;}
 .logopanel li span{float:left; width:60px; color:#484848;}
 input.text{background-color:transparent;  border:none; width:150px; margin-left:20px; overflow:hidden; float:left;}
@@ -99,7 +106,8 @@ input.text{background-color:transparent;  border:none; width:150px; margin-left:
 #content { background: #FFF;padding:5px 5px; border:1px solid #BDBDBD;}
 #content h2.h2{ padding: 10px; margin-bottom:8px; border-bottom:2px solid #BDBDBD;}
 #content .h3_tab{margin-bottom:-0px; height:27px;}
-#content .h3_tab a{display:block;background: transparent url('../images/bg_content_h3.gif') repeat-x 0 0;border:2px #d1dae3 solid;border-bottom:none; height:22px;padding:5px 20px 0; float:left;}
+#content .h3_tab a{display:block;background: transparent url('../images/bg_content_h3.gif') repeat-x 0 0;
+border:2px #d1dae3 solid;border-bottom:none; height:22px;padding:5px 20px 0; float:left;}
 #content .detailbox{ background-color:#f8f8f8; border:2px #dae1eb solid;padding:10px;}
 .search{padding:10px;}
 .btn_search{ border:none;background:transparent url('../images/btn_search.gif') no-repeat 0 0; width:59px;height:21px;}
@@ -109,7 +117,8 @@ input.text{background-color:transparent;  border:none; width:150px; margin-left:
 
 /* list table style */
 .list table.tab{ border:1px #d9e2eb solid;padding:1px;}
-.list table.tab th{ background:transparent url('../images/bg_th.gif') repeat-x 0 0; height:21px; border-left:1px #d2dae5 solid;border-right:1px #f1f2f7 solid; color:#2f3430;}
+.list table.tab th{ background:transparent url('../images/bg_th.gif') repeat-x 0 0; height:21px; 
+border-left:1px #d2dae5 solid;border-right:1px #f1f2f7 solid; color:#2f3430;}
 .list table.tab td{height:24px; text-align:center; color:#4d6ba9;}
 .list table .work span{padding-right:10px;}
 .list table .work span a{color:#4c6ca7;}
