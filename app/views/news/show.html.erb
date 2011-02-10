@@ -2,7 +2,7 @@
 <h2><%= @news.title %></h2>
 
 <p>
-  <%= @news.body %>
+  <%= @news.body.html_safe %>
 </p>
 
 
