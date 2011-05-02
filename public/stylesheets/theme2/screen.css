@@ -1,0 +1,334 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* @import "compass/reset"; */
+/* pages layout */
+/* line 12, ../sass/theme2/application.scss */
+#container {
+  width: 950px;
+  margin: 0 auto;
+}
+
+/* line 17, ../sass/theme2/application.scss */
+#content {
+  width: 710px;
+  border-width: 0px;
+  float: right;
+}
+
+/* line 23, ../sass/theme2/application.scss */
+html > body #content {
+  min-height: 600px;
+}
+
+/* line 27, ../sass/theme2/application.scss */
+#sidebar {
+  width: 230px;
+  float: left;
+}
+
+/* line 32, ../sass/theme2/application.scss */
+#sidebar {
+  width: 230px;
+  float: left;
+}
+
+/* line 45, ../sass/theme2/application.scss */
+#main.nosidebar #sidebar {
+  display: none;
+}
+
+/* line 46, ../sass/theme2/application.scss */
+#main.nosidebar #content {
+  float: left;
+  width: 950px;
+}
+
+/* line 48, ../sass/theme2/application.scss */
+#footer {
+  clear: both;
+  border-top: 2px solid #BDBDBD;
+  margin-top: 8px;
+}
+
+/* line 54, ../sass/theme2/application.scss */
+#footer .bgl {
+  padding: 10px;
+}
+
+/* line 55, ../sass/theme2/application.scss */
+#header {
+  height: 76px;
+}
+
+/* line 59, ../sass/theme2/application.scss */
+#header h1 {
+  margin: 0;
+  padding: 0;
+  height: 76px;
+}
+
+/* line 65, ../sass/theme2/application.scss */
+#nav {
+  height: 33px;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* line 71, ../sass/theme2/application.scss */
+#nav .wrapper {
+  height: 33px;
+  line-height: 33px;
+  margin: 0;
+  overflow: hidden;
+  padding-left: 25px;
+}
+
+/* line 79, ../sass/theme2/application.scss */
+#nav a {
+  display: block;
+  float: left;
+  height: 33px;
+  margin: 0;
+  text-align: center;
+  width: 100px;
+}
+
+/* pages theme */
+/* line 90, ../sass/theme2/application.scss */
+body {
+  background-color: #bdbdbd;
+}
+
+/* line 94, ../sass/theme2/application.scss */
+#container {
+  background: #FFF;
+}
+
+/* line 98, ../sass/theme2/application.scss */
+#header h1 {
+  text-indent: -999px;
+  background: url(/images/front/logo.jpg) no-repeat;
+}
+
+/* line 103, ../sass/theme2/application.scss */
+#nav {
+  background: url("/images/front/top.png") no-repeat scroll 0 0 transparent;
+  white-space: nowrap;
+}
+
+/* line 113, ../sass/theme2/application.scss */
+#nav a {
+  color: #474747;
+  font: bold 14px/33px "SimSun", Arial, Sans-Serif;
+  text-decoration: none;
+}
+
+/* line 119, ../sass/theme2/application.scss */
+#nav a:hover {
+  color: #FF6600;
+}
+
+/* line 139, ../sass/theme2/application.scss */
+#sidebar .box {
+  border: 1px solid #BDBDBD;
+  margin-bottom: 10px;
+}
+
+/* line 143, ../sass/theme2/application.scss */
+#sidebar .box h3.title {
+  margin: 0px;
+  padding: 10px;
+  background: #EEEEEE;
+}
+
+/* line 153, ../sass/theme2/application.scss */
+#footer {
+  border-top: 2px solid #BDBDBD;
+}
+
+/***** Links *****/
+/* line 159, ../sass/theme2/application.scss */
+a, a:link, a:visited {
+  color: #6F7C7F;
+  text-decoration: none;
+}
+
+/* line 160, ../sass/theme2/application.scss */
+a:hover, a:active {
+  color: #FF9900;
+  text-decoration: underline;
+}
+
+/* line 161, ../sass/theme2/application.scss */
+a img {
+  border: 0;
+}
+
+/* home page style */
+/* line 164, ../sass/theme2/application.scss */
+#company_introduce {
+  line-height: 24px;
+}
+
+/* line 167, ../sass/theme2/application.scss */
+#company_introduce h3.title {
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #EEEEEE;
+}
+
+/* line 172, ../sass/theme2/application.scss */
+#company_introduce .wrapper {
+  padding: 3px;
+  text-indent: 33px;
+}
+
+/* news */
+/* line 178, ../sass/theme2/application.scss */
+#latest_notices {
+  clear: both;
+}
+
+/* products */
+/* line 180, ../sass/theme2/application.scss */
+#latest_products {
+  clear: both;
+}
+
+/* line 182, ../sass/theme2/application.scss */
+#latest_products h3.title {
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #EEEEEE;
+}
+
+/* line 187, ../sass/theme2/application.scss */
+.product {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+/* line 188, ../sass/theme2/application.scss */
+.product .product_inner {
+  width: 120px;
+  height: 95px;
+  border: 1px solid #EEEEEE;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 189, ../sass/theme2/application.scss */
+.product h4 {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 120px;
+  height: 35px;
+  line-height: 18px;
+}
+
+/* line 191, ../sass/theme2/application.scss */
+#product .product_image {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+/* line 192, ../sass/theme2/application.scss */
+#product .product_desc {
+  border-top: 2px solid #BDBDBD;
+  clear: both;
+  padding: 10px;
+}
+
+/* line 194, ../sass/theme2/application.scss */
+#categories ul {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 195, ../sass/theme2/application.scss */
+#categories li {
+  padding: 8px;
+}
+
+/* line 196, ../sass/theme2/application.scss */
+#categories .category_1 {
+  margin-bottom: 5px;
+  padding: 3px;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+/* line 197, ../sass/theme2/application.scss */
+#categories .category_2 {
+  margin-left: 10px;
+}
+
+/* line 198, ../sass/theme2/application.scss */
+.box .product {
+  float: none;
+  margin: 10px;
+}
+
+/* login page style */
+/* line 202, ../sass/theme2/application.scss */
+#login-form {
+  font-size: 2em;
+  margin: 20px;
+  background-color: #5F5F5F;
+  text-align: center;
+}
+
+/* line 203, ../sass/theme2/application.scss */
+#login-form #back_link {
+  font-size: 12px;
+  position: absolute;
+  z-index: 10;
+  right: 22px;
+  top: 4px;
+}
+
+/* line 204, ../sass/theme2/application.scss */
+#login-form #copyright {
+  font-size: 14px;
+  padding: 8px;
+}
+
+/* line 206, ../sass/theme2/application.scss */
+#login-form h1 {
+  margin: 4px;
+  padding: 4px;
+}
+
+/* line 207, ../sass/theme2/application.scss */
+#login-form .wrapper {
+  padding: 20px;
+  border: 2px solid #4F4F4F;
+  background: #BDBDBD;
+}
+
+/* line 209, ../sass/theme2/application.scss */
+#login-form p {
+  padding: 6px;
+}
+
+/* line 210, ../sass/theme2/application.scss */
+#login-form label {
+  font-weight: bold;
+}
+
+/* line 211, ../sass/theme2/application.scss */
+#login-form input#admin_session_login, #login-form input#admin_session_password {
+  width: 300px;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #7F7F7F;
+}
+
+/* line 212, ../sass/theme2/application.scss */
+#admin_session_submit {
+  font-size: 20px;
+}

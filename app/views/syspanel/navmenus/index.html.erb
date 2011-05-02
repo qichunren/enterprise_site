@@ -1,6 +1,6 @@
 <% title "网站导航设置" %>
 <h2>网站导航设置</h2>
-<%= render :partial => "/syspanel/shared/setting_tab" %>
+
 <ul  id="navmenu_list_sortable">
   <% @navmenus.each do |navmenu| %>
     <li id="menu_<%= navmenu.id %>" data-id="<%= navmenu.id %>" ><%= navmenu.label %></li>
@@ -33,4 +33,8 @@
 
 <br />
 
-<%= link_to '添加导航菜单项', new_syspanel_navmenu_path %>
+<%= link_to '添加导航菜单项', new_syspanel_navmenu_path %>   
+
+<%= content_for :sidebar do %>
+  <%= render :partial => "/syspanel/site_settings/sidebar" %>
+<% end %>

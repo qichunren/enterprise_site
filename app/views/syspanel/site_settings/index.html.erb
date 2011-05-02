@@ -1,7 +1,5 @@
 <% title "网站配置" %>
-<h2>网站配置</h2> 
-
-<%= render :partial => "/syspanel/shared/setting_tab" %>
+<h2>网站配置</h2>
 
 <table class="list">
   <tr>
@@ -27,4 +25,8 @@
 
 <br />
 
-<%= link_to '添加配置参数', new_syspanel_site_setting_path %>
+<%= link_to '添加配置参数', new_syspanel_site_setting_path %> 
+
+<%= content_for :sidebar do %>
+  <%= render :partial => "/syspanel/site_settings/sidebar" %>
+<% end %>
