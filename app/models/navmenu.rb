@@ -5,9 +5,14 @@ class Navmenu < ActiveRecord::Base
   validates :label, :presence => true
   validates :url,   :presence => true
   
-  scope :availble, :conditions => ["is_display = ?", true], :order => "position"
+  scope :availble, :conditions => ["is_display = ?", true], :order => "position" 
   
-  def before_save
+  before_save :set_link_title
+  
+  
+  private
+  
+  def set_link_title
     if self.link_title.blank?
       self.link_title = self.label
     end

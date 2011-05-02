@@ -33,4 +33,7 @@ gem "compass", "0.10.6"
 # and rake tasks are available in development mode:
 # group :development, :test do
 #   gem 'webrat'
-# end
+# end 
+
+gem "theme_engine", :require => "theme_engine", :path => "/Users/qichunren/code/enterprise_site/extra/theme_engine"
+
