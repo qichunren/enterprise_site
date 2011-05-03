@@ -6,7 +6,10 @@ class Syspanel::SiteSettingsController < Syspanel::BaseController
   end 
   
   def basic
-  end      
+  end   
+  
+  def contact_info
+  end   
                                                                                    
   #TODO 优化
   def batch_update 
@@ -15,8 +18,12 @@ class Syspanel::SiteSettingsController < Syspanel::BaseController
         SiteSetting.find_by_setting_key(key).update_attribute(:setting_value, value)
       end
       flash[:notice] = "保存成功"
-    end                     
-    redirect_to :action => :basic
+    end                          
+    if params[:current_action].present?
+      redirect_to :action => params[:current_action] and return
+    else
+      redirect_to :action => :basic and return
+    end
   end
 
   # GET /site_settings/1

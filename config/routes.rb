@@ -30,6 +30,7 @@ EnterpriseSite::Application.routes.draw do
     resources :site_settings do
       collection do
         get "basic"
+        get "contact_info"
         post "batch_update"
       end
     end 
