@@ -27,7 +27,12 @@ EnterpriseSite::Application.routes.draw do
     resources :feedbacks    
     resources :categories
     resources :attachments
-    resources :site_settings 
+    resources :site_settings do
+      collection do
+        get "basic"
+        post "batch_update"
+      end
+    end 
     resources :pages
     resources :navmenus, :except => [:show] do
       collection do

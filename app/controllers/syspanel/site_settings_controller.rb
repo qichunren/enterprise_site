@@ -3,10 +3,20 @@ class Syspanel::SiteSettingsController < Syspanel::BaseController
   # GET /site_settings
   def index
     @site_settings = SiteSetting.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-    end
+  end 
+  
+  def basic
+  end      
+                                                                                   
+  #TODO 优化
+  def batch_update 
+    if params[:site_setting].present?
+      params[:site_setting].each do |key, value|
+        SiteSetting.find_by_setting_key(key).update_attribute(:setting_value, value)
+      end
+      flash[:notice] = "保存成功"
+    end                     
+    redirect_to :action => :basic
   end
 
   # GET /site_settings/1

@@ -1,0 +1,27 @@
+<% title "网站基础配置" -%>
+<h2>网站基础配置</h2> 
+
+<%= form_for :site_setting, :url => url_for(:action => :batch_update) do |f| -%>
+    <label for="">公司全名</label>
+    <%= f.text_field :company_full_name, :value => SiteSetting.got(:company_full_name) -%>  
+    <br />
+    
+    <label for="">公司简称</label>
+    <%= f.text_field :company_short_name, :value => SiteSetting.got(:company_short_name) -%>  
+    <br />
+    
+    <label for="">公司简介</label>
+    <%= f.text_area :company_introduce, :value => SiteSetting.got(:company_introduce) -%>  
+    <br />
+    
+    <label for="">公司地址</label>
+    <%= f.text_field :company_address, :value => SiteSetting.got(:company_address) -%>  
+    <br />
+    <%= f.submit "提交" -%>
+<% end -%>
+
+ 
+
+<%= content_for :sidebar do -%>
+  <%= render :partial => "/syspanel/site_settings/sidebar" %>
+<% end %>
