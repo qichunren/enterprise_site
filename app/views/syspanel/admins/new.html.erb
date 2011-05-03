@@ -1,0 +1,24 @@
+<% if @admin.errors.present? -%>
+    <% @admin.errors.full_messages.each do |message| -%>
+        <%= message -%>
+    <% end -%>
+<% end %>
+<%= form_for [:syspanel, @admin] do |f| -%>
+    <%= f.label :login -%> 
+    <%= f.text_field :login -%>
+    <br />                      
+    
+    <%= f.label :email -%> 
+    <%= f.text_field :email -%>
+    <br />
+    
+    <%= f.label :password -%> 
+    <%= f.text_field :password -%>             
+    <br />
+    
+    <%= f.label :password_confirmation -%> 
+    <%= f.text_field :password_confirmation -%>
+    
+    <%= f.submit -%>
+    
+<% end -%>

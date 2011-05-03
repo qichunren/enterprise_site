@@ -4,6 +4,8 @@
 <table class="list">
   <tr>
     <th>帐号</th>
+    <th>登录次数</th>
+    <th>最后一次登录</th>
     <th>创建时间</th>
     <th></th>
   </tr>
@@ -11,6 +13,8 @@
 <% @admins.each do |admin| -%>
   <tr>
     <td><%= admin.login %></td>
+    <td align="right"><%= admin.login_count %></td>
+    <td align="right"><%= admin.last_login_at.to_s %></td>
     <td><%= admin.created_at.to_s %></td> 
     <td><%= link_to "修改", edit_syspanel_admin_path(admin) -%> - <%= link_to "删除", [:syspanel, admin], :method => :delete, :confirm => "你确认要删除？" -%></td>
   </tr>
