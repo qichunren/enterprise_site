@@ -35,7 +35,17 @@ class Syspanel::AdminsController < Syspanel::BaseController
    end
    
    def destroy
-     @admin = Admin.find params[:id]
+     if Admin.count == 1
+       flash[:error] = "帐号不能全部删除"
+       redirect_to syspanel_admins_path and return
+     end
+     
+     @admin = Admin.find params[:id] 
+     
+     if @admin.login == "admin"
+       flash[:error] = "不能删除admin帐号"
+       redirect_to syspanel_admins_path and return
+     end
      @admin.destroy
      flash[:notice] = "已删除"
      redirect_to syspanel_admins_path
