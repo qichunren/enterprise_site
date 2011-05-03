@@ -47,6 +47,7 @@ GEM
       net-ssh-gateway (>= 1.0.0)
     compass (0.10.6)
       haml (>= 3.0.4)
+    database_cleaner (0.6.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     haml (3.0.23)
@@ -111,6 +112,7 @@ DEPENDENCIES
   authlogic!
   capistrano
   compass (= 0.10.6)
+  database_cleaner
   kaminari
   meta_search
   mysql2

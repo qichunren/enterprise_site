@@ -19,5 +19,7 @@ gem "meta_search" #NOTE is not compatible with rails 3.0.6
 # gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
+gem 'capistrano'  
+
+gem "database_cleaner"
 

@@ -3,7 +3,7 @@ class Syspanel::NewsController < Syspanel::BaseController
   
   # GET /news
   def index
-    @news = News.paginate :page => params[:page], :per_page => 20
+    @news = News.page(params[:page]).per(20)
 
     respond_to do |format|
       format.html # index.html.erb

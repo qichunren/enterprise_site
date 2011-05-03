@@ -8,12 +8,12 @@
 
 <table>
 
-<% @news.each do |news| %>
+<% @news.each do |news| -%>
   <tr>
-    <td><%= link_to news.title, news, :title => news.title %></td>
-    <td><%= l(news.created_at, :format => :short) %></td>
+    <td><%= link_to news.title, news, :title => news.title -%></td>
+    <td><%= l(news.created_at, :format => :short) -%></td>
   </tr>
 <% end %>
 </table>
 
-<%= will_paginate @news %>
+<%= paginate @news -%>

@@ -3,7 +3,7 @@ class NewsController < ApplicationController
 
   # GET /news
   def index
-    @news = News.order("id DESC").paginate :page => params[:page], :per_page => 10
+    @news = News.order("id DESC").page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,4 +1,9 @@
-# encoding: utf-8
+# encoding: utf-8 
+require 'database_cleaner'
+DatabaseCleaner.strategy = :truncation
+
+# then, whenever you need to clean the DB
+DatabaseCleaner.clean
 
 # super admin
 super_admin = Admin.create(

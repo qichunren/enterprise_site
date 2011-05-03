@@ -19,7 +19,8 @@
     <td align="center"><%= link_to '查看', [:syspanel, news] %> － <%= link_to '编辑', edit_syspanel_news_path(news) %> － <%= link_to '删除', [:syspanel, news], :confirm => '你要删除此新闻?', :method => :delete %></td>
   </tr>
 <% end %>
-</table>
+</table> 
+<%= paginate @news -%>
 
 <br />
 

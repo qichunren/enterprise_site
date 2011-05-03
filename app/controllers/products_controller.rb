@@ -2,7 +2,7 @@
 class ProductsController < ApplicationController
   # GET /products
   def index
-    @products = Product.published.paginate :per_page => 20, :page => params[:page]
+    @products = Product.published.page(params[:page]).per(20)
 
     respond_to do |format|
       format.html # index.html.erb
