@@ -3,12 +3,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title><%= yield(:title).blank? ? SiteSetting.got(:company_full_name) : yield(:title) %></title>
-  <% current_theme = "theme2" %>
-  <%= stylesheet_link_tag "compiled/#{current_theme}/screen.css", :media => 'screen, projection' %>
-  <%= stylesheet_link_tag "compiled/#{current_theme}/print.css", :media => 'print' %>
+  <%= theme_stylesheet_link_tag "screen", :media => 'screen, projection' %>
+  <%= theme_stylesheet_link_tag "print", :media => 'print' %>
   
   <!--[if IE]>
-    <%= stylesheet_link_tag "compiled/#{current_theme}/ie.css", :media => 'screen, projection' %>
+    <%= theme_stylesheet_link_tag "ie", :media => 'screen, projection' %>
   <![endif]-->
   
   <% if Rails.env.production? %>
