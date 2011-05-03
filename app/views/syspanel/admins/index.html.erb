@@ -1,0 +1,23 @@
+<% title "后台帐号管理" %>
+<h2>后台帐号管理</h2>
+
+<table class="list">
+  <tr>
+    <th>配置名称</th>
+    <th>参数KEY</th>
+    <th>参数值</th>
+    <th>备注</th>
+    <th width="80">值类型</th>
+    <th width="90"></th>
+  </tr>
+
+<% @admins.each do |admin| %>
+  <tr>
+    <td><%= site_setting.login %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '添加后台帐号管理', new_syspanel_admin_path %>

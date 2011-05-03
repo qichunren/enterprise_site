@@ -5,7 +5,6 @@ class AdminSessionsController < ApplicationController
   
   layout false
 
-  
   def new
     @admin_session = AdminSession.new
   end

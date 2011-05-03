@@ -10,7 +10,7 @@
 <div id="latest_products">
   <h3 class="title">最新产品</h3>
   <div class="wrapper">
-    <% @latest_products.each do |product| %>
+    <% get_products(10).each do |product| %>
       <div class='product'>
         <div class="product_inner"><%= link_to(image_tag(product.avatar.url(:thumb)), product) %></div>
         <h4><%= link_to product.name, product %></h4>
@@ -23,7 +23,7 @@
   <div class="wrapper">
     <h3>公司新闻</h3>
     <ul>   
-      <% @latest_notices.each do |notice| %>
+      <% get_notices(5).each do |notice| %>
         <li><%= link_to notice.title, notice, :title => notice.title %></li>
       <% end %>
     </ul>   

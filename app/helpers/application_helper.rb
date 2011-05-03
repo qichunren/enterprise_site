@@ -1,4 +1,5 @@
-module ApplicationHelper
+module ApplicationHelper   
+  include FrontHelper
   # set the title for the page 
   # TODO in application.html.erb <%= yield(:title) %> How to show default title when there is not title method
   def title(page_title)
