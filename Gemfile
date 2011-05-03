@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.0'
 
 gem "mysql2"
-gem "will_paginate", "3.0.pre2"
 gem "rails_config", "0.1.5"
 gem "paperclip", "2.3.3"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3' 
