@@ -1,7 +1,10 @@
 # coding: utf-8 
 class ApplicationController < ActionController::Base
 
-  protect_from_forgery
+  protect_from_forgery        
+  
+  theme :theme_resolver
+  
 
   # store the current url path
   def store_location
@@ -33,7 +36,12 @@ class ApplicationController < ActionController::Base
   
   helper_method :current_admin_session, :current_admin
 
-  private
+  private   
+  
+  def theme_resolver
+    # current_user.theme # or anything else that return a string. 
+    "default"
+  end
 
   def current_admin_session
     return @current_admin_session if defined?(@current_admin_session)

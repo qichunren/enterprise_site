@@ -1,5 +1,6 @@
 # coding: utf-8 
-EnterpriseSite::Application.routes.draw do
+EnterpriseSite::Application.routes.draw do   
+  themes_for_rails
   
   resources :news, :only => [:index, :show]
 

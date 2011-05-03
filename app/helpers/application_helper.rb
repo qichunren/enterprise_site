@@ -1,3 +1,4 @@
+# encoding: utf-8
 module ApplicationHelper   
   include FrontHelper
   # set the title for the page 
