@@ -1,10 +1,29 @@
-<%= form_for([:syspanel, @news]) do |f| %>
+<%= content_for :html_head do -%>
+    <%= javascript_include_tag "kindeditor/kindeditor-min.js" %>
+    <script type="text/javascript">
+        $(function(){
+
+            KE.show({
+            				id : 'news_body',
+            				resizeMode : 1,
+            				allowPreviewEmoticons : false,
+            				allowUpload : false,
+            				items : [
+            				'fontname', 'fontsize', '|', 'textcolor', 'bgcolor', 'bold', 'italic', 'underline',
+            				'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+            				'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+            			});
+
+        });
+    </script>
+<% end -%>
+<%= form_for([:syspanel, @news]) do |f| -%>
   <% if @news.errors.any? %>
     <div id="error_explanation">
       <h2>有以下错误：</h2>
 
       <ul>
-      <% @news.errors.full_messages.each do |msg| %>
+      <% @news.errors.full_messages.each do |msg| -%>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -17,27 +36,10 @@
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body, :class => "wymeditor" %>
+    <%= f.text_area :body, :style => "width:500px;height:300px;" %>
   </div>
   
   <div class="actions">
-    <%= f.submit :class => "wymupdate" %> - <%= link_to t(:label_back), syspanel_news_index_path %>
+    <%= f.submit -%> - <%= link_to t(:label_back), syspanel_news_index_path %>
   </div>
-<% end %> 
-
-<%= content_for :html_head do %>
-  <%= javascript_include_tag "wymeditor/jquery.wymeditor.min.js" %>
-  <%= javascript_include_tag "wymeditor/plugins/resizable/jquery.wymeditor.resizable.js" %>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      jQuery('.wymeditor').wymeditor({ 
-        updateSelector: "input[type='submit']",
-        
-        postInit: function(wym) {
-         wym.resizable();
-        }
-        
-      });
-    });
-  </script>
 <% end %>

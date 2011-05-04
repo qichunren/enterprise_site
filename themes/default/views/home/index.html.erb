@@ -3,7 +3,7 @@
 <div id="company_introduce">
    <h3 class="title">公司简介</h3>
    <div class="wrapper">
-      <%= simple_format SiteSetting.got(:company_introduce) %>
+      <%= SiteSetting.got(:company_introduce).html_safe %>
    </div>
 </div>
           

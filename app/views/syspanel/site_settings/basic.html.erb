@@ -1,3 +1,22 @@
+<%= content_for :html_head do -%>
+    <%= javascript_include_tag "kindeditor/kindeditor-min.js" %>
+    <script type="text/javascript">
+        $(function(){
+
+            KE.show({
+            				id : 'site_setting_company_introduce',
+            				resizeMode : 1,
+            				allowPreviewEmoticons : false,
+            				allowUpload : false,
+            				items : [
+            				'fontname', 'fontsize', '|', 'textcolor', 'bgcolor', 'bold', 'italic', 'underline',
+            				'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+            				'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+            			});
+
+        });
+    </script>
+<% end -%>
 <% title "网站基础配置" -%>
 <h2>网站基础配置</h2> 
 
@@ -12,7 +31,7 @@
     <br />
     
     <label for="">公司简介</label>
-    <%= f.text_area :company_introduce, :value => SiteSetting.got(:company_introduce) -%>  
+    <%= f.text_area :company_introduce, :value => SiteSetting.got(:company_introduce), :style => "width:500px;height:200px;" -%>  
     <br />
 
     <%= f.submit "提交" -%>
