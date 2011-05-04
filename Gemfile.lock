@@ -38,6 +38,7 @@ GEM
     activesupport (3.0.0)
     arel (1.0.1)
       activesupport (~> 3.0.0)
+    breadcrumbs_on_rails (2.0.0)
     builder (2.1.2)
     capistrano (2.5.19)
       highline
@@ -110,6 +111,7 @@ PLATFORMS
 
 DEPENDENCIES
   authlogic!
+  breadcrumbs_on_rails
   capistrano
   compass (= 0.10.6)
   database_cleaner

@@ -1,5 +1,6 @@
 # encoding: utf-8 
-class ProductsController < ApplicationController
+class ProductsController < ApplicationController    
+  add_breadcrumb "首页", :root_path
   # GET /products
   def index
     @products = Product.published.page(params[:page]).per(20)
@@ -23,10 +24,7 @@ class ProductsController < ApplicationController
       @product.save   
       cookies["product_#{@product.id}_view".to_sym] = "view"
     end
-
-    respond_to do |format|
-      format.html # show.html.erb
-    end
+    add_breadcrumb "产品中心", :products_path
   end
 
  

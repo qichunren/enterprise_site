@@ -2,5 +2,8 @@
 <% description @page.description -%>      
 <% keywords @page.keywords -%>
 
+<%= render_breadcrumbs -%>
+
 <h2><%= @page.title %></h2>
+
 <%= @page.body.html_safe %>

@@ -10,6 +10,7 @@ gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => '
 gem "compass", "0.10.6" 
 
 gem 'themes_for_rails', "0.4.1"
+gem "breadcrumbs_on_rails"
 
 # 分页
 gem 'kaminari'
