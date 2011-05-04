@@ -5,6 +5,8 @@ class PagesController < ApplicationController
   # GET /pages/our-services
   def show
     @page = Page.published.find_by_url_slug(params[:url_slug])
+    render_404 and return if @page.nil?
+    
     add_breadcrumb @page.title, "/pages/#{@page.url_slug}"
   end
 

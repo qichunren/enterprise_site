@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   
   theme :theme_resolver
   
-
   # store the current url path
   def store_location
     session[:return_to] = request.fullpath
@@ -14,25 +13,20 @@ class ApplicationController < ActionController::Base
   def redirect_back_or_default(default)
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
+  end       
+  
+  def render_404
+    render_optional_error_file(404)
   end
 
-
-  def rescue_action_in_public(exception)
-    case exception.class.to_s
-    when "ActionController::RoutingError"
-      render :template => 'error/resource_not_exsit' and return
-    when "ActiveRecord::StatementInvalid"
-      logger.info "#{Time.now.to_s(:db)} apperror: #{exception.inspect}, #{exception.application_backtrace}, params:#{params.inspect}"
-      render :text => "你的输入不正确! 请再试一次." and return
-    when "OCIError"
-      logger.info "#{Time.now.to_s(:db)} appdberror: #{exception.inspect}, #{exception.application_backtrace}, params:#{params.inspect}"
-      render :text => "数据库没有连接上! 请再试一次."  and return
+  def render_optional_error_file(status_code)
+    status = status_code.to_s
+    if ["404", "422", "500"].include?(status)
+      render :template => "/errors/#{status}.html.erb", :status => status, :layout => "application"
     else
-      logger.info "#{Time.now.to_s(:db)} apperror: #{exception.inspect}, #{exception.application_backtrace}, params:#{params.inspect}"
-      render :text => "#{exception.class}"  and return
+      render :template => "/errors/unknown.html.erb", :status => status, :layout => "application"
     end
-  end      
-  
+  end
   
   helper_method :current_admin_session, :current_admin
 
@@ -68,8 +62,6 @@ class ApplicationController < ActionController::Base
   def set_current_admin
     Admin.current = current_admin
   end
-
-
 
   # proxy for acts_as_audit gem
   def current_user
