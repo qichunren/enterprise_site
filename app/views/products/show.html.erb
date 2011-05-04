@@ -10,17 +10,21 @@
     </p>
     <p>
       <b>分类:</b>
-      <%= @product.category.name %>
+      <%= @product.category.name rescue "" %>
     </p>
-
+    
+    <% if @product.price.present? -%>
     <p>
       <b>价格:</b>
       <%= @product.price %>元
-    </p>
+    </p>                        
+    <% end -%>
+    <% if @product.amount.present? -%>
     <p>
       <b>现售数量:</b>
-      <%= @product.amount %>
-    </p>    
+      <%= @product.amount -%>
+    </p>                 
+    <% end -%>
   </div>
   <div class="product_desc"><%= @product.description %></div>
   
