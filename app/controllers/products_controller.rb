@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   # get products list from a category
   def category                       
     @category = Category.find params[:id]
-    @products = @category.products.published.paginate :per_page => 20, :page => params[:page]
+    @products = @category.products.published.page(params[:page]).per(20)
   end
 
   # GET /products/1
