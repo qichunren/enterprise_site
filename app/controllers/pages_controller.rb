@@ -10,7 +10,4 @@ class PagesController < ApplicationController
     end
   end
 
-
-
-
 end

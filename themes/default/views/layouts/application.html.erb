@@ -3,6 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title><%= yield(:title).blank? ? SiteSetting.got(:company_full_name) : yield(:title) %></title>
+  <%= yield(:description) -%><%= yield(:keywords) -%>
   <%= theme_stylesheet_link_tag "screen", :media => 'screen, projection' %>
   <%= theme_stylesheet_link_tag "print", :media => 'print' %>
   
