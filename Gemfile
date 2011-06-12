@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.0.8'
 
-gem "mysql2"
+gem "mysql2", "0.2.7"
 gem "rails_config", "0.1.5"
 gem "paperclip", "2.3.3"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3' 

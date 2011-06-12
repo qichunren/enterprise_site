@@ -118,7 +118,7 @@ ActiveRecord::Schema.define(:version => 20101111112445) do
     t.integer  "category_id",                                                          :null => false
     t.string   "product_no"
     t.text     "description"
-    t.integer  "click_count",                                        :default => 1
+    t.integer  "click_count",                                        :default => 0
     t.decimal  "price",               :precision => 10, :scale => 0
     t.integer  "amount"
     t.boolean  "is_published",                                       :default => true
