@@ -1,7 +1,6 @@
 # What's this?
 
-This is a enterprise site application, like a cms, but do more that it.
-
+This is a enterprise site application for company website.
 
 ### Feature moduels
 
