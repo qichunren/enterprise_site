@@ -24,3 +24,6 @@ gem 'capistrano'
 
 gem "database_cleaner"
 
+group :development do
+  gem "thin", :require => false
+end
