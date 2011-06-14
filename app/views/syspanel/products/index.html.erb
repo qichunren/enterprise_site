@@ -7,7 +7,6 @@
     <th><%= Product.model_name.human %>名称</th>
     <th><%= Product.model_name.human %>编号</th>
     <th>浏览次数</th>
-    <th>图片</th>
     <th>价格</th>
     <th>发布人</th>
     <th>操作</th>
@@ -17,11 +16,10 @@
   <tr>
     <td align="center"><%= product.id %></td>
     <td><%= product.name %></td>
-    <td><%= product.product_no %></td>
-    <td><%= product.click_count %></td>
-    <td><%= image_tag product.avatar.url(:thumb) %></td>
+    <td align="right"><%= product.product_no %></td>
+    <td align="center"><%= product.click_count %></td>
     <td><%= product.price %></td>
-    <td><%= product.created_by %></td>
+    <td align="right"><%= product.created_by %></td>
     <td align="center"><%= link_to '详情', [:syspanel, product] %> － <%= link_to '修改', edit_syspanel_product_path(product) %> － <%= link_to '删除', [:syspanel, product], :confirm => '你确定要删除此商品?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -30,6 +28,6 @@
 <br />
 
 
-<%= content_for :sidebar do %>
+<%= content_for :sidebar do -%>
   <%= render :partial => "/syspanel/products/sidebar" %>
-<% end %>
+<% end -%>

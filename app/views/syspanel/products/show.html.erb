@@ -18,7 +18,7 @@
 <%= image_tag @product.avatar.url(:medium) %>
 <p>
   <b>Description:</b>
-  <%= @product.description %>
+  <%= @product.description.html_safe %>
 </p>
 
 <p>
@@ -49,3 +49,7 @@
 
 <%= link_to '修改', edit_syspanel_product_path(@product) %> |
 <%= link_to '返回', syspanel_products_path %>
+
+<%= content_for :sidebar do -%>
+  <%= render :partial => "/syspanel/products/sidebar" %>
+<% end -%>

@@ -1,7 +1,8 @@
-<% title "修改商品信息" %>
+<% title "修改商品信息" -%>
 <h2>修改商品信息</h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<%= content_for :sidebar do -%>
+  <%= render :partial => "/syspanel/products/sidebar" %>
+<% end -%>
