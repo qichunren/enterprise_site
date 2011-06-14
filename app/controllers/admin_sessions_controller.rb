@@ -31,7 +31,7 @@ class AdminSessionsController < ApplicationController
   def destroy
     current_admin_session.destroy
     flash[:notice] = "你已安全退出系统!"
-    redirect_back_or_default new_admin_session_url
+    redirect_back_or_default admin_login_url
   end
 
 end

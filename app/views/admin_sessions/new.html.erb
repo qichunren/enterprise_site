@@ -12,7 +12,7 @@
   <div id="back_link"><%= link_to "返回公司网站", root_url %></div>
   <div class="wrapper">
     <h1><%= SiteSetting.got(:company_short_name) %> 系统登录</h1>
-    <%= form_for @admin_session, :url => admin_session_path do |form| %>
+    <%= form_for @admin_session, :url => admin_login_path do |form| %>
       <p>
         <label for="admin_session_login">帐号:</label><br/>
         <%= form.text_field "login", :size => 30, :maxlength => 50, :class => "text" %></p>
