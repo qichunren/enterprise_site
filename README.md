@@ -1,29 +1,35 @@
-# What's this?
+# 介绍?
 
-This is a enterprise site application for company website.
+这是一个用Rails3写的公司企业网站，可以用于普通的公司网站.
 
-### Feature moduels
+### 功能
 
-- News
-- Product
-- Feedback(Guestbook)
-- Customer theme
+- 新闻
+- 产品展示
+- 客户留言
+- 自定义页面
+- 多主题
 
-### How to get started?
+### 怎么起步？
 
 <pre>
     git clone git://github.com/qichunren/enterprise_site.git
     cd enterprise_site
     bundle install
-    edit config/database.yml
+    修改数据库配置文件config/database.yml
     bundle exec rake db:create
     bundle exec rake db:migrate
     bundle exec rake db:seed
     rails s thin
 </pre>
-visit http://localhost:3000, and default login id and password is [admin]/[admin888]
+现在可以访问 http://localhost:3000看到效果了，后台地址是http://localhost:3000/admin_login ，默认的管理员帐号和密码是admin/admin888
 
 
-### Progress
+### 进度
 
-Currently I'm developing it. I must release a workable version as soon as possible.
+目前还在开发中，我正在完善多主题这一块。
+
+
+### License
+
+欢迎自由使用。告诉我一下就可以了。
