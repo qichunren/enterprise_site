@@ -26,6 +26,10 @@ class ProductsController < ApplicationController
     end
     add_breadcrumb "产品中心", :products_path
   end
+  
+  def search
+    
+  end
 
  
 end

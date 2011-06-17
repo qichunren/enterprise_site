@@ -1,0 +1,14 @@
+"en-US":
+  controller:
+    application:
+      page_not_found: "Page not found!"
+      
+      
+
+
+"zh-CN":
+  controller:
+    application:
+      page_not_found: "页面不存在！"
+      
+      

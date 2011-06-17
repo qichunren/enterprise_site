@@ -22,7 +22,7 @@
     bundle exec rake db:seed
     rails s thin
 </pre>
-现在可以访问 http://localhost:3000看到效果了，后台地址是http://localhost:3000/admin_login ，默认的管理员帐号和密码是admin/admin888
+现在可以访问 http://localhost:3000 看到效果了，后台地址是 http://localhost:3000/admin_login ，默认的管理员帐号和密码是admin/admin888
 
 
 ### 进度

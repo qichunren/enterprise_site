@@ -4,6 +4,20 @@ class ApplicationController < ActionController::Base
   protect_from_forgery        
   
   theme :theme_resolver
+  def theme_resolver
+    # current_user.theme # or anything else that return a string. 
+    "theme2"
+  end
+  
+  rescue_from ActionView::MissingTemplate, :with => :view_not_found
+  def view_not_found
+    error_404_file = Rails.root.join("themes/#{theme_resolver}/views/errors/404.html")
+    if File.exist?(error_404_file)
+      render :file => error_404_file, :status => 404, :layout => false and return
+    else
+      render :text => I18n.t("controller.application.page_not_found"), :status => 404 and return
+    end
+  end
   
   # store the current url path
   def store_location
@@ -30,12 +44,7 @@ class ApplicationController < ActionController::Base
   
   helper_method :current_admin_session, :current_admin
 
-  private   
-  
-  def theme_resolver
-    # current_user.theme # or anything else that return a string. 
-    "default"
-  end
+  private
 
   def current_admin_session
     return @current_admin_session if defined?(@current_admin_session)
