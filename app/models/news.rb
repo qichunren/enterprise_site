@@ -3,7 +3,9 @@ class News < ActiveRecord::Base
   validates :title, :presence => true
   validates :body,  :presence => true
   
-  def before_create
+  before_create :set_created_by
+  
+  def set_created_by
     self.created_by = Admin.current.login
   end
 end
