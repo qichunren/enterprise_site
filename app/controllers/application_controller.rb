@@ -9,6 +9,11 @@ class ApplicationController < ActionController::Base
     "theme2"
   end
   
+  before_filter :set_locale
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+  
   rescue_from ActionView::MissingTemplate, :with => :view_not_found
   def view_not_found
     error_404_file = Rails.root.join("themes/#{theme_resolver}/views/errors/404.html")
