@@ -1,0 +1,23 @@
+"en-US":
+  view:
+    settings:
+      app_name: "Application name"
+      company_full_name: "Company full name"
+      company_short_name: "Company short name"
+      company_introduce: "Company introduce"
+      company_telphone: "Company telphone"
+      company_address: "Company address"
+      
+      
+
+
+"zh-CN":
+  view:
+    settings:
+      app_name: "程序名称"
+      company_full_name: "公司全名"
+      company_short_name: "公司简称"
+      company_introduce: "公司介绍"
+      company_telphone: "公司电话"
+      company_address: "公司地址"
+    	

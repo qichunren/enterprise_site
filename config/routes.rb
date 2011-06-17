@@ -36,7 +36,7 @@ EnterpriseSite::Application.routes.draw do
         get "contact_info"
         post "batch_update"
       end
-    end 
+    end
     resources :pages
     resources :navmenus, :except => [:show] do
       collection do

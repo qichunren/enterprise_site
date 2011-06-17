@@ -7,18 +7,17 @@
     <th>参数KEY</th>
     <th>参数值</th>
     <th>备注</th>
-    <th width="80">值类型</th>
-    <th width="90"></th>
+    <th></th>
   </tr>
 
-<% @site_settings.each do |site_setting| %>
+<% @my_setting_items.each do |site_setting| %>
   <tr>
-    <td><%= site_setting.name %></td>
-    <td><%= site_setting.setting_key %></td>
-    <td><%= truncate(site_setting.setting_value, :length => 100, :omission => "...") %></td>
-    <td><%= site_setting.remark %></td>
-    <td align="center"><%= site_setting.value_type %></td>
-    <td align="center"><%= link_to '修改', edit_syspanel_site_setting_path(site_setting) %> <%= link_to('删除', [:syspanel, site_setting], :confirm => '你要删除?', :method => :delete) unless site_setting.build_in? %></td>
+    <td><%= t("view.settings.#{site_setting.first}") -%></td>
+    <td><%= site_setting.first %></td>
+    <td><%= site_setting.last %></td>
+    <td></td>
+    
+    <td align="center"><%= link_to '修改', edit_syspanel_site_setting_path(:id => site_setting.first) %></td>
   </tr>
 <% end %>
 </table>

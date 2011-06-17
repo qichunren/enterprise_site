@@ -2,7 +2,7 @@
 class Syspanel::SiteSettingsController < Syspanel::BaseController
   # GET /site_settings
   def index
-    
+    @my_setting_items = MySettings.all
   end 
   
   def basic
