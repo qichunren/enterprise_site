@@ -4,7 +4,7 @@ gem 'rails', '3.0.8'
 gem 'rake', "0.8.7"
 
 gem "mysql2", "0.2.7"
-gem "rails_config", "0.1.5"
+gem "rails-settings-cached", :require => "rails-settings"
 gem "paperclip", "2.3.11"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3' 
 

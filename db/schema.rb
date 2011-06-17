@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101111112445) do
+ActiveRecord::Schema.define(:version => 20110617130414) do
 
   create_table "admins", :force => true do |t|
     t.string   "login",               :limit => 200,                    :null => false
@@ -130,6 +130,17 @@ ActiveRecord::Schema.define(:version => 20101111112445) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
   end
+
+  create_table "settings", :force => true do |t|
+    t.string   "var",                      :null => false
+    t.text     "value"
+    t.integer  "thing_id"
+    t.string   "thing_type", :limit => 30
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "settings", ["thing_type", "thing_id", "var"], :name => "index_settings_on_thing_type_and_thing_id_and_var", :unique => true
 
   create_table "site_settings", :force => true do |t|
     t.string   "name",                          :null => false

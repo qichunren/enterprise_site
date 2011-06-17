@@ -1,9 +1,0 @@
-system:
-  name: "CQROR Enterprise Site System"
-  version: "0.0.1"
-  domain: "www.cqror.com"
-
-#TODO dump from table site_setting  
-confog:
-  
-

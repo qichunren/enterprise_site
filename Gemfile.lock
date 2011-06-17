@@ -93,8 +93,8 @@ GEM
       activesupport (= 3.0.8)
       bundler (~> 1.0)
       railties (= 3.0.8)
-    rails_config (0.1.5)
-      activesupport (~> 3.0)
+    rails-settings-cached (0.1.2)
+      rails (>= 3.0.0)
     railties (3.0.8)
       actionpack (= 3.0.8)
       activesupport (= 3.0.8)
@@ -125,7 +125,7 @@ DEPENDENCIES
   mysql2 (= 0.2.7)
   paperclip (= 2.3.11)
   rails (= 3.0.8)
-  rails_config (= 0.1.5)
+  rails-settings-cached
   rake (= 0.8.7)
   themes_for_rails (= 0.4.1)
   thin
