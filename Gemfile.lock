@@ -119,6 +119,7 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.6.0)
     sass (3.1.2)
+    shoulda-matchers (1.0.0.beta2)
     themes_for_rails (0.4.1)
     thin (1.2.11)
       daemons (>= 1.0.9)
@@ -146,5 +147,6 @@ DEPENDENCIES
   rails-settings-cached
   rake (= 0.8.7)
   rspec-rails (~> 2.6)
+  shoulda-matchers (= 1.0.0.beta2)
   themes_for_rails (= 0.4.1)
   thin
