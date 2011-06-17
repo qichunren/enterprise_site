@@ -62,7 +62,7 @@ class ApplicationController < ActionController::Base
     unless current_admin
       store_location
       flash[:error] = "你还没有登录，请先登录！"
-      redirect_to new_admin_session_url
+      redirect_to admin_login_url
       return false
     end
   end
