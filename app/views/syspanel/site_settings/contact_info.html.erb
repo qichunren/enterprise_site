@@ -4,11 +4,11 @@
 <%= form_for :site_setting, :url => url_for(:action => :batch_update) do |f| -%>   
 <%= hidden_field_tag :current_action, params[:action] -%>
     <label for="">公司联系电话</label>
-    <%= f.text_field :company_telphone, :value => SiteSetting.got(:company_telphone) -%>  
+    <%= f.text_field :company_telphone, :value => MySettings.company_telphone -%>  
     <br />
     
     <label for="">公司地址</label>
-    <%= f.text_field :company_address, :value => SiteSetting.got(:company_address) -%>   
+    <%= f.text_field :company_address, :value => MySettings.company_address -%>   
     <br />
     <%= f.submit "提交" -%>
 <% end -%>

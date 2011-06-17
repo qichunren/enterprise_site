@@ -2,7 +2,7 @@
 class Syspanel::SiteSettingsController < Syspanel::BaseController
   # GET /site_settings
   def index
-    @site_settings = SiteSetting.all
+    
   end 
   
   def basic
@@ -15,7 +15,7 @@ class Syspanel::SiteSettingsController < Syspanel::BaseController
   def batch_update 
     if params[:site_setting].present?
       params[:site_setting].each do |key, value|
-        SiteSetting.find_by_setting_key(key).update_attribute(:setting_value, value)
+        eval "MySettings.#{key}='#{value}'"
       end
       flash[:notice] = "保存成功"
     end                          

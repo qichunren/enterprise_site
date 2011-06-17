@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>系统登录 － <%= Settings.system.name %> <%= Settings.system.version %></title>
+  <title>系统登录 － <%= MySettings.app_name %> <%= MySettings.app_version %></title>
   <%= stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection' %>
   <%= csrf_meta_tag %>
 </head>
@@ -11,7 +11,7 @@
 <body id="login-form">
   <div id="back_link"><%= link_to "返回公司网站", root_url %></div>
   <div class="wrapper">
-    <h1><%= SiteSetting.got(:company_short_name) %> 系统登录</h1>
+    <h1><%= MySettings.company_short_name %> 系统登录</h1>
     <%= form_for @admin_session, :url => admin_login_path do |form| %>
       <p>
         <label for="admin_session_login">帐号:</label><br/>
@@ -27,7 +27,7 @@
       </p>
     <% end %>
   </div>
-<div id="copyright">Powered by EnterpriseSiete 1.0 &copy; <%= SiteSetting.got(:company_short_name) %> 版权所有</div>
+<div id="copyright">Powered by EnterpriseSiete 1.0 &copy; <%= MySettings.company_short_name -%> 版权所有</div>
 
 <script type="text/javascript">                             
 <%
