@@ -8,7 +8,7 @@ gem "rails-settings-cached", :require => "rails-settings"
 gem "paperclip", "2.3.11"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3' 
 
-gem "compass", "0.10.6" 
+gem "compass", "~> 0.11.3" 
 
 gem 'themes_for_rails', "0.4.1"
 gem "breadcrumbs_on_rails"
@@ -27,4 +27,8 @@ gem "database_cleaner"
 
 group :development do
   gem "thin", :require => false
+end
+
+group :test do
+  gem "rspec-rails", "~> 2.6"
 end
