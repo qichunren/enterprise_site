@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   theme :theme_resolver
   def theme_resolver
     # current_user.theme # or anything else that return a string. 
-    "theme2"
+    "default"
   end
   
   before_filter :set_locale
