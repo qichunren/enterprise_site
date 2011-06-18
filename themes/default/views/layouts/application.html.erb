@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title><%= yield(:title).blank? ? SiteSetting.got(:company_full_name) : yield(:title) %></title>
+  <title><%= yield(:title).blank? ? MySetting.company_full_name : yield(:title) %></title>
   <%= yield(:description) -%><%= yield(:keywords) -%>
   <%= theme_stylesheet_link_tag "screen", :media => 'screen, projection' %>
   <%= theme_stylesheet_link_tag "print", :media => 'print' %>
@@ -23,7 +23,7 @@
 <body >
   <div id="container">
     <div id="header"> 
-      <h1 id="logo"><%= link_to SiteSetting.got(:company_full_name), root_path, :title => SiteSetting.got(:company_full_name) %></h1>
+      <h1 id="logo"><%= link_to MySettings.company_full_name, root_path, :title => MySettings.company_full_name %></h1>
     </div>
 
     <div id="nav">
@@ -57,7 +57,7 @@
     <div id="footer">
       <div class='bgl'>
         <div class="bgr">
-          Powered by <%= Settings.system.name %> <%= Settings.system.version %> 2010 - 2011 &copy; <%= SiteSetting.got(:company_short_name) %> 版权所有   
+          Powered by <%= MySettings.app_name %> <%= MySettings.app_version %> 2010 - 2011 &copy; <%= MySettings.company_short_name -%> 版权所有   
           <% if true %>
           <div style="float:right;">
           <% if current_admin %>
