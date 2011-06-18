@@ -2,6 +2,8 @@
 
 这是一个用Rails3写的公司企业网站，可以用于普通的公司网站.
 
+![Preview](https://github.com/qichunren/enterprise_site/raw/master/themes/default/cover.png)
+
 ### 功能
 
 - 新闻
