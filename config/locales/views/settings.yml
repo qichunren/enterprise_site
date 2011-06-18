@@ -8,6 +8,8 @@
       company_telphone: "Company telphone"
       company_address: "Company address"
       
+      themes_manage_a: "Theme manage"
+      
 
 "zh-CN":
   view:
@@ -18,4 +20,6 @@
       company_introduce: "公司介绍"
       company_telphone: "公司电话"
       company_address: "公司地址"
+      
+      themes_manage_a: "主题管理"
     	

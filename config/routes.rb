@@ -48,6 +48,7 @@ EnterpriseSite::Application.routes.draw do
     resources :product_configrations
     resources :news
     resources :admins
+    resources :themes
   end
 
   root :to => "home#index"
