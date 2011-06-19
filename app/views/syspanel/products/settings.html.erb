@@ -1,0 +1,6 @@
+<%= form_for :site_setting, :url => url_for(:action => :update_settings) do |f| -%>   
+    <label for="">是否启用产品模块？</label>
+    <%= f.check_box :enable_product_module, {:checked => MySettings.enable_product_module }, "true", "false"  -%>  
+    <br />
+    <%= f.submit "提交" -%>
+<% end -%>

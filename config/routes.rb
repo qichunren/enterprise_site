@@ -44,8 +44,12 @@ EnterpriseSite::Application.routes.draw do
       end
     end
     resources :notices  
-    resources :products
-    resources :product_configrations
+    resources :products do
+      collection do
+        get "settings"
+        post "update_settings"
+      end
+    end
     resources :news
     resources :admins
     resources :themes

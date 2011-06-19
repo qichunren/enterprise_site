@@ -69,4 +69,14 @@ class Syspanel::ProductsController < Syspanel::BaseController
       format.html { redirect_to(syspanel_products_url) }
     end
   end
+  
+  # GET /syspanel/products/settings
+  def settings
+  end
+  
+  # POST /syspanel/products/update_settings
+  def update_settings
+    MySettings.enable_product_module = params[:site_setting][:enable_product_module] == "true" ? true : false
+    redirect_to :action => :settings
+  end
 end
