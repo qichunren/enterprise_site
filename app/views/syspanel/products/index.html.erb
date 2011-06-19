@@ -1,29 +1,46 @@
 <% title "产品管理" %>
 <h2><%= Product.model_name.human %>列表</h2>
 
+
+<%= form_for @search, :url => syspanel_products_path, :html => { :method => :get } do |f| %>
+<fieldset class="collapsible " id="filters">
+  <legend >查询产品</legend>             
+    
+    <%= f.label :product_no_equals, "产品编号:" %>
+    <%= f.text_field :product_no_equals, :style => "width:60px;" %>    
+      
+    <!-- etc... -->
+    <%= f.submit "查询" %> 
+    </fieldset>
+<% end %>
+
+
 <table class="list">
   <tr>
-    <th><%= Product.model_name.human %>ID</th>
-    <th><%= Product.model_name.human %>名称</th>
-    <th><%= Product.model_name.human %>编号</th>
+    <th><%= Product.model_name.human -%>ID</th>
+    <th><%= Product.model_name.human -%>名称</th>
+    <th><%= Product.model_name.human -%>编号</th>
     <th>浏览次数</th>
     <th>价格</th>
     <th>发布人</th>
     <th>操作</th>
   </tr>
-
-<% @products.each do |product| %>
+<% @products.each do |product| -%>
   <tr>
-    <td align="center"><%= product.id %></td>
-    <td><%= product.name %></td>
-    <td align="right"><%= product.product_no %></td>
-    <td align="center"><%= product.click_count %></td>
-    <td><%= product.price %></td>
-    <td align="right"><%= product.created_by %></td>
-    <td align="center"><%= link_to '详情', [:syspanel, product] %> － <%= link_to '修改', edit_syspanel_product_path(product) %> － <%= link_to '删除', [:syspanel, product], :confirm => '你确定要删除此商品?', :method => :delete %></td>
+    <td align="center"><%= product.id -%></td>
+    <td><%= product.name -%></td>
+    <td align="right"><%= product.product_no -%></td>
+    <td align="center"><%= product.click_count -%></td>
+    <td align="right">¥<%= product.price.to_s -%> </td>
+    <td align="right"><%= product.created_by -%></td>
+    <td align="center"><%= link_to '详情', [:syspanel, product] %> － 
+                       <%= link_to '修改', edit_syspanel_product_path(product) %> － 
+                       <%= link_to '删除', [:syspanel, product], :confirm => '你确定要删除此商品?', :method => :delete %>
+    </td>
   </tr>
-<% end %>
+<% end -%>
 </table>
+<%= paginate @products -%>
 
 <br />
 

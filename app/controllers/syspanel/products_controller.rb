@@ -3,7 +3,8 @@ class Syspanel::ProductsController < Syspanel::BaseController
   
   # GET /products
   def index
-    @products = Product.all
+    @search = Product.order("id DESC").search(params[:search])
+    @products = @search.page(params[:page]).per(30)
 
     respond_to do |format|
       format.html # index.html.erb
