@@ -10,6 +10,10 @@ describe ProductsController do
     it "recognizes and generates #show" do
       { :get => "/products/1" }.should route_to(:controller => "products", :action => "show", :id => "1")
     end
+    
+    it "recognizes and generates #search" do
+      { :get => "/products/search" }.should route_to(:controller => "products", :action => "search")
+    end
 
   end
 end

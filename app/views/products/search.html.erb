@@ -1,8 +1,8 @@
-<% title "产品中心" %> 
+<% title "产品搜索" %> 
 
 <div id="products">
   <div class="wrapper">
-    <h3>最新产品</h3>
+    <h3>产品搜索结果</h3>
     <% @products.each do |product| %>
       <div class='product'>
         <div class="product_inner">
@@ -13,8 +13,8 @@
     <% end %>
   </div>
 </div><!-- end:#products -->
+<%= paginate @products -%>
 
-<%= paginate @products -%> 
 
 <%= content_for :sidebar do -%>
     <%= render :partial => "/products/search" %>

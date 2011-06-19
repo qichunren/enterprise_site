@@ -8,4 +8,11 @@ describe "products page" do
     end
   end
   
+  describe "GET /products/search" do
+    pending "works! " do
+      get search_products_path
+      response.status.should be(200)
+    end
+  end
+  
 end

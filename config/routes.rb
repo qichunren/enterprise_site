@@ -17,6 +17,9 @@ EnterpriseSite::Application.routes.draw do
     member do 
       get "category"
     end
+    collection do
+      get "search"
+    end
   end
   
   # resource :admin_session # 系统登录   

@@ -16,10 +16,8 @@
 
 <%= paginate @products -%> 
 
-
-<% content_for :sidebar do %>
-<%= render :partial => "/products/categories_bar" %>      
-<%= render :partial => "/products/recommend_products" %>
-
-
-<% end %>
+<%= content_for :sidebar do -%>
+    <%= render :partial => "/products/search" %>
+    <%= render :partial => "/products/categories_bar" %>
+    <%= render :partial => "/products/recommend_products" %>
+<% end -%>

@@ -27,8 +27,10 @@ class ProductsController < ApplicationController
     add_breadcrumb "产品中心", :products_path
   end
   
+  # GET /products/search
   def search
-    
+    @search = Product.search(params[:search])
+    @products = @search.page(params[:page]).per(30)
   end
 
  

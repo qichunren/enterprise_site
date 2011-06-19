@@ -1,0 +1,17 @@
+<% @search = Product.search(params[:search]) -%>
+<div id="products_search" class="box">    
+    <h3 class="title">搜索</h3>
+    <div class="inner">
+        <%= form_for @search, :url => search_products_path, :html => { :method => :get } do |f| %>
+        <fieldset class="collapsible " id="filters">
+          <legend >查询产品</legend>             
+
+            <%= f.label :name_like, "产品名称:" %>
+            <%= f.text_field :name_like, :style => "width:60px;" %>    
+
+            <!-- etc... -->
+            <%= f.submit "查询" %> 
+            </fieldset>
+        <% end %>
+    </div>
+</div>
