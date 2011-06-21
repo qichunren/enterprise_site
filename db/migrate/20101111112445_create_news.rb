@@ -8,6 +8,8 @@ class CreateNews < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    add_index :news, :title
   end
 
   def self.down

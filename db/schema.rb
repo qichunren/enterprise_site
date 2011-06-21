@@ -91,6 +91,8 @@ ActiveRecord::Schema.define(:version => 20110617130414) do
     t.datetime "updated_at"
   end
 
+  add_index "news", ["title"], :name => "index_news_on_title"
+
   create_table "notices", :force => true do |t|
     t.string   "title",                          :null => false
     t.text     "body"
@@ -100,6 +102,8 @@ ActiveRecord::Schema.define(:version => 20110617130414) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "notices", ["title"], :name => "index_notices_on_title"
 
   create_table "pages", :force => true do |t|
     t.string   "title",                          :null => false
@@ -112,6 +116,8 @@ ActiveRecord::Schema.define(:version => 20110617130414) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "pages", ["title"], :name => "index_pages_on_title"
 
   create_table "products", :force => true do |t|
     t.string   "name",                                                                 :null => false
@@ -131,6 +137,9 @@ ActiveRecord::Schema.define(:version => 20110617130414) do
     t.datetime "avatar_updated_at"
   end
 
+  add_index "products", ["name"], :name => "index_products_on_name"
+  add_index "products", ["product_no"], :name => "index_products_on_product_no"
+
   create_table "settings", :force => true do |t|
     t.string   "var",                      :null => false
     t.text     "value"
@@ -141,20 +150,5 @@ ActiveRecord::Schema.define(:version => 20110617130414) do
   end
 
   add_index "settings", ["thing_type", "thing_id", "var"], :name => "index_settings_on_thing_type_and_thing_id_and_var", :unique => true
-
-  create_table "site_settings", :force => true do |t|
-    t.string   "name",                          :null => false
-    t.string   "setting_key",                   :null => false
-    t.text     "setting_value",                 :null => false
-    t.string   "remark"
-    t.string   "value_type",                    :null => false
-    t.boolean  "build_in",                      :null => false
-    t.string   "module",        :default => "", :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "site_settings", ["module"], :name => "index_site_settings_on_module"
-  add_index "site_settings", ["setting_key"], :name => "index_site_settings_on_setting_key"
 
 end
