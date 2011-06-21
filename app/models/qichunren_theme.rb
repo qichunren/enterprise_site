@@ -1,6 +1,7 @@
 # encoding: utf-8
 class QichunrenTheme
   attr_accessor :cover
+  attr_accessor :dir
   attr_accessor :name
   attr_accessor :author
   attr_accessor :tags
@@ -22,6 +23,7 @@ class QichunrenTheme
       else
         hash.merge!("cover" => "/images/front/logo.jpg")
       end
+      hash.merge!("dir" => theme_dir_name)
 
       
       themes << QichunrenTheme.new(hash)
@@ -31,6 +33,7 @@ class QichunrenTheme
   
   def initialize(options={})
     @cover   = options["cover"]
+    @dir     = options["dir"]
     @name    = options["name"]
     @author  = options["author"]
     @tags    = options["tags"]

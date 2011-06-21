@@ -7,4 +7,10 @@ class Syspanel::ThemesController < Syspanel::BaseController
     Rails.logger.info "Theme size: " << @themes.size
   end
   
+  # PUT
+  def use
+    MySettings.current_theme = params[:theme]
+    redirect_to :action => :index, :notice => "Success!"
+  end
+  
 end

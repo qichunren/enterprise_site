@@ -2,4 +2,5 @@
     <%= theme.name -%> by <%= theme.author -%>
     <br />
     <%= image_tag theme.cover -%>
+    <%= button_to "使用", use_syspanel_themes_path(:theme => theme.dir), :method => :put %>
 <% end -%>

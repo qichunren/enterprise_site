@@ -55,7 +55,11 @@ EnterpriseSite::Application.routes.draw do
     end
     resources :news
     resources :admins
-    resources :themes
+    resources :themes, :only => [:index, :create] do
+      collection do
+        put "use"
+      end
+    end
   end
 
   root :to => "home#index"
