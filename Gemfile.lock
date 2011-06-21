@@ -36,6 +36,7 @@ GEM
       activemodel (= 3.0.8)
       activesupport (= 3.0.8)
     activesupport (3.0.8)
+    annotate (2.4.0)
     arel (2.0.10)
     awesome_print (0.4.0)
     breadcrumbs_on_rails (2.0.0)
@@ -141,6 +142,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate (= 2.4.0)
   authlogic!
   awesome_print (~> 0.4.0)
   breadcrumbs_on_rails

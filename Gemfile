@@ -27,6 +27,7 @@ gem "database_cleaner"
 
 group :development do
   gem "thin", :require => false
+  gem "annotate", "2.4.0"
   #　Rails concole support
   gem 'hirb-unicode' # gem 'hirb'
   gem "wirble", "~> 0.1.3" # http://pablotron.org/software/wirble/

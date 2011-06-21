@@ -16,3 +16,26 @@ class Product < ActiveRecord::Base
   end
   
 end
+
+# == Schema Information
+#
+# Table name: products
+#
+#  id                  :integer(4)      not null, primary key
+#  name                :string(255)     not null
+#  category_id         :integer(4)      not null
+#  product_no          :string(255)
+#  description         :text
+#  click_count         :integer(4)      default(0)
+#  price               :integer(10)
+#  amount              :integer(4)
+#  is_published        :boolean(1)      default(TRUE)
+#  created_by          :string(255)
+#  created_at          :datetime
+#  updated_at          :datetime
+#  avatar_file_name    :string(255)
+#  avatar_content_type :string(255)
+#  avatar_file_size    :integer(4)
+#  avatar_updated_at   :datetime
+#
+

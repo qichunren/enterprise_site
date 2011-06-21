@@ -9,3 +9,17 @@ class News < ActiveRecord::Base
     self.created_by = Admin.current.login
   end
 end
+
+# == Schema Information
+#
+# Table name: news
+#
+#  id          :integer(4)      not null, primary key
+#  title       :string(255)     not null
+#  body        :text            default(""), not null
+#  click_count :integer(4)      default(0), not null
+#  created_by  :string(255)     not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+

@@ -9,3 +9,18 @@ class Notice < ActiveRecord::Base
     self.save
   end
 end
+
+# == Schema Information
+#
+# Table name: notices
+#
+#  id           :integer(4)      not null, primary key
+#  title        :string(255)     not null
+#  body         :text
+#  click_count  :integer(4)      default(1)
+#  is_published :boolean(1)      default(TRUE)
+#  created_by   :string(255)
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
