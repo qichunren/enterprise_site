@@ -7,7 +7,10 @@
   <legend >查询产品</legend>             
     
     <%= f.label :product_no_equals, "产品编号:" %>
-    <%= f.text_field :product_no_equals, :style => "width:60px;" %>    
+    <%= f.text_field :product_no_equals, :style => "width:60px;" %>
+    
+    <%= f.label :name_like, "产品名:" %>
+    <%= f.text_field :name_like, :style => "width:120px;" %>    
       
     <!-- etc... -->
     <%= f.submit "查询" %> 
