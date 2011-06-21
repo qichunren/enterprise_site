@@ -4,3 +4,4 @@ log/*.log
 tmp/**/*
 Thumbs.db
 public/system/**
+.DS_Store
