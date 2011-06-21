@@ -6,7 +6,9 @@ class News < ActiveRecord::Base
   before_create :set_created_by
   
   def set_created_by
-    self.created_by = Admin.current.login
+    if self.created_by.blank?
+      self.created_by = Admin.current.login rescue "Unknow"
+    end
   end
 end
 
