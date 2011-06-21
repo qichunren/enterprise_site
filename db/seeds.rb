@@ -6,7 +6,7 @@ DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.clean
 
 # super admin
-super_admin = Admin.create(
+super_admin = Admin.create!(
                              :login => "admin",
                              :email => "admin@admin.com",
                              :password => "admin888",
@@ -14,7 +14,7 @@ super_admin = Admin.create(
                              :dept => 0,
                              :super_admin => true )
 
-super_admin = Admin.create(
+super_admin = Admin.create!(
                             :login => "davidcao",
                             :email => "whyruby@gmail.com",
                             :password => "davidcao888",
@@ -23,7 +23,23 @@ super_admin = Admin.create(
                             :super_admin => false ) 
                             
 notice_1 = Notice.create(:title => "公司网站正式开通了", :body => "公司网站正式开通了, 欢迎访问, 并留下你的宝贵意见.", :created_by => super_admin.login)
-notice_2 = Notice.create(:title => "好消息，公司新产品上市了", :body => "公司新产品上市了, 欢迎选购.", :created_by => super_admin.login)         
+notice_2 = Notice.create(:title => "好消息，公司新产品上市了", :body => "公司新产品上市了, 欢迎选购.", :created_by => super_admin.login)   
+
+News.create(:title => "如何成为优秀的开发人员？", :body => "事情犹如发生在昨天，那是在2000年，Pargas博士正在给我们数据结构班讲解有关数据结构方面的话题，当他讲解部署SSH应用时，一个同学问了他一个问题，当时他围绕“如果你想成为一个真正计算机科学家，你就要从学习vi编辑器开始。”说了一些事情。因为他说这些话的时候，面带微笑，事后我并不觉得他的话正确。但当时由于年轻、易受影响，回到宿舍中，我就立即开始学习如何使用vi。这样学习了了一段时间，我意识到一旦我掌握了其中的一些窍门，我就可以快速在vi中实现。
+
+六年前，我迷上了TextMate编辑器软件。当时我正从事Java软件开发工作，并在业余时间学习Rails并做一些Rails项目。那时几乎所有我读的文章和观看的视频都是说明和演示如何使用TextMate来完成文本编辑工作的方法技巧的。事实上，我当时每天用Eclipse，它正使我变成一个呆子。所以我买了一台Mac电脑，并在开机后的10分钟内就购买了TextMate软件并安装上去。
+
+我可以很老实地说，这两种文本编辑器中的任何一个都没有使我成为一个更好的程序员。
+
+优秀的工具，并不能使你成为优秀的程序员。所选用的工具确实很重要。实际上，他们也很棒。正如Tiger Woods即便使用低劣的球棒也会击败我们，Messi不穿鞋照样可以击败我们，Rafael Nadal在网球场用60年代的木制球拍也可能击败我们一样。你所积累的技术、知识和经验才是其中最重要的部分。
+
+所以，工具不能成就优秀的程序员，那什么可以呢？我认为成就一个优秀程序员需要的诸多因素都依赖于你所工作的内容和与你一同工作的人。但我发现，在软件开发领域已取得巨大成功的人身上都存在一些共同的特征，值得分享。我不敢肯定这些特征你能否学得到或者与生俱来，但我十分强烈的感到，如果我更加注重这些特征的培养，而不总停留在文本编辑器的替换上，我一定能取得很大的进步。", :created_by => super_admin.login)      
+
+News.create(:title => "诺基亚CEO：苹果失误造就Android的成功", :body => "北京时间6月9日晚间消息，诺基亚CEO史蒂芬·埃洛普(Stephen Elop)周四在伦敦Open Mobile峰会上表示，正是由于苹果失误才间接造就了Android的成功，一些人不愿遵从苹果的方式，于是谷歌才得以介入并创造了Android。
+
+谈到诺基亚的复苏战略，埃洛普称正致力于成为应用开发领域第三家主要厂商，成为Windows Phone手机的首家OEM厂商，以及与运营商结为合作伙伴等。
+
+此前有传闻称，微软和三星有意收购诺基亚。对此，埃洛普重申诺基亚不会出售。埃洛普同时谈到了苹果的发展。他表示：“苹果2007年推出了一款高水平的产品。苹果当时表示，‘这就是用户希望的’。然而苹果以苹果的方式来实现这一目标，iPhone是封闭的。”", :created_by => super_admin.login)
 
 Navmenu.create!([
   {
