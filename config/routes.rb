@@ -6,7 +6,7 @@ EnterpriseSite::Application.routes.draw do
 
   resources :feedbacks, :only => [:index, :new, :create]
   
-  get "contract-us" => "feedbacks#new"
+  get "contact-us" => "feedbacks#new"
   
   resources :notices, :only => [:index, :show]
 

@@ -58,7 +58,7 @@ Navmenu.create!([
     :position => 2 },
     
   { :label => "联系我们",
-    :url => "/contract-us",
+    :url => "/contact-us",
     :link_title => "联系我们",
     :position => 3 }    
     ])
