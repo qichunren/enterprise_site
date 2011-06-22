@@ -7,6 +7,7 @@ EnterpriseSite::Application.routes.draw do
   resources :feedbacks, :only => [:index, :new, :create]
   
   get "contact-us" => "feedbacks#new"
+  get "about-us" => "pages#about_us"
   
   resources :notices, :only => [:index, :show]
 

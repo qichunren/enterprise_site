@@ -9,5 +9,10 @@ class PagesController < ApplicationController
     
     add_breadcrumb @page.title, "/pages/#{@page.url_slug}"
   end
+  
+  # some builded in pages
+  # GET /about-us
+  def about_us
+  end
 
 end

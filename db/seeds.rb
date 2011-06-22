@@ -60,7 +60,12 @@ Navmenu.create!([
   { :label => "联系我们",
     :url => "/contact-us",
     :link_title => "联系我们",
-    :position => 3 }    
+    :position => 3 },
+    
+  { :label => "关于我们",
+    :url => "/about-us",
+    :link_title => "关于我们",
+    :position => 4 }    
     ])
 
 # All categories  start
