@@ -1113,13 +1113,13 @@ a:hover {
 /* line 133, sass/style.scss */
 #nav a:hover {
   color: #ffffff;
-  background: url(sm_6.gif) repeat-x center;
+  background: url(../images/sm_6.gif) repeat-x center;
 }
 
 /* line 134, sass/style.scss */
 #nav a.on {
   color: #ffffff;
-  background: url(sm_6.gif) repeat-x center;
+  background: url(../images/sm_6.gif) repeat-x center;
 }
 
 /* line 136, sass/style.scss */
