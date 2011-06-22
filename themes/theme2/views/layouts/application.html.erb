@@ -99,7 +99,7 @@ document.write('<embed src="http://localhost/etong/images/slide/focus.swf" wmode
 </div>
 
 <div class="announ"><div id="announ">
-<p><a href="/etong/index.php?case=announ&act=show&id=1" title="热烈庆祝本公司网站构建成立！">热烈庆祝本公司网站构建成立！</a> [2010-07-07]</p>
+<p><%= link_to get_notices(1).first.title -%> [<%= l get_notices(1).first.created_at, :format => :ymd %>]</p>
 </div></div>
 </div>
 <div id="bd">
