@@ -1,0 +1,740 @@
+@charset "UTF-8";
+/* line 1, sass/reset.scss */
+html {
+  scrollbar-face-color: #6EDEDED;
+}
+
+/* line 5, sass/reset.scss */
+body {
+  margin: 0 auto;
+  padding: 0;
+  font: 12px Arial,微软雅黑,Helvetica,sans-serif;
+  line-height: 180%;
+  color: #333;
+  text-align: left;
+  background: #ededed url(bg.gif) left top repeat-x;
+  white-space: normal;
+  word-break: break-all;
+}
+
+/* line 17, sass/reset.scss */
+img {
+  border: 0px;
+}
+
+/* line 18, sass/reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, sass/reset.scss */
+fieldset, img {
+  border: 0;
+}
+
+/* line 25, sass/reset.scss */
+li {
+  list-style: none;
+}
+
+/* line 26, sass/reset.scss */
+body, button, input, select, textarea, img {
+  font: tahoma,Helvetica,arial, "\5b8b\4f53", sans-serif;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+/* line 27, sass/reset.scss */
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* line 28, sass/reset.scss */
+code, kbd, samp {
+  font-family: courier new, courier, monospace;
+}
+
+/* line 30, sass/reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 31, sass/reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 33, sass/reset.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 34, sass/reset.scss */
+h2 {
+  font-size: 1.7em;
+}
+
+/* line 35, sass/reset.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 36, sass/reset.scss */
+h4 {
+  font-size: 1.38em;
+}
+
+/* line 37, sass/reset.scss */
+h5 {
+  font-size: 1.2em;
+}
+
+/* line 38, sass/reset.scss */
+h6 {
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+/* line 39, sass/reset.scss */
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* line 40, sass/reset.scss */
+caption, td {
+  font-weight: normal;
+}
+
+/* line 41, sass/reset.scss */
+cite, blackquote, em, i {
+  font-style: italic;
+}
+
+/* line 42, sass/reset.scss */
+strong, b {
+  font-weight: bold;
+}
+
+/* line 43, sass/reset.scss */
+pre, code {
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
+/* line 45, sass/reset.scss */
+div, form, img, ul, ol, li, dl, dt, dd, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 52, sass/reset.scss */
+table, td, tr, th {
+  font-size: 12px;
+}
+
+/* line 56, sass/reset.scss */
+ul, ol, li {
+  list-style: none;
+}
+
+/* line 60, sass/reset.scss */
+img {
+  border: 0;
+}
+
+/* line 64, sass/reset.scss */
+.clear {
+  clear: both;
+}
+
+/* line 68, sass/reset.scss */
+.floatleft {
+  float: left;
+}
+
+/* line 72, sass/reset.scss */
+.floatright {
+  float: right;
+}
+
+/* line 76, sass/reset.scss */
+.clear {
+  clear: both;
+}
+
+/*  */
+/* line 83, sass/reset.scss */
+#banner {
+  clear: both;
+}
+
+/************* 分页 */
+/* line 87, sass/reset.scss */
+.pages {
+  clear: both;
+  margin: 0px 10px;
+}
+
+/* line 92, sass/reset.scss */
+.pages strong {
+  color: #555;
+  display: block;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  padding: 0px 8px;
+  background: #F5F5F5;
+  border: 1px solid #ccc;
+  margin: 0px 3px 0px 0px;
+}
+
+/* line 104, sass/reset.scss */
+.pages a {
+  display: block;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  padding: 0px 8px;
+  border: 1px solid #CCC;
+  text-decoration: none;
+  margin: 0px 3px 0px 0px;
+  color: #555;
+}
+
+/* line 117, sass/reset.scss */
+.pages span {
+  float: right;
+}
+
+/****************内容*/
+/* line 123, sass/reset.scss */
+#title h1 {
+  line-height: 40px;
+  padding-top: 20px;
+  font-size: 22px;
+  text-align: center;
+  background: url(point.gif) left bottom repeat-x;
+  color: #333;
+  font-weight: bold;
+}
+
+/* line 134, sass/reset.scss */
+.contentinfo {
+  line-height: 24px;
+  text-align: center;
+  color: #999;
+  padding-right: 15px;
+}
+
+/* line 141, sass/reset.scss */
+.contentinfo a {
+  color: #999;
+}
+
+/* line 143, sass/reset.scss */
+.text {
+  padding: 30px 20px;
+  text-align: 14px;
+  line-height: 200%;
+  color: #333;
+}
+
+/* line 153, sass/reset.scss */
+.floatright {
+  float: right;
+}
+
+/* line 154, sass/reset.scss */
+.floatleft {
+  float: left;
+}
+
+/* line 156, sass/reset.scss */
+.blank10, .blank30, .blank20 {
+  clear: both;
+  height: 10px;
+  overflow: hidden;
+}
+
+/* line 157, sass/reset.scss */
+.blank30 {
+  height: 30px;
+}
+
+/* line 158, sass/reset.scss */
+.blank20 {
+  height: 20px;
+}
+
+/*工具*/
+/* line 161, sass/reset.scss */
+#tool {
+  font-size: 12px;
+  line-height: 20px;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  height: 20px;
+  margin: 10px 0;
+  padding: 10px 0 10px 10px;
+  overflow: hidden;
+}
+
+/* line 171, sass/reset.scss */
+#tool ul {
+  float: left;
+}
+
+/* line 174, sass/reset.scss */
+#tool ul li {
+  float: left;
+  width: 90px;
+  line-height: 20px;
+}
+
+/* line 179, sass/reset.scss */
+#tool .commentary, #tool .print, #tool .copy, #tool .email, #tool .close, #tool .rss_2, #tool .t_1, #tool .t_2, #tool .t_3 {
+  background-image: url(tool.gif);
+  background-repeat: no-repeat;
+  background-position: left -20px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 0 0 25px;
+  display: block;
+  margin: 0 10px 0 0;
+  color: #333;
+}
+
+/* line 190, sass/reset.scss */
+#tool .print {
+  background-position: left -40px;
+}
+
+/* line 193, sass/reset.scss */
+#tool .copy {
+  background-position: left -80px;
+}
+
+/* line 196, sass/reset.scss */
+#tool .email {
+  background-position: left -100px;
+}
+
+/* line 199, sass/reset.scss */
+#tool .close {
+  background-position: left -60px;
+}
+
+/* line 202, sass/reset.scss */
+#tool .rss_2 {
+  background-position: left -120px;
+}
+
+/* line 205, sass/reset.scss */
+#tool .t_1 {
+  background-position: left -140px;
+}
+
+/* line 208, sass/reset.scss */
+#tool .t_2 {
+  background-position: left -160px;
+}
+
+/* line 211, sass/reset.scss */
+#tool .t_3 {
+  background-position: left -180px;
+}
+
+/* line 215, sass/reset.scss */
+#tool .t_4 {
+  padding-left: 20px;
+  background: url(comment.gif) left 3px no-repeat;
+}
+
+/* line 216, sass/reset.scss */
+#tool .orders {
+  padding-left: 20px;
+  background: url(orders.gif) left 2px no-repeat;
+}
+
+/* line 217, sass/reset.scss */
+#tool .sinaicon {
+  padding-left: 20px;
+  background: url(sinaicon.png) left 1px no-repeat;
+}
+
+/************* 分类列表 */
+/* line 219, sass/reset.scss */
+.news_list {
+  padding: 10px;
+  text-align: left;
+}
+
+/* line 224, sass/reset.scss */
+.news_list li {
+  clear: both;
+  line-height: 28px;
+  padding-left: 15px;
+  border-bottom: 1px dotted #999;
+  background: url(icon06.gif) left 12px no-repeat;
+}
+
+/* line 232, sass/reset.scss */
+.news_list li a {
+  color: #666;
+}
+
+/* line 236, sass/reset.scss */
+.category_title {
+  clear: both;
+  line-height: 28px;
+  color: #333;
+  padding: 0px 15px 0px 30px;
+  margin-bottom: 10px;
+  background: #f5f5f5 url(icon04.gif) 10px 10px no-repeat;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 246, sass/reset.scss */
+.category_title span {
+  float: right;
+}
+
+/* line 250, sass/reset.scss */
+.category_title h4 {
+  font-size: 14px;
+}
+
+/* line 254, sass/reset.scss */
+.news_text h5, .news_text_pic h5 {
+  float: right;
+  width: 525px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: left;
+  color: #333;
+  padding-left: 20px;
+  background: url(icon05.gif) left 6px no-repeat;
+  _background: url(icon05.gif) left 12px no-repeat;
+}
+
+/* line 266, sass/reset.scss */
+.news_text h5 {
+  width: 700px;
+}
+
+/* line 270, sass/reset.scss */
+.news_text h5, .news_text_pic h5 a {
+  color: #333;
+}
+
+/* line 274, sass/reset.scss */
+.news_list .date, .news_text h5 .date, .news_text_pic h5 .date, .strgrade {
+  float: right;
+  padding-right: 15px;
+  color: #999;
+  font-weight: normal;
+}
+
+/* line 281, sass/reset.scss */
+.strgrade {
+  display: block;
+  width: 160px;
+  text-align: left;
+}
+
+/* line 287, sass/reset.scss */
+.news_list p {
+  margin: 5px;
+  padding: 5px 5px 5px 20px;
+  background: #FFF;
+  text-indent: 2em;
+}
+
+/* line 294, sass/reset.scss */
+.news_text, .news_text_pic {
+  clear: both;
+  height: auto;
+  padding: 10px 0px;
+  border-bottom: 1px dotted #ccc;
+}
+
+/* line 302, sass/reset.scss */
+.news_text p, .news_text_pic p {
+  float: right;
+  width: 560px;
+  text-align: left;
+  color: #999;
+  padding: 5px;
+  text-indent: 2em;
+}
+
+/* line 311, sass/reset.scss */
+.news_text p {
+  width: 710px;
+}
+
+/* line 315, sass/reset.scss */
+a.news_text_img {
+  display: block;
+  float: left;
+  height: 100px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+/* line 323, sass/reset.scss */
+.news_text_img img {
+  height: 100px;
+  margin-right: 15px;
+}
+
+/* line 328, sass/reset.scss */
+.list1 a, .list2 a, .list3 a {
+  padding-right: 30px;
+  background: url(new.gif) right 2px no-repeat;
+}
+
+/************* 产品 */
+/* line 334, sass/reset.scss */
+.product_box {
+  float: left;
+  width: 142px;
+  margin: 15px 15px 0px;
+  padding: 5px;
+  background: url(piclist_1.png) right top no-repeat;
+  overflow: hidden;
+}
+
+/* line 342, sass/reset.scss */
+.product_box img {
+  width: 142px;
+}
+
+/* line 346, sass/reset.scss */
+.product_box a {
+  display: block;
+  width: 142px;
+  height: 114px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+/* line 354, sass/reset.scss */
+.product_box h5 {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* line 360, sass/reset.scss */
+.product_box h5 a {
+  height: 44px;
+  line-height: 18px;
+}
+
+/* line 365, sass/reset.scss */
+.p_info {
+  height: 20px;
+  line-height: 20px;
+  padding-left: 30px;
+  background: url(bullet1.gif) left top no-repeat;
+  color: #0D61BA;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/************* 当前位置 */
+/* line 376, sass/reset.scss */
+#position {
+  line-height: 22px;
+  padding-bottom: 35px;
+  color: #999;
+  text-align: right;
+  background: url(point.gif) left 26px repeat-x;
+}
+
+/* line 384, sass/reset.scss */
+#position a {
+  height: 12px;
+  line-height: 12px;
+  padding: 7px 10px;
+  background: url(icon02.gif) left 9px no-repeat;
+  color: #999;
+}
+
+/************* 搜索 */
+/* line 393, sass/reset.scss */
+#search {
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+/* line 399, sass/reset.scss */
+#inputsearch {
+  border: none;
+  margin: 0px;
+  padding: 0px 0px 0px 17px;
+  width: 140px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #666;
+  background: url(search_input.gif);
+}
+
+/* line 411, sass/reset.scss */
+.s_btn {
+  width: 17px;
+  height: 18px;
+  border: none;
+  background: url(search.gif);
+}
+
+/************* 代码高亮 */
+/* line 414, sass/reset.scss */
+.dp-HighLighter {
+  border: 1px solid #ccc;
+  background: #f7f7f7 url(codebg.gif) left top repeat-y;
+}
+
+/* line 415, sass/reset.scss */
+.dp-HighLighter ol {
+  padding-left: 40px;
+}
+
+/* line 416, sass/reset.scss */
+.dp-HighLighter ol li {
+  padding-left: 10px;
+  list-style-type: decimal;
+}
+
+/* line 420, sass/reset.scss */
+.tools {
+  padding-left: 10px;
+  background: #F7F7F7;
+  border-bottom: 1px solid #ccc;
+}
+
+/************* 投票 */
+/* line 423, sass/reset.scss */
+.vote-list {
+  padding: 10px;
+}
+
+/* line 425, sass/reset.scss */
+.vote-list li {
+  clear: both;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* line 433, sass/reset.scss */
+.vote-list #button {
+  float: right;
+}
+
+/* line 437, sass/reset.scss */
+#ballot {
+  height: 10px;
+  _height: 16px;
+  margin: 0px 5px 0px 0px;
+}
+
+/* line 443, sass/reset.scss */
+.date {
+  float: right;
+  color: #999;
+}
+
+/* line 445, sass/reset.scss */
+.list li {
+  padding-left: 20px;
+  background: url(icon05.gif) left center no-repeat;
+}
+
+/* line 447, sass/reset.scss */
+.copyright {
+  clear: both;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+/* line 448, sass/reset.scss */
+.copyright a {
+  color: #999;
+}
+
+/* 
+  --------------------------------------
+  *****  9. assist (辅助)   *****
+  --------------------------------------
+*/
+/* line 455, sass/reset.scss */
+.p5 {
+  padding: 5px;
+}
+
+/* line 459, sass/reset.scss */
+.p10 {
+  padding: 10px;
+}
+
+/* line 463, sass/reset.scss */
+.blank5 {
+  clear: both;
+  height: 5px;
+  overflow: hidden;
+}
+
+/* line 469, sass/reset.scss */
+.blank10, .blank30 {
+  clear: both;
+  height: 10px;
+  overflow: hidden;
+}
+
+/* line 475, sass/reset.scss */
+.blank20 {
+  height: 20px;
+}
+
+/* line 479, sass/reset.scss */
+.blank30 {
+  height: 30px;
+}
+
+/* line 483, sass/reset.scss */
+.padding10 {
+  padding: 10px;
+}
+
+/* line 487, sass/reset.scss */
+.margin5 {
+  margin: 5px;
+}
+
+/* line 491, sass/reset.scss */
+.padding5 {
+  padding: 5px;
+}
+
+/* line 495, sass/reset.scss */
+.blank5 {
+  clear: both;
+  height: 5px;
+  overflow: hidden;
+}
+
+/* line 501, sass/reset.scss */
+.hr {
+  clear: both;
+  height: 1px;
+  background: url(point.gif) repeat-x;
+}

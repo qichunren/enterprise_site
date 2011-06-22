@@ -1,0 +1,23 @@
+<% title "产品搜索" %> 
+
+<div id="products">
+  <div class="wrapper">
+    <h3>产品搜索结果</h3>
+    <% @products.each do |product| %>
+      <div class='product'>
+        <div class="product_inner">
+          <%= link_to(image_tag(product.avatar.url(:thumb)), product) %>
+        </div>
+        <h4><%= link_to product.name, product %></h4>
+      </div> 
+    <% end %>
+  </div>
+</div><!-- end:#products -->
+<%= paginate @products -%>
+
+
+<%= content_for :sidebar do -%>
+    <%= render :partial => "/products/search" %>
+    <%= render :partial => "/products/categories_bar" %>
+    <%= render :partial => "/products/recommend_products" %>
+<% end -%>

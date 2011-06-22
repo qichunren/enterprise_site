@@ -1,0 +1,23 @@
+<div id="categories" class="box">
+  <h3 class="title">产品分类</h3>
+  <div class="inner">
+    <ul>
+      <% category_level = Category.category_level %>
+      <% Category.root.children.each do |category| %>
+      <% if category_level == 1 %>
+        <li><%= link_to category.name, category_product_path(category) %></li>                   
+      <% elsif category_level == 2 %>
+        <li>
+          <div class="category_1"><%= link_to category.name, category_product_path(category) %></div>
+          <div class="category_2">
+          <% category.children.each do |category1| %>
+            <span><%= link_to category1.name, category_product_path(category1) %></span>
+          <% end %>
+          </div>
+        </li>  
+        <% end %>
+      <% end %>
+    </ul>
+  </div><!-- end:inner -->
+
+</div><!-- end:categories -->

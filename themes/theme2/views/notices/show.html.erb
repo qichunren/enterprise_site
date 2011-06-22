@@ -1,0 +1,12 @@
+<% title @notice.title %>
+
+<h2><%= @notice.title %></h2>
+
+<p>
+  <%= @notice.body %>
+</p>
+
+
+<div>
+  <strong><%= @notice.created_by %></strong> 发布于 <%= l @notice.created_at, :format => :long %>
+</div>

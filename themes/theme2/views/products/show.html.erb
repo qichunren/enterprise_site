@@ -1,0 +1,44 @@
+<%= render_breadcrumbs -%>
+<div id="product">
+  <div class="product_inner">
+    <%= image_tag @product.avatar.url(:medium), :class => "product_image" %>
+  </div>
+  <div class="product_meta">
+    <h2><%= @product.name %></h2>
+    <p>
+      <b>产品编号:</b>
+      <%= @product.product_no %>
+    </p>
+    <p>
+      <b>分类:</b>
+      <%= @product.category.name rescue "" %>
+    </p>
+    
+    <% if @product.price.present? -%>
+    <p>
+      <b>价格:</b>
+      <%= @product.price %>元
+    </p>                        
+    <% end -%>
+    <% if @product.amount.present? -%>
+    <p>
+      <b>现售数量:</b>
+      <%= @product.amount -%>
+    </p>                 
+    <% end -%>
+  </div>
+  <div class="product_desc"><%= @product.description.html_safe %></div>
+  
+</div><!-- End:#product -->
+
+<% content_for :sidebar do -%>
+  <%= render :partial => "/products/search" -%>
+  <%= render :partial => "/products/categories_bar" -%>
+  <%= render :partial => "/products/recommend_products" -%>
+<% end -%>
+
+
+
+
+
+

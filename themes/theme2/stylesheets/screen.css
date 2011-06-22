@@ -1,0 +1,2113 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* @import "compass/reset"; */
+/* line 1, sass/reset.scss */
+html {
+  scrollbar-face-color: #6EDEDED;
+}
+
+/* line 5, sass/reset.scss */
+body {
+  margin: 0 auto;
+  padding: 0;
+  font: 12px Arial,微软雅黑,Helvetica,sans-serif;
+  line-height: 180%;
+  color: #333;
+  text-align: left;
+  background: #ededed url(bg.gif) left top repeat-x;
+  white-space: normal;
+  word-break: break-all;
+}
+
+/* line 17, sass/reset.scss */
+img {
+  border: 0px;
+}
+
+/* line 18, sass/reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, sass/reset.scss */
+fieldset, img {
+  border: 0;
+}
+
+/* line 25, sass/reset.scss */
+li {
+  list-style: none;
+}
+
+/* line 26, sass/reset.scss */
+body, button, input, select, textarea, img {
+  font: tahoma,Helvetica,arial, "\5b8b\4f53", sans-serif;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+/* line 27, sass/reset.scss */
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* line 28, sass/reset.scss */
+code, kbd, samp {
+  font-family: courier new, courier, monospace;
+}
+
+/* line 30, sass/reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 31, sass/reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 33, sass/reset.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 34, sass/reset.scss */
+h2 {
+  font-size: 1.7em;
+}
+
+/* line 35, sass/reset.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 36, sass/reset.scss */
+h4 {
+  font-size: 1.38em;
+}
+
+/* line 37, sass/reset.scss */
+h5 {
+  font-size: 1.2em;
+}
+
+/* line 38, sass/reset.scss */
+h6 {
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+/* line 39, sass/reset.scss */
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* line 40, sass/reset.scss */
+caption, td {
+  font-weight: normal;
+}
+
+/* line 41, sass/reset.scss */
+cite, blackquote, em, i {
+  font-style: italic;
+}
+
+/* line 42, sass/reset.scss */
+strong, b {
+  font-weight: bold;
+}
+
+/* line 43, sass/reset.scss */
+pre, code {
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
+/* line 45, sass/reset.scss */
+div, form, img, ul, ol, li, dl, dt, dd, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 52, sass/reset.scss */
+table, td, tr, th {
+  font-size: 12px;
+}
+
+/* line 56, sass/reset.scss */
+ul, ol, li {
+  list-style: none;
+}
+
+/* line 60, sass/reset.scss */
+img {
+  border: 0;
+}
+
+/* line 64, sass/reset.scss */
+.clear {
+  clear: both;
+}
+
+/* line 68, sass/reset.scss */
+.floatleft {
+  float: left;
+}
+
+/* line 72, sass/reset.scss */
+.floatright {
+  float: right;
+}
+
+/* line 76, sass/reset.scss */
+.clear {
+  clear: both;
+}
+
+/*  */
+/* line 83, sass/reset.scss */
+#banner {
+  clear: both;
+}
+
+/************* 分页 */
+/* line 87, sass/reset.scss */
+.pages {
+  clear: both;
+  margin: 0px 10px;
+}
+
+/* line 92, sass/reset.scss */
+.pages strong {
+  color: #555;
+  display: block;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  padding: 0px 8px;
+  background: #F5F5F5;
+  border: 1px solid #ccc;
+  margin: 0px 3px 0px 0px;
+}
+
+/* line 104, sass/reset.scss */
+.pages a {
+  display: block;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  padding: 0px 8px;
+  border: 1px solid #CCC;
+  text-decoration: none;
+  margin: 0px 3px 0px 0px;
+  color: #555;
+}
+
+/* line 117, sass/reset.scss */
+.pages span {
+  float: right;
+}
+
+/****************内容*/
+/* line 123, sass/reset.scss */
+#title h1 {
+  line-height: 40px;
+  padding-top: 20px;
+  font-size: 22px;
+  text-align: center;
+  background: url(point.gif) left bottom repeat-x;
+  color: #333;
+  font-weight: bold;
+}
+
+/* line 134, sass/reset.scss */
+.contentinfo {
+  line-height: 24px;
+  text-align: center;
+  color: #999;
+  padding-right: 15px;
+}
+
+/* line 141, sass/reset.scss */
+.contentinfo a {
+  color: #999;
+}
+
+/* line 143, sass/reset.scss */
+.text {
+  padding: 30px 20px;
+  text-align: 14px;
+  line-height: 200%;
+  color: #333;
+}
+
+/* line 153, sass/reset.scss */
+.floatright {
+  float: right;
+}
+
+/* line 154, sass/reset.scss */
+.floatleft {
+  float: left;
+}
+
+/* line 156, sass/reset.scss */
+.blank10, .blank30, .blank20 {
+  clear: both;
+  height: 10px;
+  overflow: hidden;
+}
+
+/* line 157, sass/reset.scss */
+.blank30 {
+  height: 30px;
+}
+
+/* line 158, sass/reset.scss */
+.blank20 {
+  height: 20px;
+}
+
+/*工具*/
+/* line 161, sass/reset.scss */
+#tool {
+  font-size: 12px;
+  line-height: 20px;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  height: 20px;
+  margin: 10px 0;
+  padding: 10px 0 10px 10px;
+  overflow: hidden;
+}
+
+/* line 171, sass/reset.scss */
+#tool ul {
+  float: left;
+}
+
+/* line 174, sass/reset.scss */
+#tool ul li {
+  float: left;
+  width: 90px;
+  line-height: 20px;
+}
+
+/* line 179, sass/reset.scss */
+#tool .commentary, #tool .print, #tool .copy, #tool .email, #tool .close, #tool .rss_2, #tool .t_1, #tool .t_2, #tool .t_3 {
+  background-image: url(tool.gif);
+  background-repeat: no-repeat;
+  background-position: left -20px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 0 0 25px;
+  display: block;
+  margin: 0 10px 0 0;
+  color: #333;
+}
+
+/* line 190, sass/reset.scss */
+#tool .print {
+  background-position: left -40px;
+}
+
+/* line 193, sass/reset.scss */
+#tool .copy {
+  background-position: left -80px;
+}
+
+/* line 196, sass/reset.scss */
+#tool .email {
+  background-position: left -100px;
+}
+
+/* line 199, sass/reset.scss */
+#tool .close {
+  background-position: left -60px;
+}
+
+/* line 202, sass/reset.scss */
+#tool .rss_2 {
+  background-position: left -120px;
+}
+
+/* line 205, sass/reset.scss */
+#tool .t_1 {
+  background-position: left -140px;
+}
+
+/* line 208, sass/reset.scss */
+#tool .t_2 {
+  background-position: left -160px;
+}
+
+/* line 211, sass/reset.scss */
+#tool .t_3 {
+  background-position: left -180px;
+}
+
+/* line 215, sass/reset.scss */
+#tool .t_4 {
+  padding-left: 20px;
+  background: url(comment.gif) left 3px no-repeat;
+}
+
+/* line 216, sass/reset.scss */
+#tool .orders {
+  padding-left: 20px;
+  background: url(orders.gif) left 2px no-repeat;
+}
+
+/* line 217, sass/reset.scss */
+#tool .sinaicon {
+  padding-left: 20px;
+  background: url(sinaicon.png) left 1px no-repeat;
+}
+
+/************* 分类列表 */
+/* line 219, sass/reset.scss */
+.news_list {
+  padding: 10px;
+  text-align: left;
+}
+
+/* line 224, sass/reset.scss */
+.news_list li {
+  clear: both;
+  line-height: 28px;
+  padding-left: 15px;
+  border-bottom: 1px dotted #999;
+  background: url(icon06.gif) left 12px no-repeat;
+}
+
+/* line 232, sass/reset.scss */
+.news_list li a {
+  color: #666;
+}
+
+/* line 236, sass/reset.scss */
+.category_title {
+  clear: both;
+  line-height: 28px;
+  color: #333;
+  padding: 0px 15px 0px 30px;
+  margin-bottom: 10px;
+  background: #f5f5f5 url(icon04.gif) 10px 10px no-repeat;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 246, sass/reset.scss */
+.category_title span {
+  float: right;
+}
+
+/* line 250, sass/reset.scss */
+.category_title h4 {
+  font-size: 14px;
+}
+
+/* line 254, sass/reset.scss */
+.news_text h5, .news_text_pic h5 {
+  float: right;
+  width: 525px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: left;
+  color: #333;
+  padding-left: 20px;
+  background: url(icon05.gif) left 6px no-repeat;
+  _background: url(icon05.gif) left 12px no-repeat;
+}
+
+/* line 266, sass/reset.scss */
+.news_text h5 {
+  width: 700px;
+}
+
+/* line 270, sass/reset.scss */
+.news_text h5, .news_text_pic h5 a {
+  color: #333;
+}
+
+/* line 274, sass/reset.scss */
+.news_list .date, .news_text h5 .date, .news_text_pic h5 .date, .strgrade {
+  float: right;
+  padding-right: 15px;
+  color: #999;
+  font-weight: normal;
+}
+
+/* line 281, sass/reset.scss */
+.strgrade {
+  display: block;
+  width: 160px;
+  text-align: left;
+}
+
+/* line 287, sass/reset.scss */
+.news_list p {
+  margin: 5px;
+  padding: 5px 5px 5px 20px;
+  background: #FFF;
+  text-indent: 2em;
+}
+
+/* line 294, sass/reset.scss */
+.news_text, .news_text_pic {
+  clear: both;
+  height: auto;
+  padding: 10px 0px;
+  border-bottom: 1px dotted #ccc;
+}
+
+/* line 302, sass/reset.scss */
+.news_text p, .news_text_pic p {
+  float: right;
+  width: 560px;
+  text-align: left;
+  color: #999;
+  padding: 5px;
+  text-indent: 2em;
+}
+
+/* line 311, sass/reset.scss */
+.news_text p {
+  width: 710px;
+}
+
+/* line 315, sass/reset.scss */
+a.news_text_img {
+  display: block;
+  float: left;
+  height: 100px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+/* line 323, sass/reset.scss */
+.news_text_img img {
+  height: 100px;
+  margin-right: 15px;
+}
+
+/* line 328, sass/reset.scss */
+.list1 a, .list2 a, .list3 a {
+  padding-right: 30px;
+  background: url(new.gif) right 2px no-repeat;
+}
+
+/************* 产品 */
+/* line 334, sass/reset.scss */
+.product_box {
+  float: left;
+  width: 142px;
+  margin: 15px 15px 0px;
+  padding: 5px;
+  background: url(piclist_1.png) right top no-repeat;
+  overflow: hidden;
+}
+
+/* line 342, sass/reset.scss */
+.product_box img {
+  width: 142px;
+}
+
+/* line 346, sass/reset.scss */
+.product_box a {
+  display: block;
+  width: 142px;
+  height: 114px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+/* line 354, sass/reset.scss */
+.product_box h5 {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* line 360, sass/reset.scss */
+.product_box h5 a {
+  height: 44px;
+  line-height: 18px;
+}
+
+/* line 365, sass/reset.scss */
+.p_info {
+  height: 20px;
+  line-height: 20px;
+  padding-left: 30px;
+  background: url(bullet1.gif) left top no-repeat;
+  color: #0D61BA;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/************* 当前位置 */
+/* line 376, sass/reset.scss */
+#position {
+  line-height: 22px;
+  padding-bottom: 35px;
+  color: #999;
+  text-align: right;
+  background: url(point.gif) left 26px repeat-x;
+}
+
+/* line 384, sass/reset.scss */
+#position a {
+  height: 12px;
+  line-height: 12px;
+  padding: 7px 10px;
+  background: url(icon02.gif) left 9px no-repeat;
+  color: #999;
+}
+
+/************* 搜索 */
+/* line 393, sass/reset.scss */
+#search {
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+/* line 399, sass/reset.scss */
+#inputsearch {
+  border: none;
+  margin: 0px;
+  padding: 0px 0px 0px 17px;
+  width: 140px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #666;
+  background: url(search_input.gif);
+}
+
+/* line 411, sass/reset.scss */
+.s_btn {
+  width: 17px;
+  height: 18px;
+  border: none;
+  background: url(search.gif);
+}
+
+/************* 代码高亮 */
+/* line 414, sass/reset.scss */
+.dp-HighLighter {
+  border: 1px solid #ccc;
+  background: #f7f7f7 url(codebg.gif) left top repeat-y;
+}
+
+/* line 415, sass/reset.scss */
+.dp-HighLighter ol {
+  padding-left: 40px;
+}
+
+/* line 416, sass/reset.scss */
+.dp-HighLighter ol li {
+  padding-left: 10px;
+  list-style-type: decimal;
+}
+
+/* line 420, sass/reset.scss */
+.tools {
+  padding-left: 10px;
+  background: #F7F7F7;
+  border-bottom: 1px solid #ccc;
+}
+
+/************* 投票 */
+/* line 423, sass/reset.scss */
+.vote-list {
+  padding: 10px;
+}
+
+/* line 425, sass/reset.scss */
+.vote-list li {
+  clear: both;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* line 433, sass/reset.scss */
+.vote-list #button {
+  float: right;
+}
+
+/* line 437, sass/reset.scss */
+#ballot {
+  height: 10px;
+  _height: 16px;
+  margin: 0px 5px 0px 0px;
+}
+
+/* line 443, sass/reset.scss */
+.date {
+  float: right;
+  color: #999;
+}
+
+/* line 445, sass/reset.scss */
+.list li {
+  padding-left: 20px;
+  background: url(icon05.gif) left center no-repeat;
+}
+
+/* line 447, sass/reset.scss */
+.copyright {
+  clear: both;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+/* line 448, sass/reset.scss */
+.copyright a {
+  color: #999;
+}
+
+/* 
+  --------------------------------------
+  *****  9. assist (辅助)   *****
+  --------------------------------------
+*/
+/* line 455, sass/reset.scss */
+.p5 {
+  padding: 5px;
+}
+
+/* line 459, sass/reset.scss */
+.p10 {
+  padding: 10px;
+}
+
+/* line 463, sass/reset.scss */
+.blank5 {
+  clear: both;
+  height: 5px;
+  overflow: hidden;
+}
+
+/* line 469, sass/reset.scss */
+.blank10, .blank30 {
+  clear: both;
+  height: 10px;
+  overflow: hidden;
+}
+
+/* line 475, sass/reset.scss */
+.blank20 {
+  height: 20px;
+}
+
+/* line 479, sass/reset.scss */
+.blank30 {
+  height: 30px;
+}
+
+/* line 483, sass/reset.scss */
+.padding10 {
+  padding: 10px;
+}
+
+/* line 487, sass/reset.scss */
+.margin5 {
+  margin: 5px;
+}
+
+/* line 491, sass/reset.scss */
+.padding5 {
+  padding: 5px;
+}
+
+/* line 495, sass/reset.scss */
+.blank5 {
+  clear: both;
+  height: 5px;
+  overflow: hidden;
+}
+
+/* line 501, sass/reset.scss */
+.hr {
+  clear: both;
+  height: 1px;
+  background: url(point.gif) repeat-x;
+}
+
+/* line 2, sass/style.scss */
+html {
+  scrollbar-face-color: #6EDEDED;
+}
+
+/* line 6, sass/style.scss */
+body {
+  margin: 0 auto;
+  padding: 0;
+  font: 12px Arial,微软雅黑,Helvetica,sans-serif;
+  line-height: 180%;
+  color: #333;
+  text-align: left;
+  background: #ededed url(bg.gif) left top repeat-x;
+  white-space: normal;
+  word-break: break-all;
+}
+
+/* line 18, sass/style.scss */
+img {
+  border: 0px;
+}
+
+/* line 19, sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, sass/style.scss */
+fieldset, img {
+  border: 0;
+}
+
+/* line 26, sass/style.scss */
+li {
+  list-style: none;
+}
+
+/* line 27, sass/style.scss */
+body, button, input, select, textarea, img {
+  font: tahoma,Helvetica,arial, "\5b8b\4f53", sans-serif;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+/* line 28, sass/style.scss */
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* line 29, sass/style.scss */
+code, kbd, samp {
+  font-family: courier new, courier, monospace;
+}
+
+/* line 31, sass/style.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 32, sass/style.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 34, sass/style.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 35, sass/style.scss */
+h2 {
+  font-size: 1.7em;
+}
+
+/* line 36, sass/style.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 37, sass/style.scss */
+h4 {
+  font-size: 1.38em;
+}
+
+/* line 38, sass/style.scss */
+h5 {
+  font-size: 1.2em;
+}
+
+/* line 39, sass/style.scss */
+h6 {
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+/* line 40, sass/style.scss */
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* line 41, sass/style.scss */
+caption, td {
+  font-weight: normal;
+}
+
+/* line 42, sass/style.scss */
+cite, blackquote, em, i {
+  font-style: italic;
+}
+
+/* line 43, sass/style.scss */
+strong, b {
+  font-weight: bold;
+}
+
+/* line 44, sass/style.scss */
+pre, code {
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
+/* line 46, sass/style.scss */
+div, form, img, ul, ol, li, dl, dt, dd, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 53, sass/style.scss */
+table, td, tr, th {
+  font-size: 12px;
+}
+
+/* line 57, sass/style.scss */
+ul, ol, li {
+  list-style: none;
+}
+
+/* line 61, sass/style.scss */
+img {
+  border: 0;
+}
+
+/* line 65, sass/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 69, sass/style.scss */
+.floatleft {
+  float: left;
+}
+
+/* line 73, sass/style.scss */
+.floatright {
+  float: right;
+}
+
+/* line 77, sass/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 81, sass/style.scss */
+body {
+  background: #ffffff;
+  margin: 0px;
+  font-size: 12px;
+  font-family: Arial, "宋体";
+}
+
+/* line 82, sass/style.scss */
+#main {
+  width: 980px;
+  margin: 0 auto;
+  padding: 0px auto;
+}
+
+/* line 83, sass/style.scss */
+#header {
+  width: 980px;
+  margin-top: -69px;
+}
+
+/* line 85, sass/style.scss */
+#bd {
+  width: 980px;
+  margin-top: 13px;
+}
+
+/* line 86, sass/style.scss */
+#bd_left {
+  width: 372px;
+  float: left;
+}
+
+/* line 87, sass/style.scss */
+#bd_right {
+  width: 595px;
+  float: right;
+}
+
+/* line 88, sass/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 89, sass/style.scss */
+#footer {
+  width: 980px;
+  clear: both;
+  text-align: center;
+}
+
+/* line 90, sass/style.scss */
+#links {
+  padding: 10px;
+  border: 1px solid #E7E7E7;
+}
+
+/* line 91, sass/style.scss */
+.bottom_cprt, .bottom_cprt a {
+  color: #888;
+}
+
+/* line 95, sass/style.scss */
+a {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+/* line 96, sass/style.scss */
+a:link {
+  color: #333;
+  text-decoration: none;
+}
+
+/* line 97, sass/style.scss */
+a:visited {
+  color: #666;
+  text-decoration: none;
+}
+
+/* line 98, sass/style.scss */
+a:hover {
+  color: #D9271F;
+  text-decoration: underline;
+}
+
+/* line 100, sass/style.scss */
+.logo {
+  float: left;
+  padding: 15px 0px 10px 15px;
+}
+
+/* line 101, sass/style.scss */
+.top {
+  float: right;
+  width: 320px;
+  _width: 330px;
+  text-align: right;
+}
+
+/* line 102, sass/style.scss */
+.top_wd {
+  float: left;
+  font-size: 10px;
+  font-family: Arial, "宋体";
+  color: #696969;
+  padding: 5px 0px 10px;
+  line-height: 10px;
+}
+
+/* line 103, sass/style.scss */
+.top_wd a {
+  font-size: 10px;
+  color: #696969;
+  text-decoration: none;
+}
+
+/* line 104, sass/style.scss */
+.top_wd a:hover {
+  font-size: 10px;
+  color: #696969;
+  text-decoration: underline;
+}
+
+/* line 105, sass/style.scss */
+.top_input {
+  float: left;
+  padding-left: 8px;
+}
+
+/* line 106, sass/style.scss */
+.top_inputimg {
+  float: left;
+  padding-left: 8px;
+}
+
+/* line 107, sass/style.scss */
+.top_input input {
+  background-image: url(sm_2.gif);
+  background-repeat: no-repeat;
+  background-position: left;
+  border: 1px solid #e7e7e7;
+  height: 20px;
+  line-height: 20px;
+  text-align: left;
+  text-indent: 24px;
+  color: #CCC;
+  font-size: 12px;
+}
+
+/* line 119, sass/style.scss */
+.top_a {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* line 120, sass/style.scss */
+.top_a a {
+  color: #555;
+}
+
+/* line 122, sass/style.scss */
+#sig {
+  position: relative;
+  z-index: 999;
+  top: 120px;
+  left: 907px;
+  width: 77px;
+  height: 79px;
+  background: url(sig.png) no-repeat left top !important;
+  /*For Firefox*/
+  *background: none;
+  /*For IE7 & IE6*/
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/sig.png',sizingMethod='crop');
+}
+
+/* line 130, sass/style.scss */
+#nav {
+  background: #0087ce url(sm_4.gif) left center repeat-x;
+  height: 38px;
+  line-height: 38px;
+  clear: both;
+}
+
+/* line 132, sass/style.scss */
+#nav a {
+  display: block;
+  float: left;
+  margin: 0px;
+  padding: 0px 20px;
+  color: #ffffff;
+  float: left;
+  list-style-type: none;
+  text-decoration: none;
+  line-height: 38px;
+  height: 38px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* line 133, sass/style.scss */
+#nav a:hover {
+  color: #ffffff;
+  background: url(sm_6.gif) repeat-x center;
+}
+
+/* line 134, sass/style.scss */
+#nav a.on {
+  color: #ffffff;
+  background: url(sm_6.gif) repeat-x center;
+}
+
+/* line 136, sass/style.scss */
+ul#navmenu li {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  float: left;
+  /*For Gecko*/
+  display: inline;
+  list-style: none;
+  position: relative;
+}
+
+/* line 146, sass/style.scss */
+ul#navmenu ul {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 200px;
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background: url(navmenu_bg.png) repeat-y left top;
+  _background: #0087ce;
+}
+
+/* line 159, sass/style.scss */
+ul#navmenu ul li {
+  line-height: 28px;
+  float: none;
+  /*For Gecko*/
+  display: block !important;
+  display: inline;
+  /*For IE*/
+}
+
+/* 2nd Menu */
+/* line 169, sass/style.scss */
+ul#navmenu li:hover li a,
+ul#navmenu li.iehover li a {
+  float: none;
+  color: #FFF;
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+  font-weight: normal;
+  margin: 0px 10px 6px;
+  border-bottom: 1px solid #555;
+}
+
+/* 2nd Menu Hover Persistence */
+/* line 183, sass/style.scss */
+ul#navmenu li:hover li a:hover,
+ul#navmenu li:hover li:hover a,
+ul#navmenu li.iehover li a:hover,
+ul#navmenu li.iehover li.iehover a {
+  color: #FFF;
+  background: none;
+}
+
+/* 3rd Menu */
+/* line 189, sass/style.scss */
+ul#navmenu li:hover li:hover li a,
+ul#navmenu li.iehover li.iehover li a {
+  color: #FFF;
+}
+
+/* 3rd Menu Hover Persistence */
+/* line 196, sass/style.scss */
+ul#navmenu li:hover li:hover li a:hover,
+ul#navmenu li:hover li:hover li:hover a,
+ul#navmenu li.iehover li.iehover li a:hover,
+ul#navmenu li.iehover li.iehover li.iehover a {
+  color: #FFF;
+}
+
+/* 4th Menu */
+/* line 201, sass/style.scss */
+ul#navmenu li:hover li:hover li:hover li a,
+ul#navmenu li.iehover li.iehover li.iehover li a {
+  color: #FFF;
+}
+
+/* 4th Menu Hover */
+/* line 206, sass/style.scss */
+ul#navmenu li:hover li:hover li:hover li a:hover,
+ul#navmenu li.iehover li.iehover li.iehover li a:hover {
+  color: #FFF;
+}
+
+/* line 210, sass/style.scss */
+ul#navmenu ul ul,
+ul#navmenu ul ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+/* line 220, sass/style.scss */
+ul#navmenu li:hover ul ul,
+ul#navmenu li:hover ul ul ul,
+ul#navmenu li.iehover ul ul,
+ul#navmenu li.iehover ul ul ul {
+  display: none;
+}
+
+/* line 228, sass/style.scss */
+ul#navmenu li:hover ul,
+ul#navmenu ul li:hover ul,
+ul#navmenu ul ul li:hover ul,
+ul#navmenu li.iehover ul,
+ul#navmenu ul li.iehover ul,
+ul#navmenu ul ul li.iehover ul {
+  display: block;
+}
+
+/* line 234, sass/style.scss */
+#announ {
+  height: 28px;
+  line-height: 28px;
+  padding: 0px 0px 0px 30px;
+  background: url(sm_10.gif) 15px center no-repeat;
+  overflow: hidden;
+}
+
+/* line 235, sass/style.scss */
+.announ {
+  width: 978px;
+  overflow: hidden;
+  background: url(sm_7.gif) repeat-x top;
+  border: solid 1px #e7e7e7;
+}
+
+/* line 237, sass/style.scss */
+.right_left {
+  float: left;
+  width: 372px;
+}
+
+/* line 238, sass/style.scss */
+.right_right {
+  float: right;
+  width: 208px;
+}
+
+/* line 241, sass/style.scss */
+.box1 {
+  border: solid 1px #e7e7e7;
+}
+
+/* line 242, sass/style.scss */
+.title {
+  background: url(../images/sm_8.gif) repeat-x bottom;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 243, sass/style.scss */
+.lanwd {
+  float: left;
+  padding-left: 16px;
+  font-size: 14px;
+  font-family: Microsoft YaHei,"宋体";
+  color: #0160b0;
+}
+
+/* line 244, sass/style.scss */
+.lanwd a {
+  color: #0160b0;
+}
+
+/* line 245, sass/style.scss */
+.english {
+  float: left;
+  padding-left: 8px;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #999999;
+}
+
+/* line 246, sass/style.scss */
+.english a {
+  color: #999;
+}
+
+/* line 248, sass/style.scss */
+.new_tj {
+  padding: 8px;
+}
+
+/* line 249, sass/style.scss */
+.news_pic {
+  float: left;
+  padding: 8px;
+}
+
+/* line 250, sass/style.scss */
+.imgys {
+  padding: 2px;
+  background: #FFFFFF;
+  border: #eeeeee 1px solid;
+  width: 120px;
+}
+
+/* line 251, sass/style.scss */
+.lanwd12c {
+  font-weight: bold;
+  color: #006ac3;
+}
+
+/* line 252, sass/style.scss */
+.lanwd12c a {
+  font-weight: bold;
+  color: #006ac3;
+  text-decoration: none;
+}
+
+/* line 253, sass/style.scss */
+.lanwd12c a:hover {
+  font-weight: bold;
+  color: #006ac3;
+  text-decoration: underline;
+}
+
+/* line 254, sass/style.scss */
+.p1 {
+  float: right;
+  width: 195px;
+  line-height: 24px;
+  font-size: 12px;
+  color: #535353;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 256, sass/style.scss */
+.news {
+  padding: 8px;
+}
+
+/* line 257, sass/style.scss */
+.ul2 {
+  clear: both;
+  margin: 0px;
+  padding: 2px 8px 8px 8px;
+  text-align: left;
+  font-family: "宋体";
+  font-size: 12px;
+}
+
+/* line 265, sass/style.scss */
+.ul2 li {
+  font-family: "宋体";
+  font-size: 12px;
+  line-height: 26px;
+  height: 26px;
+  list-style-type: none;
+  color: #535353;
+  display: block;
+  padding: 0px;
+  display: block;
+  background: url(mb_14.gif) no-repeat left bottom;
+  white-space: nowrap;
+}
+
+/* line 278, sass/style.scss */
+.ul2 li a {
+  color: #535353;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+/* line 283, sass/style.scss */
+.ul2 li a:hover {
+  color: #D9271F;
+}
+
+/* line 286, sass/style.scss */
+.ul2 .date {
+  color: #999999;
+  float: right;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+}
+
+/* line 294, sass/style.scss */
+.learn_more {
+  float: right;
+  padding-left: 24px;
+}
+
+/* line 297, sass/style.scss */
+.lanwd10 {
+  color: #006ac3;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 298, sass/style.scss */
+.lanwd10 a {
+  color: #006ac3;
+  text-decoration: none;
+}
+
+/* line 299, sass/style.scss */
+.lanwd10 a:hover {
+  color: #006ac3;
+  text-decoration: underline;
+}
+
+/* line 301, sass/style.scss */
+.new_tjg {
+  padding: 6px 8px 0px 8px;
+  clear: both;
+}
+
+/* line 302, sass/style.scss */
+.learn_moreg {
+  float: left;
+  padding-left: 24px;
+  clear: both;
+}
+
+/* line 306, sass/style.scss */
+.ul2g {
+  clear: both;
+  margin: 0px;
+  padding: 8px;
+  text-align: left;
+  font-family: "宋体";
+  font-size: 12px;
+}
+
+/* line 314, sass/style.scss */
+.ul2g li {
+  font-family: "宋体";
+  font-size: 12px;
+  line-height: 27px;
+  margin: 2px 0px;
+  list-style-type: none;
+  color: #535353;
+  display: block;
+}
+
+/* line 324, sass/style.scss */
+.ul2g li a {
+  color: #535353;
+  text-decoration: none;
+  display: block;
+  line-height: 27px;
+  padding: 0px 8px 0px 10px;
+  background: url(sm_9.gif) repeat-x bottom;
+  border: solid 1px #e7e7e7;
+  overflow: hidden;
+}
+
+/* line 334, sass/style.scss */
+.ul2g li a:hover {
+  color: #006ac3;
+  background: url(sm_9.gif) repeat-x bottom;
+  border: solid 1px #e7e7e7;
+  line-height: 27px;
+  font-weight: bold;
+}
+
+/* line 343, sass/style.scss */
+.ul2g .m1 a {
+  color: #006ac3;
+  background: url(sm_9.gif) repeat-x bottom;
+  border: solid 1px #e7e7e7;
+  line-height: 27px;
+  height: 27px;
+}
+
+/* line 349, sass/style.scss */
+.bottom_nav {
+  height: 24px;
+  line-height: 24px;
+  border: solid 1px #e7e7e7;
+}
+
+/* line 350, sass/style.scss */
+.bottom_wd {
+  color: #535353;
+  font-size: 10px;
+  padding-left: 16px;
+  font-family: Arial, "宋体";
+}
+
+/* line 351, sass/style.scss */
+.bottom_wd a {
+  color: #535353;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* line 352, sass/style.scss */
+.bottom_wd a:hover {
+  color: #006ac3;
+  font-size: 12px;
+}
+
+/* line 353, sass/style.scss */
+.bottom_cprt {
+  line-height: 32px;
+  font-family: Arial, "宋体";
+  font-size: 12px;
+}
+
+/* line 354, sass/style.scss */
+.gotop {
+  float: right;
+  padding-right: 16px;
+}
+
+/* line 355, sass/style.scss */
+.gotop a {
+  color: #535353;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  width: 30px;
+}
+
+/* line 356, sass/style.scss */
+.gotop a:hover {
+  color: #006ac3;
+  font-size: 12px;
+}
+
+/*-------------2级页面-------------*/
+/* line 361, sass/style.scss */
+.gonggaog {
+  height: 26px;
+  border: solid 1px #e7e7e7;
+  margin-top: 8px;
+}
+
+/* line 363, sass/style.scss */
+#bd_leftg {
+  width: 208px;
+  float: left;
+  overflow: hidden;
+}
+
+/* line 364, sass/style.scss */
+#bd_rightg {
+  width: 751px;
+  float: right;
+  overflow: hidden;
+}
+
+/* line 366, sass/style.scss */
+.box1g {
+  border: solid 1px #e7e7e7;
+  margin-top: 8px;
+}
+
+/* line 368, sass/style.scss */
+.box2 {
+  border: solid 1px #e7e7e7;
+}
+
+/* line 369, sass/style.scss */
+.title2 {
+  background: url(sm_8g.gif) repeat-x bottom;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 370, sass/style.scss */
+.lanwd2 {
+  float: left;
+  padding-left: 16px;
+  font-size: 14px;
+  font-family: Microsoft YaHei,"宋体";
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* line 371, sass/style.scss */
+.lanwd2 a, .title2 a, .english2 a {
+  color: white;
+}
+
+/* line 372, sass/style.scss */
+.english2 {
+  float: left;
+  padding-left: 8px;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+/* line 374, sass/style.scss */
+.banner1 {
+  width: 735px;
+  border: solid 1px #e7e7e7;
+}
+
+/* line 376, sass/style.scss */
+.rightg_content {
+  border: solid 1px #e7e7e7;
+  padding: 8px;
+}
+
+/* line 377, sass/style.scss */
+.rightg_title {
+  height: 32px;
+  line-height: 32px;
+}
+
+/* line 378, sass/style.scss */
+.content2 {
+  width: 730px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 380, sass/style.scss */
+.prod_box {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 16px;
+}
+
+/* line 381, sass/style.scss */
+img.prod {
+  border: 1px solid #dddddd;
+  padding: 4px;
+  width: 200px;
+  height: 147px;
+  background: #FFffff;
+}
+
+/* line 382, sass/style.scss */
+a.prod_font {
+  padding: 0px;
+  text-decoration: none;
+  color: #666666;
+  line-height: 32px;
+}
+
+/* line 383, sass/style.scss */
+.p1g {
+  line-height: 26px;
+  font-size: 12px;
+  color: #535353;
+  padding: 16px;
+}
+
+/* line 385, sass/style.scss */
+.pd_title {
+  font-size: 16px;
+  line-height: 26px;
+  color: #0160b0;
+  text-align: center;
+  padding: 20px 0px 20px;
+  font-weight: bold;
+  background: url(point.gif) left bottom repeat-x;
+  font-family: Microsoft YaHei,"宋体";
+}
+
+/* line 386, sass/style.scss */
+.pd {
+  font-size: 12px;
+  line-height: 26px;
+  color: #333333;
+  text-align: left;
+  margin: 15px 25px 25px 25px;
+}
+
+/* line 388, sass/style.scss */
+#addcontentuser {
+  padding: 10px;
+  border: 1px dotted #ccc;
+  background: #F5F5F5;
+}
+
+/* line 390, sass/style.scss */
+.ul2g li a.on2 {
+  padding-left: 25px;
+}
+
+/* line 393, sass/style.scss */
+#menu {
+  width: 190px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+/* line 400, sass/style.scss */
+#menu h5 a {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  height: 36px;
+  line-height: 36px;
+  overflow: hidden;
+}
+
+/* line 410, sass/style.scss */
+#menu h5 a:visited, #menu h5.on {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  border-top: 1px solid #779DB1;
+  border-bottom: 1px solid #779DB1;
+  background: url(icon01.gif) 30px center no-repeat;
+  height: 38px;
+  line-height: 38px;
+  overflow: hidden;
+}
+
+/* line 422, sass/style.scss */
+#menu a {
+  display: block;
+  width: 190px;
+  padding-left: 50px;
+  background: white url(menu_a.gif) left bottom no-repeat;
+  height: 36px;
+  line-height: 36px;
+  overflow: hidden;
+  color: #333;
+}
+
+/* line 433, sass/style.scss */
+#menu a:hover {
+  display: block;
+  padding-left: 50px;
+  color: #669A01;
+  height: 36px;
+  line-height: 36px;
+  background: white url(menu_hover.gif) left bottom no-repeat;
+  font-weight: bold;
+}
+
+/* line 445, sass/style.scss */
+div.sdmenu {
+  width: 186px;
+}
+
+/* line 448, sass/style.scss */
+div.sdmenu div {
+  overflow: hidden;
+}
+
+/* line 452, sass/style.scss */
+div.sdmenu div.collapsed {
+  height: 38px;
+  line-height: 38px;
+}
+
+/* line 457, sass/style.scss */
+div.sdmenu div span {
+  display: block;
+  height: 38px;
+  line-height: 38px;
+  font-weight: bold;
+  padding-left: 50px;
+  border-top: 1px solid #779DB1;
+  border-bottom: 1px solid #779DB1;
+  background: url(icon01.gif) 30px center no-repeat;
+  cursor: default;
+}
+
+/* line 468, sass/style.scss */
+div.sdmenu div.collapsed span {
+  height: 38px;
+  line-height: 38px;
+}
+
+/* line 473, sass/style.scss */
+div.sdmenu div a.current {
+  background: #F0F4F9;
+}
+
+/* line 476, sass/style.scss */
+div.sdmenu div a:hover {
+  text-decoration: none;
+}
+
+/* line 480, sass/style.scss */
+#list-view {
+  overflow: auto;
+}
+
+/* line 481, sass/style.scss */
+#list-view li {
+  float: left;
+  margin: 0 12px 10px;
+  width: 150px;
+  height: 162px;
+  overflow: hidden;
+  text-align: center;
+  display: block;
+  position: relative;
+  line-height: 1em;
+}
+
+/* line 482, sass/style.scss */
+#list-view .img-wrap {
+  position: static;
+  width: 150px;
+  height: 134px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  *display: block;
+  *font-size: 124px;
+  *font-family: Arial;
+  overflow: hidden;
+  _border: none;
+}
+
+/* line 483, sass/style.scss */
+#list-view img {
+  max-width: 130px;
+  max-height: 124px;
+  vertical-align: middle;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  _border: none;
+}
+
+/* line 484, sass/style.scss */
+#list-view img:hover, #list-view .highlight {
+  border-color: #ff8015;
+  _border: none;
+}
+
+/* line 485, sass/style.scss */
+#list-view h5 a {
+  clear: both;
+  width: 142px;
+  overflow: hidden;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* line 497, sass/style.scss */
+.oidbtn {
+  width: 40px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0px;
+  border: none;
+  text-align: center;
+  color: #590101;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* line 508, sass/style.scss */
+.oid {
+  width: 128px;
+  height: 23px;
+  line-height: 23px;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+/* line 509, sass/style.scss */
+.mailbtn {
+  width: 178px;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 15px;
+  border: none;
+  background: url(mailbtn.gif) left top no-repeat;
+}
+
+/* line 515, sass/style.scss */
+.mail {
+  width: 176px;
+  height: 23px;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+/* line 517, sass/style.scss */
+#vote #button {
+  clear: both;
+  float: right;
+  width: 88px;
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  background: url(vote_btn.gif) left top no-repeat;
+  border: none;
+  color: white;
+}
+
+/*首页滚动*/
+/* line 520, sass/style.scss */
+.scoll_img {
+  float: left;
+  width: 756px;
+  overflow: hidden;
+}
+
+/* line 525, sass/style.scss */
+.scoll_img table {
+  width: 754px;
+  overflow: hidden;
+  padding: 0px 10px 10px;
+}
+
+/* line 528, sass/style.scss */
+.GalleryPictureScroller {
+  margin: 5px 10px;
+  height: 158px;
+  width: 678px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 536, sass/style.scss */
+.GalleryPictureScrollerMoveLeft {
+  background: url(previous_btn.gif) 0px 20px;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 86px;
+  cursor: pointer;
+}
+
+/* line 544, sass/style.scss */
+.GalleryPictureScrollerMoveRight {
+  background: url(next_btn.gif) 0px 20px;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 86px;
+  cursor: pointer;
+}
+
+/* line 553, sass/style.scss */
+.GalleryPictureScrollerImageArea {
+  padding: 0 5px;
+  width: 142px;
+  height: 155px;
+  overflow: hidden;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+/* line 563, sass/style.scss */
+.GalleryPictureScrollerImage {
+  height: 120px;
+  width: 140px;
+  text-align: center;
+  /*水平居中*/
+  font-size: 110px;
+  /*IE靠这垂直居中*/
+  display: table-cell;
+  vertical-align: middle;
+  overflow: hidden;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  *display: block;
+  *font-size: 88px;
+  *font-family: Arial;
+}
+
+/* line 572, sass/style.scss */
+.GalleryPictureScrollerImage a {
+  display: block;
+  height: 120px;
+  width: 140px;
+  overflow: hidden;
+  text-align: center;
+  /*水平居中*/
+  font-size: 110px;
+  /*IE靠这垂直居中*/
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 577, sass/style.scss */
+.GalleryPictureScrollerImage img {
+  max-width: 110px;
+  max-height: 90px;
+  vertical-align: middle;
+  padding: 5px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: white;
+}
+
+/* line 581, sass/style.scss */
+.GalleryPictureScrollerDetails {
+  line-height: 22px;
+}
+
+/* line 583, sass/style.scss */
+#i_type {
+  clear: both;
+  padding: 16px;
+}
+
+/* line 584, sass/style.scss */
+#i_type a {
+  float: left;
+  margin-right: 10px;
+  padding: 0px 5px;
+  border: 1px solid #E7E7E7;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+/* line 585, sass/style.scss */
+#i_type a:hover {
+  background: #F5F5F5;
+}
+
+/************* 投票 */
+/* line 588, sass/style.scss */
+#content_vote {
+  text-align: left;
+}
+
+/* line 590, sass/style.scss */
+#content_vote span {
+  float: left;
+  line-height: 18px;
+}
+
+/* line 592, sass/style.scss */
+.num {
+  float: left;
+  width: 14px;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #fff;
+  font: bold 10px Tahoma;
+  padding: 3px 10px 0px 0px;
+  background: url(rank_2.gif) no-repeat left 5px;
+}
+
+/* line 604, sass/style.scss */
+#content_vote input {
+  padding: 1px 10px;
+  font-size: 12px;
+}
+
+/* line 606, sass/style.scss */
+.optionbar {
+  background: #F5F5F5;
+  border: 1px solid #CAD9EA;
+  float: left;
+  height: 14px;
+  line-height: 14px;
+  margin: 0px 0.5em 0px 1.5em;
+}
+
+/* line 615, sass/style.scss */
+.optionbar div {
+  background: #CAD9EA;
+  border: 1px solid #CAD9EA;
+  float: left;
+  height: 12px;
+  line-height: 12px;
+  overflow: hidden;
+}
+
+/* line 624, sass/style.scss */
+#p_list_s {
+  width: 380px;
+  margin: 0px auto;
+  padding: 0px auto;
+}

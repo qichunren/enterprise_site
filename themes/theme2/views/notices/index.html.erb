@@ -1,0 +1,12 @@
+<h2>Listing notices</h2>
+                       
+<div id="notices">
+       <ul>
+        <% @notices.each do |notice| %>
+               <li><%= link_to notice.title, notice, :title => notice.title %></li>
+        <% end %>
+       </ul>
+  
+  </div>
+
+<%= will_paginate @notices %>

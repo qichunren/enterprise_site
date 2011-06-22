@@ -1,0 +1,12 @@
+<% title @news.title %>
+<h2><%= @news.title %></h2>
+
+<p>
+  <%= @news.body.html_safe %>
+</p>
+
+
+<p>
+  <b>浏览次数:</b>
+  <%= @news.click_count %>  <%= @news.created_by %> <%= l(@news.created_at, :format => :long) %>发布
+</p>

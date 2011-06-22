@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>曹冰制冷设备有限公司</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="icon" href="http://localhost/etong/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://localhost/etong/favicon.ico" type="image/x-icon" />
+<%= theme_stylesheet_link_tag "screen", :media => 'screen, projection' %>
+<%= theme_stylesheet_link_tag "print", :media => 'print' %>
+</head>
+
+<body>
+<div id="main">
+<div id="sig"></div>
+<div id="header">
+  	<div class="logo"><%= link_to root_url do -%><img src="http://localhost/etong/images/logo.gif" alt="" width="324"><% end -%></div>
+    <div class="top">
+<div class="top_a">
+<a href="" onclick="window.external.addFavorite(this.href,this.title);return false;" title='曹冰制冷' rel="sidebar">收藏</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+<a title="留言" href="/etong/index.php?case=guestbook&act=index" target="_blank">留言</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+
+<a id="StranLink" title="繁简转换">繁体</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+<script src="/etong/index.php?case=user&act=login_js"></script></div>
+<div class="top_wd clear"><a href="index.php?case=archive&act=show&aid=4">SITEMAP</a>  |  <a href="/etong/index.php?case=archive&act=list&catid=5" title="联系我们">CONTACT</a></div>
+<form name='search' action="/etong/index.php?case=archive&act=search" onsubmit="search_check();" method="post">
+<div class="top_input">
+<input type="text" name="keyword" value="请输入查询信息！" onfocus="if(this.value=='请输入查询信息！') {this.value=''}" onblur="if(this.value=='') this.value='请输入查询信息！'" size="24" />
+    </div> 
+<div  class="top_inputimg"><input name='submit' type="image" src="/etong/template/default/skin/sm_3.gif" align="middle" /></div>
+</form>
+
+   </div>
+
+<div class="clear"></div>
+<div id="nav">
+<ul id="navmenu"> 
+<li><a title="返回首页" href="/" class="one on">网站首页</a></li>
+<li><%= theme_image_tag "nav_line.gif" -%></li>
+<li><a href="/etong/index.php?case=archive&act=list&catid=1" title="关于我们" class="one">关于我们</a>
+<ul>
+</ul>
+</li><li><%= theme_image_tag "nav_line.gif" -%></li>
+<li><a href="/news" title="企业新闻" class="one">企业新闻</a>
+<ul>
+
+</ul>
+</li><li><%= theme_image_tag "nav_line.gif" -%></li>
+<li><a href="/products" title="产品中心" class="one">产品中心</a>
+<ul>
+    
+</ul>
+</li><li><%= theme_image_tag "nav_line.gif" -%></li>
+<li><a href="/contract-us" title="联系我们" class="one">联系我们</a>
+<ul>
+</ul>
+</li></ul>
+
+</div>
+
+<div class="blank5"></div>
+
+<div class="banner">
+<script type="text/javascript">
+switch(5){/*幻灯片数量控制*/
+case 1:
+var files='http://localhost/etong/images/slide/banner01.jpg';/*广告图片*/
+    var links='http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
+    var texts='CmsEasy3.0助力企业网络营销';/*图片标题*/
+break
+case 2:
+var files='http://localhost/etong/images/slide/banner01.jpg|http://localhost/etong/images/slide/banner02.jpg';/*广告图片*/
+var links='http://www.cmseasy.cn|http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
+var texts='CmsEasy3.0助力企业网络营销|海量精美CmsEasy模板免费下载';/*图片标题*/
+break
+case 3:
+var files='http://localhost/etong/images/slide/banner01.jpg|http://localhost/etong/images/slide/banner02.jpg|http://localhost/etong/images/slide/banner03.jpg';/*广告图片*/
+var links='http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
+var texts='CmsEasy3.0助力企业网络营销|海量精美CmsEasy模板免费下载|免费下载CmsEasy,还有机会获取商业授权';/*图片标题*/
+    case 4:
+var files='http://localhost/etong/images/slide/banner01.jpg|http://localhost/etong/images/slide/banner02.jpg|http://localhost/etong/images/slide/banner03.jpg|http://localhost/etong/images/slide/banner04.jpg';/*广告图片*/
+var links='http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
+var texts='CmsEasy3.0助力企业网络营销|海量精美CmsEasy模板免费下载|免费下载CmsEasy,还有机会获取商业授权|欢迎网建公司及工作室参与CmsEasy官方分享计划';/*图片标题*/
+   default:
+   var files='http://localhost/etong/images/slide/banner01.jpg|http://localhost/etong/images/slide/banner02.jpg|http://localhost/etong/images/slide/banner03.jpg|http://localhost/etong/images/slide/banner04.jpg|http://localhost/etong/images/slide/banner05.jpg';/*广告图片*/
+var links='http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
+var texts='CmsEasy3.0助力企业网络营销|海量精美CmsEasy模板免费下载|免费下载CmsEasy,还有机会获取商业授权|欢迎网建公司及工作室参与CmsEasy官方分享计划|CmsEasy服务/售后/程序多重升级';/*图片标题*/
+}
+
+var swf_width=980;/*修改flash宽，图片广告需要适应此宽度*/
+var swf_height=280;/*修改flash高，图片广告需要适应此高度*/
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="http://localhost/etong/images/slide/focus.swf"><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'">');
+document.write('<embed src="http://localhost/etong/images/slide/focus.swf" wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</script>
+</div>
+
+<div class="announ"><div id="announ">
+<p><a href="/etong/index.php?case=announ&act=show&id=1" title="热烈庆祝本公司网站构建成立！">热烈庆祝本公司网站构建成立！</a> [2010-07-07]</p>
+</div></div>
+</div>
+<div id="bd">
+
+<%= yield -%>
+      <div class="clear"></div>
+    </div>
+    <!--bd部结束-->
+<div class="blank10"></div>
+<div  id="links">
+<strong>热门关键词：</strong><a href="/etong/index.php?case=archive&act=search&keyword=-E4-BA-A7-E5-93-81&ule=1">产品</a> <a href="/etong/index.php?case=archive&act=search&keyword=-E8-AF-B7-E8-BE-93-E5-85-A5-E6-9F-A5-E8-AF-A2-E4-BF-A1-E6-81-AF-EF-BC-81&ule=1">请输入查询信息！</a> <a href="/etong/index.php?case=archive&act=search&keyword=&ule=1"></a> <a href="/etong/index.php?case=archive&act=search&keyword=b&ule=1">b</a> <div class="blank10"></div>
+</div>
+
+
+<div class="blank10"></div>
+<div class="blank10"></div>
+<div id="footer">
+    	<div class="bottom_nav">
+    	  <div class="bottom_wd">
+
+<a href="/etong/index.php?case=archive&act=show&aid=4">网站地图</a>&nbsp;-&nbsp;
+<a href="/etong/index.php?case=archive&act=show&aid=3">诚聘英才</a>&nbsp;-&nbsp;
+<a href="/etong/index.php?case=archive&act=show&aid=2">企业荣誉</a>&nbsp;-&nbsp;
+<a href="/etong/index.php?case=archive&act=show&aid=1">企业文化</a>&nbsp;-&nbsp;
+<a href="#">TOP</a></div>
+    	</div>
+
+        <div class="bottom_cprt">Copyright © 2010-2011 <a title="曹冰制冷" href="http://localhost/etong/">曹冰制冷</a> All Rights Reserved. </div>
+    </div><!--end #fooder -->
+    
+</div>
+<!-- 非商业用户请勿删除 -->
+<div class="copyright">&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/" target="_blank">浪ICP备11001680号</a>
+</div><!-- end .copyright -->
+ 
+
+</div>
+  </div> 
+</div><!-- end #main -->
+</body>
+</html>
