@@ -1241,7 +1241,7 @@ ul#navmenu ul ul li.iehover ul {
   height: 28px;
   line-height: 28px;
   padding: 0px 0px 0px 30px;
-  background: url(sm_10.gif) 15px center no-repeat;
+  background: url(../images/sm_10.gif) 15px center no-repeat;
   overflow: hidden;
 }
 
@@ -1249,7 +1249,7 @@ ul#navmenu ul ul li.iehover ul {
 .announ {
   width: 978px;
   overflow: hidden;
-  background: url(sm_7.gif) repeat-x top;
+  background: url(../images/sm_7.gif) repeat-x top;
   border: solid 1px #e7e7e7;
 }
 
@@ -1815,7 +1815,7 @@ div.sdmenu div a:hover {
   float: left;
   margin: 0 12px 10px;
   width: 150px;
-  height: 162px;
+  height: 167px;
   overflow: hidden;
   text-align: center;
   display: block;

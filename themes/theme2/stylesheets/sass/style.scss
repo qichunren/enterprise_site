@@ -231,8 +231,8 @@ display: block;
 
 .banner{}
 
-#announ {height:28px;line-height:28px; padding:0px 0px 0px 30px;background:url(sm_10.gif) 15px center no-repeat;overflow:hidden;}
-.announ {width:978px;overflow:hidden;background:url(sm_7.gif) repeat-x top; border:solid 1px #e7e7e7;}
+#announ {height:28px;line-height:28px; padding:0px 0px 0px 30px;background:url(../images/sm_10.gif) 15px center no-repeat;overflow:hidden;}
+.announ {width:978px;overflow:hidden;background:url(../images/sm_7.gif) repeat-x top; border:solid 1px #e7e7e7;}
 
 .right_left{ float:left; width:372px;}
 .right_right{ float:right; width:208px;}
@@ -478,7 +478,7 @@ div.sdmenu div a:hover {
 }
 
 #list-view{overflow:auto;}
-#list-view li{float:left;margin:0 12px 10px;width:150px;height:162px;overflow:hidden;text-align:center;display:block;position:relative;line-height:1em;}
+#list-view li{float:left;margin:0 12px 10px;width:150px;height:167px;overflow:hidden;text-align:center;display:block;position:relative;line-height:1em;}
 #list-view .img-wrap{position:static;width:150px;height:134px;text-align:center;display:table-cell;vertical-align:middle;*display:block;*font-size:124px;*font-family:Arial;overflow:hidden;_border:none;}
 #list-view img{max-width:130px;max-height:124px;vertical-align:middle;padding:5px;border:1px solid #ccc;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;_border:none;}
 #list-view img:hover,#list-view .highlight{border-color:#ff8015;_border:none;}
