@@ -36,32 +36,10 @@
 <div class="clear"></div>
 <div id="nav">
 <ul id="navmenu">
-    
-<li>
-    <a title="返回首页" href="/" class="one on">网站首页</a>
-</li>
-
-<li><%= theme_image_tag "nav_line.gif" -%></li>
-
-<li>
-    <a href="/etong/index.php?case=archive&act=list&catid=1" title="关于我们" class="one">关于我们</a>
-</li>
-
-<li><%= theme_image_tag "nav_line.gif" -%></li>
-
-<li>
-    <a href="/news" title="企业新闻" class="one">企业新闻</a>
-</li>
-
-<li><%= theme_image_tag "nav_line.gif" -%></li>
-
-<li>
-    <a href="/products" title="产品中心" class="one">产品中心</a>
-</li>
-<li><%= theme_image_tag "nav_line.gif" -%></li>
-<li>
-    <a href="/contract-us" title="联系我们" class="one">联系我们</a>
-</li>
+    <% Navmenu.availble.all.each do |nav_menu| %>
+    <li><%= link_to nav_menu.label, nav_menu.url, :target => ("_blank" if nav_menu.open_in_new_window?), :title => nav_menu.link_title, :class => "one" %></li>
+    <li><%= theme_image_tag "nav_line.gif" -%></li>
+    <% end %>
 </ul><!-- end: #navmenu -->
 
 </div><!-- end: #nav -->
