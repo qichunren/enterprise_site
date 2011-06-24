@@ -5,31 +5,30 @@
 <title>曹冰制冷设备有限公司</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link rel="icon" href="http://localhost/etong/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="http://localhost/etong/favicon.ico" type="image/x-icon" />
 <%= theme_stylesheet_link_tag "screen", :media => 'screen, projection' %>
 <%= theme_stylesheet_link_tag "print", :media => 'print' %>
 </head>
-
 <body>
 <div id="main">
 <div id="sig"></div>
 <div id="header">
   	<div class="logo"><%= link_to root_url do -%><%= theme_image_tag "logo.jpg"%><% end -%></div>
     <div class="top">
-<div class="top_a">
-<a href="" onclick="window.external.addFavorite(this.href,this.title);return false;" title='曹冰制冷' rel="sidebar">收藏</a>&nbsp;&nbsp;-&nbsp;&nbsp;
-<a title="留言" href="/etong/index.php?case=guestbook&act=index" target="_blank">留言</a>&nbsp;&nbsp;-&nbsp;&nbsp;
 
-<a id="StranLink" title="繁简转换">繁体</a>&nbsp;&nbsp;-&nbsp;&nbsp;
-<script src="/etong/index.php?case=user&act=login_js"></script></div>
-<div class="top_wd clear"><a href="index.php?case=archive&act=show&aid=4">SITEMAP</a>  |  <a href="/etong/index.php?case=archive&act=list&catid=5" title="联系我们">CONTACT</a></div>
-<form name='search' action="/etong/index.php?case=archive&act=search" onsubmit="search_check();" method="post">
+<div class="top_a">
+    <a href="" onclick="window.external.addFavorite(this.href,this.title);return false;" title='曹冰制冷' rel="sidebar">收藏</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+    <a title="留言" href="/etong/index.php?case=guestbook&act=index" target="_blank">留言</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+    <a id="StranLink" title="繁简转换">繁体</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+</div><!-- end .top_a -->
+
+<% @search = Product.search(params[:search]) -%>
+<%= form_for @search, :url => search_products_path, :html => { :method => :get } do |f| %>
 <div class="top_input">
-<input type="text" name="keyword" value="请输入查询信息！" onfocus="if(this.value=='请输入查询信息！') {this.value=''}" onblur="if(this.value=='') this.value='请输入查询信息！'" size="24" />
-    </div> 
-<div  class="top_inputimg"><input name='submit' type="image" src="/etong/template/default/skin/sm_3.gif" align="middle" /></div>
-</form>
+<%= f.text_field :name_like, :style => "width:120px;", :value => "手机" %>
+<input name='submit' type="image" src="/themes/theme2/images/sm_3.gif" align="middle" />
+</div><!-- end class top_input -->
+
+<% end -%>
 
    </div>
 
