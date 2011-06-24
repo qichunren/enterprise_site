@@ -7,7 +7,7 @@
       <div class="wrapper">
         <h3>最新产品</h3>
         <ul id="list-view">
-        <% @products.each do |product| %>
+        <% @products.each do |product| -%>
           <li class='product'>
             <div class="img-wrap">
               <%= link_to(image_tag(product.avatar.url(:thumb)), product) %>

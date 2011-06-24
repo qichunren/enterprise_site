@@ -847,7 +847,7 @@ ul#navmenu ul ul li.iehover ul {
 
 /* line 369, sass/style.scss */
 .title2 {
-  background: url(sm_8g.gif) repeat-x bottom;
+  background: url(../images/sm_8g.gif) repeat-x bottom;
   height: 30px;
   line-height: 30px;
 }
@@ -942,7 +942,7 @@ a.prod_font {
   text-align: center;
   padding: 20px 0px 20px;
   font-weight: bold;
-  background: url(point.gif) left bottom repeat-x;
+  background: url(../images/point.gif) left bottom repeat-x;
   font-family: Microsoft YaHei,"宋体";
 }
 
