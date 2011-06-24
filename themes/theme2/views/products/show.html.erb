@@ -1,35 +1,67 @@
-<%= render_breadcrumbs -%>
-<div id="product">
-  <div class="product_inner">
-    <%= image_tag @product.avatar.url(:medium), :class => "product_image" %>
-  </div>
-  <div class="product_meta">
-    <h2><%= @product.name %></h2>
-    <p>
-      <b>产品编号:</b>
-      <%= @product.product_no %>
-    </p>
-    <p>
-      <b>分类:</b>
-      <%= @product.category.name rescue "" %>
-    </p>
-    
-    <% if @product.price.present? -%>
-    <p>
-      <b>价格:</b>
-      <%= @product.price %>元
-    </p>                        
-    <% end -%>
-    <% if @product.amount.present? -%>
-    <p>
-      <b>现售数量:</b>
-      <%= @product.amount -%>
-    </p>                 
-    <% end -%>
-  </div>
-  <div class="product_desc"><%= @product.description.html_safe %></div>
-  
-</div><!-- End:#product -->
+<style type = "text/css">
+#pro_view {margin:12px;width:780px;height:340px;}
+#pro_infor {height:260px;}
+#image_box {float:left;width:350px;height:251px;}
+#image_box img {border:1px solid #ccc;width:335px;height:251px;}
+#pro_baseinfo {float:right; width:400px;height:251px;}
+#image_list {clear:both;height:50px;}
+#image_list li {width:54px; height:38px; border:1px solid #ccc;overflow:hidden;}
+#image_list img {width:50px;height:36px; padding:2px;cursor:pointer;}
+
+#pro_baseinfo ul li {line-height:32px;}
+.p_info {height:40px;line-height:40px;padding-left:20px;background:url(/themes/theme2/images/comment.gif) left center no-repeat;border-bottom:1px dotted #ccc;}
+</style>
+
+<div id="bd_leftg"></div>
+<div id="bd_rightg">
+    <div class="rightg_content">
+        <div class="rightg_title">
+            <%= render_breadcrumbs -%>
+        </div>
+        
+        <div class="content2">
+            <div class="blank30"></div>
+            <div id="pro_view">
+                <div id="pro_infor">
+                    <div id="image_box" style="position: relative;">
+                        <a href='#'><%= image_tag @product.avatar.url(:medium), :class => "product_image", :id => "current_img" %></a>
+                    </div><!-- end: #image_box -->
+                    <div id="pro_baseinfo">
+                        <ul>
+                            <li><strong>产品名称: </strong><%= @product.name %></li>
+                            <li><strong>产品编号:</strong><%= @product.product_no %></li>
+                            <li><strong>分类:</strong><%= @product.category.name rescue "" %></li>
+                            <% if @product.price.present? -%>
+                            <li>
+                              <strong>价格:</strong>
+                              <%= @product.price %>元
+                            </li>                        
+                            <% end -%>
+                            <% if @product.amount.present? -%>
+                            <li>
+                              <strong>现售数量:</strong>
+                              <%= @product.amount -%>
+                            </li>                 
+                            <% end -%>
+                        </ul>
+                    </div><!-- end: #pro_baseinfo -->
+                </div><!-- end: #pro_infor -->
+
+            </div><!-- end #pro_view -->
+            
+            
+            <div class="blank30"></div>
+            <div class="p_info">产品介绍：</div>
+            <div class="blank30"></div>
+            <div class="pd" style="width:680px;" id="content">
+            <p><%= @product.description.html_safe %></p></div><!-- end .pd -->
+            
+            
+        </div><!-- end .content2 -->
+        
+    </div>
+
+</div><!-- End: #bd_rightg -->
 
 <% content_for :sidebar do -%>
   <%= render :partial => "/products/search" -%>
