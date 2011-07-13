@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20110713150657) do
 
   create_table "ads", :force => true do |t|
     t.string   "title"
+    t.text     "description"
     t.string   "target_url",                 :null => false
     t.string   "image_url"
     t.integer  "click_count", :default => 0, :null => false

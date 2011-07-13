@@ -7,6 +7,11 @@
 <meta name="description" content="" />
 <%= theme_stylesheet_link_tag "screen", :media => 'screen, projection' %>
 <%= theme_stylesheet_link_tag "print", :media => 'print' %>
+<%= javascript_include_tag "jquery" -%>
+<%= theme_javascript_include_tag "galleria/galleria-1.2.4.min" -%>
+<script>
+Galleria.loadTheme('/themes/theme2/javascripts/galleria/themes/classic/galleria.classic.min.js');
+</script>
 </head>
 <body>
 <div id="main">
@@ -30,62 +35,43 @@
 
 <% end -%>
 
-   </div>
+</div><!-- end .top_a -->
 
 <div class="clear"></div>
 <div id="nav">
-<ul id="navmenu">
-    <% Navmenu.availble.all.each do |nav_menu| %>
-    <li><%= link_to nav_menu.label, nav_menu.url, :target => ("_blank" if nav_menu.open_in_new_window?), :title => nav_menu.link_title, :class => "one" %></li>
-    <li><%= theme_image_tag "nav_line.gif" -%></li>
-    <% end %>
-</ul><!-- end: #navmenu -->
-
+    <ul id="navmenu">
+        <% Navmenu.availble.all.each do |nav_menu| %>
+        <li><%= link_to nav_menu.label, nav_menu.url, :target => ("_blank" if nav_menu.open_in_new_window?), :title => nav_menu.link_title, :class => "one" %></li>
+        <li><%= theme_image_tag "nav_line.gif" -%></li>
+        <% end %>
+    </ul><!-- end: #navmenu -->
 </div><!-- end: #nav -->
 
 <div class="blank5"></div>
 
 <div class="banner">
-<script type="text/javascript">
-switch(5){/*幻灯片数量控制*/
-case 1:
-var files='http://localhost/etong/images/slide/banner01.jpg';/*广告图片*/
-    var links='http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
-    var texts='CmsEasy3.0助力企业网络营销';/*图片标题*/
-break
-case 2:
-var files='http://localhost/etong/images/slide/banner01.jpg|http://localhost/etong/images/slide/banner02.jpg';/*广告图片*/
-var links='http://www.cmseasy.cn|http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
-var texts='CmsEasy3.0助力企业网络营销|海量精美CmsEasy模板免费下载';/*图片标题*/
-break
-case 3:
-var files='http://localhost/etong/images/slide/banner01.jpg|http://localhost/etong/images/slide/banner02.jpg|http://localhost/etong/images/slide/banner03.jpg';/*广告图片*/
-var links='http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
-var texts='CmsEasy3.0助力企业网络营销|海量精美CmsEasy模板免费下载|免费下载CmsEasy,还有机会获取商业授权';/*图片标题*/
-    case 4:
-var files='http://localhost/etong/images/slide/banner01.jpg|http://localhost/etong/images/slide/banner02.jpg|http://localhost/etong/images/slide/banner03.jpg|http://localhost/etong/images/slide/banner04.jpg';/*广告图片*/
-var links='http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
-var texts='CmsEasy3.0助力企业网络营销|海量精美CmsEasy模板免费下载|免费下载CmsEasy,还有机会获取商业授权|欢迎网建公司及工作室参与CmsEasy官方分享计划';/*图片标题*/
-   default:
-   var files='http://localhost/etong/images/slide/banner01.jpg|http://localhost/etong/images/slide/banner02.jpg|http://localhost/etong/images/slide/banner03.jpg|http://localhost/etong/images/slide/banner04.jpg|http://localhost/etong/images/slide/banner05.jpg';/*广告图片*/
-var links='http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn|http://www.cmseasy.cn';/*图片上的链接,注意链接中的&要用%26替换*/
-var texts='CmsEasy3.0助力企业网络营销|海量精美CmsEasy模板免费下载|免费下载CmsEasy,还有机会获取商业授权|欢迎网建公司及工作室参与CmsEasy官方分享计划|CmsEasy服务/售后/程序多重升级';/*图片标题*/
-}
+    <div id="gallery">
+        <% Ad.all.each do |ad| -%>
+        <img src="<%= ad.image_url%>" alt="<%= ad.description -%>" title="<%= ad.title -%>">
+        <% end -%>
+    </div>
+    <script type="text/javascript">
+        $('#gallery').galleria({
+            width:980,
+                    height:300
+        });
+    </script>
+</div><!-- end .banner -->
 
-var swf_width=980;/*修改flash宽，图片广告需要适应此宽度*/
-var swf_height=280;/*修改flash高，图片广告需要适应此高度*/
-document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
-document.write('<param name="movie" value="http://localhost/etong/images/slide/focus.swf"><param name="quality" value="high">');
-document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
-document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'">');
-document.write('<embed src="http://localhost/etong/images/slide/focus.swf" wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
-</script>
-</div>
+<div class="announ">
+    <div id="announ">
+        <p><%= link_to get_notices(1).first.title -%> [<%= l get_notices(1).first.created_at, :format => :ymd %>]</p>
+    </div>
+</div><!-- end .announ -->
+</div><!-- end .header -->
 
-<div class="announ"><div id="announ">
-<p><%= link_to get_notices(1).first.title -%> [<%= l get_notices(1).first.created_at, :format => :ymd %>]</p>
-</div></div>
-</div>
+
+
 <div id="bd">
 <%= yield -%>
 <div class="clear"></div>

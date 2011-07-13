@@ -25,6 +25,11 @@ super_admin = Admin.create!(
 notice_1 = Notice.create(:title => "公司网站正式开通了", :body => "公司网站正式开通了, 欢迎访问, 并留下你的宝贵意见.", :created_by => super_admin.login)
 notice_2 = Notice.create(:title => "好消息，公司新产品上市了", :body => "公司新产品上市了, 欢迎选购.", :created_by => super_admin.login)   
 
+ad_1 = Ad.create(:title => "产品一", :description => "", :image_url => "/themes/theme2/images/slide/ad1.jpg", :target_url => "/themes/theme2/images/slide/ad1.jpg")
+ad_1 = Ad.create(:title => "产品二", :description => "", :image_url => "/themes/theme2/images/slide/ad2.jpg", :target_url => "/themes/theme2/images/slide/ad1.jpg")
+ad_1 = Ad.create(:title => "产品三", :description => "", :image_url => "/themes/theme2/images/slide/ad3.jpg", :target_url => "/themes/theme2/images/slide/ad1.jpg")
+ad_1 = Ad.create(:title => "产品四", :description => "", :image_url => "/themes/theme2/images/slide/ad4.jpg", :target_url => "/themes/theme2/images/slide/ad1.jpg")
+
 News.create(:title => "如何成为优秀的开发人员？", :body => "事情犹如发生在昨天，那是在2000年，Pargas博士正在给我们数据结构班讲解有关数据结构方面的话题，当他讲解部署SSH应用时，一个同学问了他一个问题，当时他围绕“如果你想成为一个真正计算机科学家，你就要从学习vi编辑器开始。”说了一些事情。因为他说这些话的时候，面带微笑，事后我并不觉得他的话正确。但当时由于年轻、易受影响，回到宿舍中，我就立即开始学习如何使用vi。这样学习了了一段时间，我意识到一旦我掌握了其中的一些窍门，我就可以快速在vi中实现。
 
 六年前，我迷上了TextMate编辑器软件。当时我正从事Java软件开发工作，并在业余时间学习Rails并做一些Rails项目。那时几乎所有我读的文章和观看的视频都是说明和演示如何使用TextMate来完成文本编辑工作的方法技巧的。事实上，我当时每天用Eclipse，它正使我变成一个呆子。所以我买了一台Mac电脑，并在开机后的10分钟内就购买了TextMate软件并安装上去。
