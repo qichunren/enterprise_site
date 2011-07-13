@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.8'
-gem 'rake', "0.8.7"
+gem 'rails', '3.0.9'
+gem 'rake', "0.9.2"
 
 gem "mysql2", "0.2.7"
 gem "rails-settings-cached", :require => "rails-settings"
