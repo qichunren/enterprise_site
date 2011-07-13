@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110617130414) do
+ActiveRecord::Schema.define(:version => 20110713150657) do
 
   create_table "admins", :force => true do |t|
     t.string   "login",               :limit => 200,                    :null => false
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(:version => 20110617130414) do
   add_index "admins", ["last_login_at"], :name => "index_admins_on_last_login_at"
   add_index "admins", ["login"], :name => "index_admins_on_login"
   add_index "admins", ["persistence_token"], :name => "index_admins_on_persistence_token"
+
+  create_table "ads", :force => true do |t|
+    t.string   "title"
+    t.string   "target_url",                 :null => false
+    t.string   "image_url"
+    t.integer  "click_count", :default => 0, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "attachments", :force => true do |t|
     t.string   "name",                               :null => false
