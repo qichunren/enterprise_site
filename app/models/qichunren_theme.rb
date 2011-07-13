@@ -10,7 +10,7 @@ class QichunrenTheme
   def self.all_themes
     themes = []
     Dir.glob(Rails.root.join("themes/*")).each do |theme_dir|
-      theme_dir_name = theme_dir.split("/").last
+      theme_dir_name = File.basename(theme_dir)
       readme_file = theme_dir + "/README.yml"
       cover_file  = theme_dir + "/images/cover.png"
       if File.exists?(readme_file)
