@@ -1,7 +1,6 @@
 # encoding: utf-8
 module FrontHelper 
   
-  
   # 取得公司公德
   #TODO 加更多方法选项，如order
   def get_notices(limit, options={})

@@ -1,35 +1,73 @@
-<% title "首页" %> 
+<% title "首页" %>
+<style type="text/css">
+    .box1 {
+        margin-bottom: 10px;
+    }
+    #company_introduce {
+        width: 500px;
+        float: left;
+        margin-right: 10px;
+    }
 
+    #latest_notices {
+        width: 460px;
+        float: right;
+    }
+
+    #latest_notices ul {
+        padding: 10px;
+    }
+    #company_introduce .wrapper {
+        padding: 10px;
+    }
+    #latest_products .wrapper {
+        padding: 10px;
+    }
+    #latest_products .product {
+        width: 200px;
+        height: 200px;
+        margin-right: 10px;
+        float: left;
+    }
+    #latest_products .product h4 {
+        font-weight: normal;
+        font-size: 13px;
+    }
+</style>
 <div id="company_introduce" class="box1">
    <h3 class="title">公司简介</h3>
    <div class="wrapper">
       <%= MySettings.company_introduce.html_safe %>
    </div>
 </div>
-          
+
+<div id="latest_notices" class="box1">
+    <h3 class="title">公司新闻</h3>
+  <div class="wrapper">
+
+    <ul>
+      <% get_notices(5).each do |notice| %>
+        <li><%= link_to notice.title, notice, :title => notice.title %></li>
+      <% end %>
+    </ul>
+  </div>
+</div><!-- end #latest_notices -->
+
+<div class="clear"></div>
+
 <div id="latest_products" class="box1">
-    <div class="title"><div class="lanwd"><a href="/products">产品中心</a>
+    <div class="title">
+        <div class="lanwd"><a href="/products">产品中心</a></div>
+        <div class="english">/ Products</div>
     </div>
-                	<div class="english">/ Products</div>
-                	</div>
-                	
+
   <div class="wrapper">
     <% get_products(10).each do |product| %>
       <div class='product'>
         <div class="product_inner"><%= link_to(image_tag(product.avatar.url(:thumb)), product) %></div>
-        <h4><%= link_to product.name, product %></h4>
-      </div> 
+        <h4><%= link_to product.name, product, :title => product.name %></h4>
+      </div>
     <% end %>
+    <div class="clear"></div>
   </div>
-</div>
-
-<div id="latest_notices">
-  <div class="wrapper">
-    <h3>公司新闻</h3>
-    <ul>   
-      <% get_notices(5).each do |notice| %>
-        <li><%= link_to notice.title, notice, :title => notice.title %></li>
-      <% end %>
-    </ul>   
-  </div>               
 </div>
